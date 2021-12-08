@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"dee899de70",applicationID:"80106271"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/documents/address-before-joint-session-the-congress-the-state-the-union-19" />
+<link rel="shortlink" href="/node/313186" />
+<link rel="shortcut icon" href="https://www.presidency.ucsb.edu/sites/default/files/favicon-app_0.png" type="image/png" />
+  <title>Address Before a Joint Session of the Congress on the State of the Union | The American Presidency Project</title>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,700,600,300|Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_uuQd0L7qawhKpY0MHO8pVG2W6LSQqS5w9XHZMk3vO2U.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_Cq1R3m_ERXC2ynYnp57HZ-O7ehprd9pvLTuV32DY_ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_BXCmDYWIH6zmNsU0Js_WJYpLGUpEB4GhicAN6AdoPdM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_gsVew5cLoW8YoOz5wlq-MSojac7Ph5f6cujHg4HQfcM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_DW59q6nX-P3-D4cA08_V2iLlMJIaFdPFYT8X6nSFpV8.css" media="print" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/jquery/1.11/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_38VWQ3jjQx0wRFj7gkntZr077GgJoGn5nv3v05IeLLo.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_XklFG3kfg0lBQ-7DD_t92S8L-ZsoZ29gklqc_A_ZH6o.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-86410002-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_0ri5u0t83fzlM17yaHG1aQGEln8kbFJP2gAtCU7MncM.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_gvpxcPEErmaiJn8qGSGx2O87lReivTR09hs10gIG3Yg.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"app","theme_token":"fgqLaEyF2n4NnUoUMpj9AoDShkFDoWoCLLJ-1DFrm9k","js":{"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.js":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.filter.js":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.js":1,"modules\/statistics\/statistics.js":1,"sites\/default\/themes\/bootstrap\/js\/bootstrap.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jQuery\/jquery-1.11.2.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jquery.ui\/1.11.4\/jquery-ui.min.js":1,"1":1,"sites\/default\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/default\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/default\/modules\/contrib\/field_group\/field_group.js":1,"sites\/default\/modules\/contrib\/rrssb\/rrssb.init.js":1,"sites\/default\/libraries\/rrssb-plus\/js\/rrssb.min.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/affix.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/alert.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/button.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/carousel.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/collapse.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/dropdown.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/modal.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tooltip.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/popover.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/scrollspy.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tab.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/transition.js":1,"sites\/default\/themes\/app\/scripts\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/default\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/default\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/default\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/default\/modules\/contrib\/extlink\/extlink.css":1,"sites\/default\/modules\/contrib\/views\/css\/views.css":1,"sites\/default\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.filter.css":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.css":1,"sites\/default\/modules\/contrib\/vefl\/css\/vefl-layouts.css":1,"public:\/\/rrssb\/rrssb.3c7a5cb3.css":1,"sites\/default\/libraries\/rrssb-plus\/css\/rrssb.css":1,"sites\/default\/themes\/app\/css\/style.css":1,"sites\/default\/themes\/app\/css\/oog.css":1,"sites\/default\/themes\/app\/css\/print.css":1}},"jquery_ui_multiselect_widget":{"module_path":"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget","multiple":1,"filter":1,"subselector":"#edit-category2","selectedlist":"4","autoOpen":0,"header":1,"height":"auto","classes":"app-uberselect","filter_auto_reset":1,"filter_width":"auto","jquery_ui_multiselect_widget_path_match_exclude":"admin\/*\r\nmedia\/*\r\nfile\/*\r\nsystem\/ajax"},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"dpg_docs_media":{"displays":{"block_2":{"filters":[]}}},"report_a_typo":{"displays":{"block":{"filters":[]}}},"document_attached_files":{"displays":{"block":{"filters":[]},"block_1":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/advanced-search":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]},"statistics":{"data":{"nid":"313186"},"url":"\/modules\/statistics\/statistics.php"},"field_group":{"div":"full"},"rrssb":{"size":"1","shrink":"1","regrow":"","minRows":"1","maxRows":"1","prefixReserve":"1em","prefixHide":"1em","alignRight":0},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-313186 node-type-documents" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div class="wrapper"> <!-- Wrapper for Sticky Footer -->
+
+      <div class="branding-region">
+      <div class="container">
+                  <div class="region region-branding">
+    <section id="block-block-1" class="block block-block site-title-block clearfix">
+
+      
+  <div class="site-title"><a href="https://www.presidency.ucsb.edu/">The American Presidency Project</a></div>
+
+</section>
+<section id="block-block-2" class="block block-block top-link-buttons clearfix">
+
+      
+  <p><a class="btn btn-default" href="https://www.presidency.ucsb.edu/about">About</a><a class="btn btn-default" href="/advanced-search"><span class="glyphicon glyphicon-search"></span> Search</a></p>
+<p id="ucScript"><a href="https://www.ucsb.edu/" target="_blank"><img alt="ucsb wordmark black" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/uc_santa_barbara_wordmark_black_rgb.svg" style="width: 175px; height: 13px;" /></a></p>
+
+</section>
+  </div>
+      </div>
+    </div>
+  
+  <div id="navbar" role="banner" class="navbar navbar-default"><!-- Only way to remove "container" class -->
+    <div class="container">
+      <div class="navbar-header">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+              <div class="navbar-collapse collapse">
+          <nav role="navigation">
+                          <ul class="menu nav navbar-nav"><li class="first expanded active-trail active dropdown"><a href="/documents" class="active-trail dropdown-toggle" data-toggle="dropdown">Documents <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/documents/presidential-documents-archive-guidebook">Guidebook</a></li>
+<li class="last leaf"><a href="/documents/category-attributes">Category Attributes</a></li>
+</ul></li>
+<li class="collapsed"><a href="/statistics">Statistics</a></li>
+<li class="leaf"><a href="/media" title="">Media Archive</a></li>
+<li class="leaf"><a href="/presidents" title="">Presidents</a></li>
+<li class="leaf"><a href="/analyses" title="">Analyses</a></li>
+<li class="last leaf"><a href="https://giving.ucsb.edu/Funds/Give?id=185" title="">GIVE</a></li>
+</ul>                                              </nav>
+        </div>
+          </div>
+  </div>
+
+  <div role="banner" id="page-header" class="site-header">
+      </div>
+
+  <div class="main-container container">
+    <div class="row">
+
+          <aside class="col-sm-3 no-print" role="complementary">
+            <div class="region region-sidebar-first well">
+    <section id="block-menu-block-8" class="block block-menu-block doc-sub clearfix">
+
+        <h2 class="block-title">Documents</h2>
+    
+  <div class="menu-block-wrapper menu-block-8 menu-name-menu-documents parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-10329"><a href="/documents/presidential-documents-archive-guidebook" title="">Archive Guidebook</a></li>
+<li class="leaf active-trail menu-mlid-10330 active"><a href="/documents" title="" class="active-trail">Categories</a></li>
+<li class="last leaf menu-mlid-10791"><a href="/documents/category-attributes" title="">Attributes</a></li>
+</ul></div>
+
+</section>
+<section id="block-menu-block-7" class="block block-menu-block dropdown clearfix">
+
+        <h2 class="block-title">Categories</h2>
+    
+  <div class="menu-block-wrapper menu-block-7 menu-name-menu-doc-cat-menu parent-mlid-0 menu-level-1">
+    <ul class="menu nav"><li class="first expanded menu-mlid-10954 dropdown"><a href="/documents/app-categories/presidential" title="Presidential (73842)" class="dropdown-toggle" data-toggle="dropdown">Presidential (259551) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10904"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/correspondents-association" title="Correspondents&#039; Association (31)">Correspondents&#039; Association (31)</a></li>
+<li class="leaf menu-mlid-10910"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/eulogies" title="Eulogies (55)">Eulogies (57)</a></li>
+<li class="leaf menu-mlid-10930"><a href="/documents/app-categories/written-presidential-orders/presidential/executive-orders" title="Executive Orders (5885)">Executive Orders (6135)</a></li>
+<li class="leaf menu-mlid-10912"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/fireside-chats" title="Fireside Chats (27)">Fireside Chats (27)</a></li>
+<li class="leaf menu-mlid-10906"><a href="/documents/app-categories/presidential/interviews" title="Interviews (950)">Interviews (955)</a></li>
+<li class="leaf menu-mlid-10894"><a href="/documents/app-categories/presidential/letters" title="Letters (4363)">Letters (4599)</a></li>
+<li class="leaf menu-mlid-10898"><a href="/documents/app-categories/presidential/miscellaneous-remarks" title="Miscellaneous Remarks (21956)">Miscellaneous Remarks (23689)</a></li>
+<li class="leaf menu-mlid-10899"><a href="/documents/app-categories/presidential/miscellaneous-written" title="Miscellaneous Written (741)">Miscellaneous Written (841)</a></li>
+<li class="leaf menu-mlid-10907"><a href="/documents/app-categories/presidential/news-conferences" title="News Conferences (2096)">News Conferences (2474)</a></li>
+<li class="leaf menu-mlid-10933"><a href="/documents/app-categories/written-statements/presidential/signing-statements" title="Signing Statements (2082)">Signing Statements (2151)</a></li>
+<li class="collapsed menu-mlid-10909"><a href="/documents/app-categories/presidential/spoken-addresses-and-remarks" title="Spoken Addresses and Remarks (5428)">Spoken Addresses and Remarks (10397)</a></li>
+<li class="leaf menu-mlid-10911"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/farewell-address" title="Farewell Address (10)">Farewell Address (11)</a></li>
+<li class="leaf menu-mlid-10913"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/inaugural-addresses" title="Inaugural Addresses (61)">Inaugural Addresses (62)</a></li>
+<li class="leaf menu-mlid-10895"><a href="/documents/app-categories/presidential/memoranda" title="Memoranda (1828)">Memoranda (2017)</a></li>
+<li class="leaf menu-mlid-10927"><a href="/documents/app-categories/written-messages/presidential/messages" title="Messages (11049)">Messages (11308)</a></li>
+<li class="leaf menu-mlid-10914"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/oral-address" title="Oral Address (618)">Oral Address (631)</a></li>
+<li class="leaf menu-mlid-10931"><a href="/documents/app-categories/written-presidential-orders/presidential/proclamations" title="Proclamations (7974)">Proclamations (8644)</a></li>
+<li class="leaf menu-mlid-10919"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/saturday-weekly-addresses-radio" title="Saturday Addresses (Radio and Webcast) (1629)">Saturday Weekly Addresses (Radio and Webcast) (1639)</a></li>
+<li class="leaf menu-mlid-10920"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-dinners" title="State Dinners (953)">State Dinners (953)</a></li>
+<li class="leaf menu-mlid-10921"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-the-union-addresses" title="State of the Union Addresses (98)">State of the Union Addresses (98)</a></li>
+<li class="leaf menu-mlid-10928"><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" title="State of the Union Messages (1)">State of the Union Messages (140)</a></li>
+<li class="leaf menu-mlid-10934"><a href="/documents/app-categories/written-statements/presidential/statements" title="Statements (8647)">Statements (9165)</a></li>
+<li class="leaf menu-mlid-10936"><a href="/documents/app-categories/written-statements/presidential/statements-administration-policy" title="Statements of Administration Policy (5081)">Statements of Administration Policy (5267)</a></li>
+<li class="leaf menu-mlid-10924"><a href="/documents/app-categories/presidential/vetoes" title="Vetoes (266)">Vetoes (1191)</a></li>
+<li class="collapsed menu-mlid-10925"><a href="/documents/app-categories/presidential/written-messages" title="Written Messages (11021)">Written Messages (23748)</a></li>
+<li class="expanded menu-mlid-10929"><a href="/documents/app-categories/presidential/written-presidential-orders" title="Written Presidential Orders (13858)">Written Presidential Orders (31697)</a></li>
+<li class="last collapsed menu-mlid-10932"><a href="/documents/app-categories/presidential/written-statements" title="Written Statements (16012)">Written Statements (33142)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10903 dropdown"><a href="/documents/app-categories/pressmedia" title="Press (9114)" class="dropdown-toggle" data-toggle="dropdown">Press/Media (17316) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first last leaf menu-mlid-10908"><a href="/documents/app-categories/pressmedia/press-briefings" title="Press Briefings (6037)">Press Briefings (6535)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10887 dropdown"><a href="/documents/app-categories/elections-and-transitions" title="Elections and Transitions (16448)" class="dropdown-toggle" data-toggle="dropdown">Elections and Transitions (24429) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10888"><a href="/documents/app-categories/elections-and-transitions/campaign-documents" title="Campaign Documents (2747)">Campaign Documents (4446)</a></li>
+<li class="expanded menu-mlid-10889"><a href="/documents/app-categories/elections-and-transitions/convention-speeches" title="Convention Speeches (50)">Convention Speeches (76)</a></li>
+<li class="leaf menu-mlid-10890"><a href="/documents/app-categories/elections-and-transitions/debates" title="Debates (152)">Debates (171)</a></li>
+<li class="leaf menu-mlid-10892"><a href="/documents/app-categories/elections-and-transitions/party-platforms" title="Party Platforms (98)">Party Platforms (101)</a></li>
+<li class="last leaf menu-mlid-10893"><a href="/documents/app-categories/elections-and-transitions/transition-documents" title="Transition Documents (346)">Transition Documents (549)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10896 dropdown"><a href="/documents/app-categories/miscellaneous" title="Miscellaneous (46156)" class="dropdown-toggle" data-toggle="dropdown">Miscellaneous (432) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10900"><a href="/documents/app-categories/miscellaneous/opposition-party-responses" title="Opposition Party Responses (28)">Opposition Party Responses (32)</a></li>
+<li class="last leaf menu-mlid-10915"><a href="/documents/app-categories/miscellaneous/post-presidential-remarks" title="Post Presidential Remarks (5)">Post Presidential Remarks (10)</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-10883"><a href="/documents/app-categories/congressional" title="Congressional (3)">Congressional (37)</a></li>
+</ul></div>
+
+</section>
+  </div>
+        </aside>  <!-- /#sidebar-first -->
+      
+      <section class="col-sm-9">
+                        <a id="main-content"></a>
+                
+                          
+                          <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  
+
+<div  about="/documents/address-before-joint-session-the-congress-the-state-the-union-19" typeof="sioc:Item foaf:Document" class="node node-documents view-mode-full ">
+    <div class="row">
+    <div class="col-sm-8 ">
+      
+  <div class="field-docs-person">
+    <div  about="/people/president/barack-obama" typeof="sioc:Item foaf:Document" class="ds-1col node node-prez-diet view-mode-for_documents  clearfix">
+
+  
+  
+  <div class="field-diet-pictures">
+    <img typeof="foaf:Image" class="img-responsive" src="https://www.presidency.ucsb.edu/sites/default/files/styles/doc_img/public/people/barack-obama_1.jpg?itok=auwSxo2u" width="170" height="230" alt="Barack Obama photo" />  </div>
+
+  <div class="field-title">
+    <h3 class="diet-title"><a href="/people/president/barack-obama">Barack Obama</a></h3>  </div>
+
+  <div class="field-ds-byline">
+    
+  <div class="field-resuable-byline">
+    <div class="diet-by-line president"><span class="presidential-ordinal-number">44th</span> <span class="job-position">President of the United States:</span> <span class="dates">2009 ‐ 2017</span></div>
+  </div>
+  </div>
+
+  <div class="field-ds-doc-title">
+    <h1>Address Before a Joint Session of the Congress on the State of the Union</h1>
+  </div>
+</div>
+
+  </div>
+
+  <div class="field-docs-start-date-time">
+    <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2016-01-12T21:10:00+00:00">January 12, 2016</span>  </div>
+
+  <div class="field-docs-content">
+    <p>Thank you. Mr. Speaker, Mr. Vice President, Members of Congress, my fellow Americans: Tonight marks the eighth year that I've come here to report on the State of the Union. And for this final one, I'm going to try to make it a little shorter. I know some of you are antsy to get back to Iowa. [<em>Laughter</em>] I've been there. I'll be shaking hands afterwards if you want some tips. [<em>Laughter</em>]</p>
+<p>Now, I understand that because it's an election season, expectations for what we will achieve this year are low. But, Mr. Speaker, I appreciate the constructive approach that you and other leaders took at the end of last year to pass a budget and make tax cuts permanent for working families. So I hope we can work together this year on some bipartisan priorities like criminal justice reform and helping people who are battling prescription drug abuse and heroin abuse. So, who knows, we might surprise the cynics again.</p>
+<p>But tonight I want to go easy on the traditional list of proposals for the year ahead. Don't worry, I've got plenty—[<em>laughter</em>]—from helping students learn to write computer code to personalizing medical treatments for patients. And I will keep pushing for progress on the work that I believe still needs to be done: fixing a broken immigration system, protecting our kids from gun violence, equal pay for equal work, paid leave, raising the minimum wage. All these things still matter to hard-working families. They're still the right thing to do. And I won't let up until they get done.</p>
+<p>But for my final address to this Chamber, I don't want to just talk about next year. I want to focus on the next 5 years, the next 10 years, and beyond. I want to focus on our future.</p>
+<p>We live in a time of extraordinary change, change that's reshaping the way we live, the way we work, our planet, our place in the world. It's change that promises amazing medical breakthroughs, but also economic disruptions that strain working families. It promises this education for girls in the most remote villages, but also connects terrorists plotting an ocean away. It's change that can broaden opportunity or widen inequality. And whether we like it or not, the pace of this change will only accelerate.</p>
+<p>America has been through big changes before: wars and depression, the influx of new immigrants, workers fighting for a fair deal, movements to expand civil rights. Each time, there have been those who told us to fear the future; who claimed we could slam the brakes on change; who promised to restore past glory if we just got some group or idea that was threatening America under control. And each time, we overcame those fears. We did not, in the words of Lincoln, adhere to the "dogmas of the quiet past." Instead, we thought anew and acted anew. We made change work for us, always extending America's promise outward, to the next frontier, to more people. And because we did, because we saw opportunity with a—where others saw peril, we emerged stronger and better than before.</p>
+<p>What was true then can be true now. Our unique strengths as a nation—our optimism and work ethic, our spirit of discovery, our diversity, our commitment to rule of law—these things give us everything we need to ensure prosperity and security for generations to come.</p>
+<p>In fact, it's in that spirit that we have made progress these past 7 years. That's how we recovered from the worst economic crisis in generations. That's how we reformed our health care system and reinvented our energy sector. That's how we delivered more care and benefits to our troops coming home and our veterans. That's how we secured the freedom in every State to marry the person we love.</p>
+<p>But such progress is not inevitable. It's the result of choices we make together. And we face such choices right now. Will we respond to the changes of our time with fear, turning inward as a nation, turning against each other as a people? Or will we face the future with confidence in who we are, in what we stand for, in the incredible things that we can do together?</p>
+<p>So let's talk about the future and four big questions that I believe we as a country have to answer, regardless of who the next President is or who controls the next Congress. First, how do we give everyone a fair shot at opportunity and security in this new economy? Second, how do we make technology work for us and not against us, especially when it comes to solving urgent challenges like climate change? Third, how do we keep America safe and lead the world without becoming its policeman? And finally, how can we make our politics reflect what's best in us and not what's worst?</p>
+<p>Let me start with the economy and a basic fact: The United States of America right now has the strongest, most durable economy in the world. We're in the middle of the longest streak of private sector job creation in history. More than 14 million new jobs, the strongest 2 years of job growth since the 1990s, an unemployment rate cut in half. Our auto industry just had its best year ever. That's just part of a manufacturing surge that's created nearly 900,000 new jobs in the past 6 years. And we've done all this while cutting our deficits by almost three-quarters.</p>
+<p>Anyone claiming that America's economy is in decline is peddling fiction. Now, what is true—and the reason that a lot of Americans feel anxious—is that the economy has been changing in profound ways, changes that started long before the great recession hit, changes that have not let up.</p>
+<p>Today, technology doesn't just replace jobs on the assembly line, but any job where work can be automated. Companies in a global economy can locate anywhere, and they face tougher competition. As a result, workers have less leverage for a raise. Companies have less loyalty to their communities. And more and more wealth and income is concentrated at the very top.</p>
+<p>All these trends have squeezed workers, even when they have jobs, even when the economy is growing. It's made it harder for a hard-working family to pull itself out of poverty, harder for young people to start their careers, tougher for workers to retire when they want to. And although none of these trends are unique to America, they do offend our uniquely American belief that everybody who works hard should get a fair shot.</p>
+<p>For the past 7 years, our goal has been a growing economy that also works better for everybody. We've made progress, but we need to make more. And despite all the political arguments that we've had these past few years, there are actually some areas where Americans broadly agree.</p>
+<p>We agree that real opportunity requires every American to get the education and training they need to land a good-paying job. The bipartisan reform of No Child Left Behind was an important start, and together, we've increased early childhood education, lifted high school graduation rates to new highs, boosted graduates in fields like engineering. In the coming years, we should build on that progress, by providing pre-K for all and offering every student the hands-on computer science and math classes that make them job-ready on day one. We should recruit and support more great teachers for our kids.</p>
+<p>And we have to make college affordable for every American. No hard-working student should be stuck in the red. We've already reduced student loan payments by—to 10 percent of a borrower's income. And that's good. But now we've actually got to cut the cost of college. Providing 2 years of community college at no cost for every responsible student is one of the best ways to do that, and I'm going to keep fighting to get that started this year. It's the right thing to do.</p>
+<p>But a great education isn't all we need in this new economy. We also need benefits and protections that provide a basic measure of security. It's not too much of a stretch to say that some of the only people in America who are going to work the same job, in the same place, with a health and retirement package for 30 years are sitting in this Chamber. [<em>Laughter</em>] For everyone else, especially folks in their forties and fifties, saving for retirement or bouncing back from job loss has gotten a lot tougher. Americans understand that at some point in their careers, in this new economy, they may have to retool, they may have to retrain. But they shouldn't lose what they've already worked so hard to build in the process.</p>
+<p>That's why Social Security and Medicare are more important than ever. We shouldn't weaken them, we should strengthen them. And for Americans short of retirement, basic benefits should be just as mobile as everything else is today. That, by the way, is what the Affordable Care Act is all about. It's about filling the gaps in employer-based care so that when you lose a job or you go back to school or you strike out and launch that new business, you'll still have coverage. Nearly 18 million people have gained coverage so far. And in the process, health care inflation has slowed. And our businesses have created jobs every single month since it became law.</p>
+<p>Now, I'm guessing we won't agree on health care anytime soon, but—[<em>laughter</em>]—a little applause back there. [<em>Laughter</em>] Just a guess. But there should be other ways parties can work together to improve economic security. Say a hard-working American loses his job. We shouldn't just make sure that he can get unemployment insurance, we should make sure that program encourages him to retrain for a business that's ready to hire him. If that new job doesn't pay as much, there should be a system of wage insurance in place so that he can still pay his bills. And even if he's going from job to job, he should still be able to save for retirement and take his savings with him. That's the way we make the new economy work better for everybody.</p>
+<p>I also know Speaker Ryan has talked about his interest in tackling poverty. America is about giving everybody willing to work a chance, a hand up. And I'd welcome a serious discussion about strategies we can all support, like expanding tax cuts for low-income workers who don't have children.</p>
+<p>But there are some areas where—we just have to be honest—it has been difficult to find agreement over the last 7 years. And a lot of them fall under the category of what role the Government should play in making sure the system's not rigged in favor of the wealthiest and biggest corporations. And it's an honest disagreement, and the American people have a choice to make.</p>
+<p>I believe a thriving private sector is the lifeblood of our economy. I think there are outdated regulations that need to be changed. There is redtape that needs to be cut. [<em>Applause</em>] There you go! Yes! See? But after years now of record corporate profits, working families won't get more opportunity or bigger paychecks just by letting big banks or big oil or hedge funds make their own rules at everybody else's expense. Middle class families are not going to feel more secure because we allowed attacks on collective bargaining to go unanswered. Food stamp recipients did not cause the financial crisis; recklessness on Wall Street did. Immigrants aren't the principal reason wages haven't gone up; those decisions are made in the boardrooms that all too often put quarterly earnings over long-term returns. It's sure not the average family watching tonight that avoids paying taxes through offshore accounts. [<em>Laughter</em>]</p>
+<p>The point is, I believe that in this new economy, workers and startups and small businesses need more of a voice, not less. The rules should work for them. And I'm not alone in this. This year, I plan to lift up the many businesses who have figured out that doing right by their workers or their customers or their communities ends up being good for their shareholders. And I want to spread those best practices across America. That's part of a brighter future.</p>
+<p>In fact, it turns, out many of our best corporate citizens are also our most creative. And this brings me to the second big question we as a country have to answer: How do we reignite that spirit of innovation to meet our biggest challenges?</p>
+<p>Sixty years ago, when the Russians beat us into space, we didn't deny Sputnik was up there. [<em>Laughter</em>] We didn't argue about the science or shrink our research and development budget. We built a space program almost overnight. And 12 years later, we were walking on the Moon.</p>
+<p>Now, that spirit of discovery is in our DNA. America is Thomas Edison and the Wright Brothers and George Washington Carver. America is Grace Hopper and Katherine Johnson and Sally Ride. America is every immigrant and entrepreneur from Boston to Austin to Silicon Valley, racing to shape a better future. That's who we are.</p>
+<p>And over the past 7 years, we've nurtured that spirit. We've protected an open Internet and taken bold new steps to get more students and low-income Americans online. We've launched next-generation manufacturing hubs and online tools that give an entrepreneur everything he or she needs to start a business in a single day. But we can do so much more.</p>
+<p>Last year, Vice President Biden said that with a new moonshot, America can cure cancer. Last month, he worked with this Congress to give scientists at the National Institutes of Health the strongest resources that they've had in over a decade. Well—so tonight I'm announcing a new national effort to get it done. And because he's gone to the mat for all of us on so many issues over the past 40 years, I'm putting Joe in charge of mission control. For the loved ones we've all lost, for the families that we can still save, let's make America the country that cures cancer once and for all. What do you say, Joe? Let's make it happen.</p>
+<p>Now, medical research is critical. We need the same level of commitment when it comes to developing clean energy sources. Look, if anybody still wants to dispute the science around climate change, have at it. [<em>Laughter</em>] You will be pretty lonely, because you'll be debating our military, most of America's business leaders, the majority of the American people, almost the entire scientific community, and 200 nations around the world who agree it's a problem and intend to solve it. But even if the planet wasn't at stake, even if 2014 wasn't the warmest year on record—until 2015 turned out to be even hotter—why would we want to pass up the chance for American businesses to produce and sell the energy of the future? Listen, 7 years ago, we made the single biggest investment in clean energy in our history. Here are the results. In fields from Iowa to Texas, wind power is now cheaper than dirtier, conventional power. On rooftops from Arizona to New York, solar is saving Americans tens of millions of dollars a year on their energy bills and employs more Americans than coal in jobs that pay better than average. We're taking steps to give homeowners the freedom to generate and store their own energy, something, by the way, that environmentalists and Tea Partiers have teamed up to support. And meanwhile, we've cut our imports of foreign oil by nearly 60 percent and cut carbon pollution more than any other country on Earth. Gas under 2 bucks a gallon ain't bad either. [<em>Laughter</em>]</p>
+<p>Now we've got to accelerate the transition away from old, dirtier energy sources. Rather than subsidize the past, we should invest in the future, especially in communities that rely on fossil fuels. We do them no favor when we don't show them where the trends are going. And that's why I'm going to push to change the way we manage our oil and coal resources so that they better reflect the costs they impose on taxpayers and our planet. And that way, we put money back into those communities and put tens of thousands of Americans to work building a 21st-century transportation system.</p>
+<p>Now, none of this is going to happen overnight. And yes, there are plenty of entrenched interests who want to protect the status quo. But the jobs we'll create, the money we'll save, the planet we'll preserve—that is the kind of future our kids and our grandkids deserve. And it's within our grasp.</p>
+<p>Now, climate change is just one of many issues where our security is linked to the rest of the world. And that's why the third big question that we have to answer together is how to keep America safe and strong without either isolating ourselves or trying to nation-build everywhere there's a problem.</p>
+<p>Now, I told you earlier all the talk of America's economic decline is political hot air. Well, so is all the rhetoric you hear about our enemies getting stronger and America getting weaker. Let me tell you something: The United States of America is the most powerful nation on Earth. Period. [<em>Applause</em>] Period. It's not even close. [<em>Applause</em>] It's not even close. It's not even close. We spend more on our military than the next eight nations combined. Our troops are the finest fighting force in the history of the world. [<em>Applause</em>] All right. No nation attacks us directly, or our allies, because they know that's the path to ruin. Surveys show our standing around the world is higher than when I was elected to this office, and when it comes to every important international issue, people of the world do not look to Beijing or Moscow to lead. They call us. So I think it's useful to level set here, because when we don't, we don't make good decisions.</p>
+<p>Now, as someone who begins every day with an intelligence briefing, I know this is a dangerous time. But that's not primarily because of some looming superpower out there, and it's certainly not because of diminished American strength. In today's world, we're threatened less by evil empires and more by failing states.</p>
+<p>The Middle East is going through a transformation that will play out for a generation, rooted in conflicts that date back millennia. Economic headwinds are blowing in from a Chinese economy that is in significant transition. Even as their economy severely contracts, Russia is pouring resources in to prop up Ukraine and Syria, client states that they saw slipping away from their orbit. And the international system we built after World War II is now struggling to keep pace with this new reality. It's up to us, the United States of America, to help remake that system. And to do that well, it means that we've got to set priorities. Priority number one is protecting the American people and going after terrorist networks. Both Al Qaida and now ISIL pose a direct threat to our people, because in today's world, even a handful of terrorists who place no value on human life, including their own, can do a lot of damage. They use the Internet to poison the minds of individuals inside our country. Their actions undermine and destabilize our allies. We have to take them out.</p>
+<p>But as we focus on destroying ISIL, over-the-top claims that this is world war III just play into their hands. Masses of fighters on the back of pickup trucks, twisted souls plotting in apartments or garages, they pose an enormous danger to civilians; they have to be stopped. But they do not threaten our national existence. That is the story ISIL wants to tell. That's the kind of propaganda they use to recruit. We don't need to build them up to show that we're serious, and we sure don't need to push away vital allies in this fight by echoing the lie that ISIL is somehow representative of one of the world's largest religions. We just need to call them what they are: killers and fanatics who have to be rooted out, hunted down, and destroyed.</p>
+<p>And that's exactly what we're doing. For more than a year, America has led a coalition of more than 60 countries to cut off ISIL's financing, disrupt their plots, stop the flow of terrorist fighters, and stamp out their vicious ideology. With nearly 10,000 airstrikes, we're taking out their leadership, their oil, their training camps, their weapons. We're training, arming, and supporting forces who are steadily reclaiming territory in Iraq and Syria.</p>
+<p>If this Congress is serious about winning this war and wants to send a message to our troops and the world, authorize the use of military force against ISIL. Take a vote. [<em>Applause</em>] Take a vote. But the American people should know that with or without congressional action, ISIL will learn the same lessons as terrorists before them. If you doubt America's commitment—or mine—to see that justice is done, just ask Usama bin Laden. Ask the leader of Al Qaida in Yemen, who was taken out last year, or the perpetrator of the Benghazi attacks, who sits in a prison cell. When you come after Americans, we go after you. And it may take time, but we have long memories, and our reach has no limits.</p>
+<p>Our foreign policy has to be focused on the threat from ISIL and Al Qaida, but it can't stop there. For even without ISIL, even without Al Qaida, instability will continue for decades in many parts of the world: in the Middle East, in Afghanistan and parts of Pakistan, in parts of Central America, in Africa and Asia. Some of these places may become safe havens for new terrorist networks. Others will just fall victim to ethnic conflict or famine, feeding the next wave of refugees. The world will look to us to help solve these problems, and our answer needs to be more than tough talk or calls to carpet-bomb civilians. That may work as a TV sound bite, but it doesn't pass muster on the world stage.</p>
+<p>We also can't try to take over and rebuild every country that falls into crisis, even if it's done with the best of intentions. That's not leadership; that's a recipe for quagmire, spilling American blood and treasure that ultimately will weaken us. It's the lesson of Vietnam; it's the lesson of Iraq. And we should have learned it by now.</p>
+<p>Now, fortunately there is a smarter approach: a patient and disciplined strategy that uses every element of our national power. It says America will always act, alone if necessary, to protect our people and our allies, but on issues of global concern, we will mobilize the world to work with us and make sure other countries pull their own weight. That's our approach to conflicts like Syria, where we're partnering with local forces and leading international efforts to help that broken society pursue a lasting peace. That's why we built a global coalition, with sanctions and principled diplomacy, to prevent a nuclear-armed Iran. And as we speak, Iran has rolled back its nuclear program, shipped out its uranium stockpile, and the world has avoided another war.</p>
+<p>That's how we stopped the spread of Ebola in West Africa. Our military, our doctors, our development workers—they were heroic; they set up the platform that then allowed other countries to join in behind us and stamp out that epidemic. Hundreds of thousands, maybe a couple million, lives were saved.</p>
+<p>That's how we forged a Trans-Pacific Partnership to open markets and protect workers and the environment and advance American leadership in Asia. It cuts 18,000 taxes on products made in America, which will then support more good jobs here in America. With TPP, China does not set the rules in that region, we do. You want to show our strength in this new century? Approve this agreement. Give us the tools to enforce it. It's the right thing to do.</p>
+<p>Let me give you another example. Fifty years of isolating Cuba had failed to promote democracy. It set us back in Latin America. That's why we restored diplomatic relations, opened the door to travel and commerce, positioned ourselves to improve the lives of the Cuban people. So if you want to consolidate our leadership and credibility in the hemisphere, recognize that the cold war is over. Lift the embargo.</p>
+<p>The point is, American leadership in the 21st century is not a choice between ignoring the rest of the world—except when we kill terrorists—or occupying and rebuilding whatever society is unraveling. Leadership means a wise application of military power and rallying the world behind causes that are right. It means seeing our foreign assistance as a part of our national security, not something separate, not charity.</p>
+<p>When we lead nearly 200 nations to the most ambitious agreement in history to fight climate change, yes, that helps vulnerable countries, but it also protects our kids. When we help Ukraine defend its democracy or Colombia resolve a decades-long war, that strengthens the international order we depend on. When we help African countries feed their people and care for the sick, it's the right thing to do, and it prevents the next pandemic from reaching our shores. Right now we're on track to end the scourge of HIV/AIDS. That's within our grasp. And we have the chance to accomplish the same thing with malaria, something I'll be pushing this Congress to fund this year.</p>
+<p>That's American strength. That's American leadership. And that kind of leadership depends on the power of our example. That's why I will keep working to shut down the prison at Guantanamo. It is expensive, it is unnecessary, and it only serves as a recruitment brochure for our enemies. There's a better way.</p>
+<p>And that's why we need to reject any politics—any politics—that targets people because of race or religion. Let me just say this. This is not a matter of political correctness, this is a matter of understanding just what it is that makes us strong. The world respects us not just for our arsenal, it respects us for our diversity and our openness and the way we respect every faith.</p>
+<p>His Holiness Pope Francis told this body from the very spot that I'm standing on tonight that "to imitate the hatred and violence of tyrants and murderers is the best way to take their place." When politicians insult Muslims, whether abroad or our fellow citizens, when a mosque is vandalized or a kid is called names, that doesn't make us safer. That's not telling it what—telling it like it is. It's just wrong. It diminishes us in the eyes of the world. It makes it harder to achieve our goals. It betrays who we are as a country. "We the People." Our Constitution begins with those three simple words, words we've come to recognize mean all the people, not just some; words that insist we rise and fall together, that that's how we might perfect our Union. And that brings me to the fourth and maybe most important thing that I want to say tonight.</p>
+<p>The future we want—all of us want—opportunity and security for our families, a rising standard of living, a sustainable, peaceful planet for our kids—all that is within our reach. But it will only happen if we work together. It will only happen if we can have rational, constructive debates. It will only happen if we fix our politics.</p>
+<p>A better politics doesn't mean we have to agree on everything. This is a big country: different regions, different attitudes, different interests. That's one of our strengths too. Our Founders distributed power between States and branches of government and expected us to argue, just as they did, fiercely, over the size and shape of government, over commerce and foreign relations, over the meaning of liberty and the imperatives of security.</p>
+<p>But democracy does require basic bonds of trust between its citizens. It doesn't work if we think the people who disagree with us are all motivated by malice. It doesn't work if we think that our political opponents are unpatriotic or trying to weaken America. Democracy grinds to a halt without a willingness to compromise or when even basic facts are contested or when we listen only to those who agree with us. Our public life withers when only the most extreme voices get all the attention. And most of all, democracy breaks down when the average person feels their voice doesn't matter, that the system is rigged in favor of the rich or the powerful or some special interest.</p>
+<p>Too many Americans feel that way right now. It's one of the few regrets of my Presidency: that the rancor and suspicion between the parties has gotten worse instead of better. I have no doubt, a President with the gifts of Lincoln or Roosevelt might have better bridged the divide, and I guarantee, I'll keep trying to be better so long as I hold this office.</p>
+<p>But, my fellow Americans, this cannot be my task—or any President's—alone. There are a whole lot of folks in this Chamber, good people, who would like to see more cooperation, would like to see a more elevated debate in Washington, but feel trapped by the imperatives of getting elected, by the noise coming out of your base. I know; you've told me. It's the worst kept secret in Washington. And a lot of you aren't enjoying being trapped in that kind of rancor.</p>
+<p>But that means if we want a better politics—and I'm addressing the American people now—if we want a better politics, it's not enough just to change a Congressman or change a Senator or even change a President. We have to change the system to reflect our better selves.</p>
+<p>I think we've got to end the practice of drawing our congressional districts so that politicians can pick their voters and not the other way around. Let a bipartisan group do it.</p>
+<p>I believe we've got to reduce the influence of money in our politics so that a handful of families or hidden interests can't bankroll our elections. And if our existing approach to campaign finance reform can't pass muster in the courts, we need to work together to find a real solution. Because it's a problem. And most of you don't like raising money. [<em>Laughter</em>] I know. I've done it.</p>
+<p>We've got to make it easier to vote, not harder. We need to modernize it for the way we live now. This is America: We want to make it easier for people to participate. And over the course of this year, I intend to travel the country to push for reforms that do just that. But I can't do these things on my own. Changes in our political process—in not just who gets elected, but how they get elected—that will only happen when the American people demand it. It depends on you. That's what's meant by a government of, by, and for the people.</p>
+<p>What I'm suggesting is hard. It's a lot easier to be cynical; to accept that change is not possible and politics is hopeless and the problem is, all the folks who are elected don't care; and to believe that our voices and our actions don't matter. But if we give up now, then we forsake a better future. Those with money and power will gain greater control over the decisions that could send a young soldier to war or allow another economic disaster or roll back the equal rights and voting rights that generations of Americans have fought, even died, to secure. And then, as frustration grows, there will be voices urging us to fall back into our respective tribes, to scapegoat fellow citizens who don't look like us or pray like us or vote like we do or share the same background.</p>
+<p>We can't afford to go down that path. It won't deliver the economy we want. It will not produce the security we want. But most of all, it contradicts everything that makes us the envy of the world.</p>
+<p>So, my fellow Americans, whatever you may believe, whether you prefer one party or no party, whether you supported my agenda or fought as hard as you could against it, our collective futures depends on your willingness to uphold your duties as a citizen. To vote. To speak out. To stand up for others, especially the weak, especially the vulnerable, knowing that each of us is only here because somebody, somewhere, stood up for us. We need every American to stay active in our public life—and not just during election time—so that our public life reflects the goodness and the decency that I see in the American people every single day.</p>
+<p>It is not easy. Our brand of democracy is hard. But I can promise that a little over a year from now, when I no longer hold this office, I will be right there with you as a citizen, inspired by those voices of fairness and vision, of grit and good humor and kindness, that have helped America travel so far. Voices that help us see ourselves not, first and foremost, as Black or White or Asian or Latino, not as gay or straight, immigrant or native born, not Democrat or Republican, but as Americans first, bound by a common creed. Voices Dr. King believed would have the final word: voices of "unarmed truth and unconditional love."</p>
+<p>And they're out there, those voices. They don't get a lot of attention; they don't seek a lot of fanfare; but they're busy doing the work this country needs doing. I see them everywhere I travel in this incredible country of ours. I see you, the American people. And in your daily acts of citizenship, I see our future unfolding.</p>
+<p>I see it in the worker on the assembly line who clocked extra shifts to keep his company open and the boss who pays him higher wages instead of laying him off. I see it in the dreamer who stays up late at night to finish her science project and the teacher who comes in early, maybe with some extra supplies that she bought because she knows that that young girl might someday cure a disease.</p>
+<p>I see it in the American who served his time, made bad mistakes as a child, but now is dreaming of starting over. And I see it in the business owner who gives him that second chance. The protester determined to prove that justice matters and the young cop walking the beat, treating everybody with respect, doing the brave, quiet work of keeping us safe.</p>
+<p>I see it in the soldier who gives almost everything to save his brothers, the nurse who tends to him till he can run a marathon, the community that lines up to cheer him on. It's the son who finds the courage to come out as who he is and the father whose love for that son overrides everything he's been taught.</p>
+<p>I see it in the elderly woman who will wait in line to cast her vote as long as she has to, the new citizen who casts his vote for the first time, the volunteers at the polls who believe every vote should count. Because each of them, in different ways, know how much that precious right is worth.</p>
+<p>That's the America I know. That's the country we love: clear eyed, big hearted, undaunted by challenge. Optimistic that unarmed truth and unconditional love will have the final word. That's what makes me so hopeful about our future. I believe in change because I believe in you, the American people. And that's why I stand here as confident as I have ever been that the state of our Union is strong.</p>
+<p>Thank you. God bless you. God bless the United States of America. Thank you.</p>
+  </div>
+
+  <div class="field-node-attached-images">
+    <h2 class="title">Related Images</h2><div class="view view-document-attached-files view-id-document_attached_files view-display-id-block view-dom-id-808c31c6a6ad38bf5f9d8dd04ce7faf5">
+        
+    
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+          
+  <div class="field-election-related-docs">
+    <span class="file"><img class="file-icon" alt="Image icon" title="image/jpeg" src="/modules/file/icons/image-x-generic.png" /> <a href="https://www.presidency.ucsb.edu/sites/default/files/documents_with_attached_files/313186/112638.jpg" type="image/jpeg; length=32121">112638.jpg</a></span>  </div>
+    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  <div class="field-docs-footnote">
+    <p>NOTE: The President spoke at 9:10 p.m. in the House Chamber of the U.S. Capitol. In his remarks, he referred to Speaker of the House of Representatives Paul D. Ryan; Katherine G. Johnson, former physicist and research mathematician, National Aeronautics and Space Administration; and Ahmed Abu Khattala, suspected perpetrator of the terrorist attacks on the U.S. mission in Benghazi, Libya, on September 11, 2012. He also referred to the Islamic State of Iraq and the Levant (ISIL) terrorist organization. The Office of the Press Secretary also released a Spanish language transcript of these remarks.</p>
+  </div>
+
+  <div class="field-prez-document-citation">
+    <p class="ucsbapp_citation">Barack Obama, Address Before a Joint Session of the Congress on the State of the Union Online by Gerhard Peters and John T. Woolley, The American Presidency Project https://www.presidency.ucsb.edu/node/313186</p>  </div>
+    </div>
+    <div class="col-sm-4 ">
+      <div class="group-meta">
+  <div class="field-ds-filed-under-">
+    <h3 class="oog-label">Filed Under</h3>  </div>
+<h3 class="label-above oog-label ds ">Categories</h3><div><a href="/documents/app-categories/presidential/spoken-addresses-and-remarks" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Spoken Addresses and Remarks</a></div><div><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-the-union-addresses" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">State of the Union Addresses</a></div><div><a href="/documents/app-categories/presidential" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Presidential</a></div><div class="jump"><div class="view view-dpg-docs-media view-id-dpg_docs_media view-display-id-block_2 view-dom-id-24e73395a23c02f4b1973219b7e9f2e6">
+        
+    
+      <div class="view-content">
+        <div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+  <div class="field-docs-location">
+    
+
+<div  about="/node/200009" typeof="sioc:Item foaf:Document" class="node node-location-flag view-mode-for_documents ">
+    <div class="row">
+    <div class="col-sm-12 ">
+        <h3 class="field-label">
+    Location  </h3>
+
+  <div class="field-spot-state">
+    Washington, DC  </div>
+
+  <div class="field-spot-flag">
+    <img typeof="foaf:Image" class="img-responsive" src="https://www.presidency.ucsb.edu/sites/default/files/location-flags/DC.jpg" width="120" height="60" alt="" />  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+  </div>
+</div><div class="rrssb"><ul class="rrssb-buttons"><li class="rrssb-twitter"><a href="https://twitter.com/intent/tweet?text=Address%20Before%20a%20Joint%20Session%20of%20the%20Congress%20on%20the%20State%20of%20the%20Union&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-19" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">twitter</span></a></li><li class="rrssb-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-19" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">facebook</span></a></li><li class="rrssb-linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-19&title=Address%20Before%20a%20Joint%20Session%20of%20the%20Congress%20on%20the%20State%20of%20the%20Union" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">linkedin</span></a></li><li class="rrssb-googleplus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-19" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">google+</span></a></li><li class="rrssb-email"><a href="mailto:?subject=Address%20Before%20a%20Joint%20Session%20of%20the%20Congress%20on%20the%20State%20of%20the%20Union&body=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-19" ><span class="rrssb-icon"></span><span class="rrssb-text">email</span></a></li></ul></div>
+  <div class="field-ds-big-search-block">
+    <section id="block-views-5c12edf56060306972111336e0789cf4" class="block block-views other-frontpage-block clearfix">
+
+        <h2 class="block-title">Simple Search of Our Archives</h2>
+    
+  <form action="/advanced-search" method="get" id="views-exposed-form-prez-documents-archive-search2-page-1" accept-charset="UTF-8"><div>  <div class="views-exposed-form vefl-layout bootstrap-6-6-stacked">
+    <div class="views-exposed-widgets clearfix">
+              <div class="vefl-region vefl-region-top">
+                      
+<div id="edit-field-keywords-wrapper" class="views-exposed-widget views-widget-edit-field-keywords">
+    
+  <div class="views-widget">    <div class="form-item form-item-field-keywords form-type-textfield form-group"><input class="form-control form-text" type="text" id="edit-field-keywords" name="field-keywords" value="" size="30" maxlength="128" /></div>  </div>
+  </div>
+                  </div>
+              <div class="vefl-region vefl-region-left">
+                  </div>
+              <div class="vefl-region vefl-region-right">
+                  </div>
+              <div class="vefl-region vefl-region-bottom">
+                      
+<div id="items-per-page-wrapper" class="views-exposed-widget views-widget-items-per-page">
+    
+      <div class="form-item form-item-items-per-page form-type-select form-group"> <label class="control-label" for="edit-items-per-page"># per page</label>
+<select class="form-control form-select" id="edit-items-per-page" name="items_per_page"><option value="5">5</option><option value="10">10</option><option value="25" selected="selected">25</option><option value="50">50</option><option value="100">100</option></select></div>  
+  </div>
+                      
+<div id="button-wrapper" class="views-exposed-widget views-widget-button views-submit-button">
+    
+      <button type="submit" id="edit-submit-prez-documents-archive-search2" name="" value="Apply" class="btn btn-default form-submit">Apply</button>
+  
+  </div>
+                  </div>
+          </div>
+  </div>
+</div></form>
+</section>
+  </div>
+
+  <div class="field-ds-typo">
+    <div class="view view-report-a-typo view-id-report_a_typo view-display-id-block view-dom-id-8ba5c2ab1c6c60316814057aeb5b8eb7">
+        
+    
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/report-a-typo?content_id=313186&amp;title=Address%20Before%20a%20Joint%20Session%20of%20the%20Congress%20on%20the%20State%20of%20the%20Union" class="report-typo" target="_blank"><h3>Report a Typo</h3></a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+
+</section>
+  </div>
+<!-- Content -->
+      </section>
+
+      
+    </div>
+  </div>
+  
+  
+</div>
+<footer class="site-footer no-print">
+  <div class="container">
+      <div class="region region-footer">
+    <section id="block-block-4" class="block block-block attribution clearfix">
+
+      
+  <p><span>The American Presidency Project</span><br />John Woolley and Gerhard Peters<br /><strong><a href="https://www.presidency.ucsb.edu/contact">Contact</a></strong></p>
+
+</section>
+<section id="block-block-6" class="block block-block foot ucsb clearfix">
+
+      
+  <p style="text-align: center;display:inline-block;"><a class="twitter" href="https://twitter.com/presidency_proj" target="_blank">Twitter</a> <a class="facebook" href="https://www.facebook.com/pg/american.presidency.project/" target="_blank">Facebook</a></p>
+
+</section>
+<section id="block-block-5" class="block block-block copyright clearfix">
+
+      
+  <p>Copyright &copy; The American Presidency Project<br /><a href="http://www.ucsb.edu/terms-of-use" target="_blank">Terms of Service</a> | <a href="http://www.policy.ucsb.edu/privacy-notification/" target="_blank">Privacy</a> | <a href="/accessibility">Accessibility</a></p><p><img alt="uc santa barbara logo" src="/sites/default/files/pictures/uc-santa-barbara-wordmark-white1x.svg" style="width: 197px; min-width: 150px; height: 14px;object-fit:cover;" /></p>
+</section>
+  </div>
+  </div>
+  </footer>
+  <script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_NKBfN5q_T2fdeVG6tE3pdNU7glYkyzgPuDTc4K3Ne1w.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"dee899de70","applicationID":"80106271","transactionName":"bl1XYxNYWkVYVxFdWVcXdFQVUFtYFlAWa1NBTEdWEmZaWV1ROkRXXl1qQQhcQw==","queueTime":0,"applicationTime":620,"atts":"QhpUFVtCSUs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

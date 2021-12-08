@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"dee899de70",applicationID:"80106271"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/documents/address-before-joint-session-the-congress-the-state-the-union-23" />
+<link rel="shortlink" href="/node/211931" />
+<link rel="shortcut icon" href="https://www.presidency.ucsb.edu/sites/default/files/favicon-app_0.png" type="image/png" />
+  <title>Address Before a Joint Session of the Congress on the State of the Union | The American Presidency Project</title>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,700,600,300|Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_uuQd0L7qawhKpY0MHO8pVG2W6LSQqS5w9XHZMk3vO2U.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_Cq1R3m_ERXC2ynYnp57HZ-O7ehprd9pvLTuV32DY_ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_BXCmDYWIH6zmNsU0Js_WJYpLGUpEB4GhicAN6AdoPdM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_gsVew5cLoW8YoOz5wlq-MSojac7Ph5f6cujHg4HQfcM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_DW59q6nX-P3-D4cA08_V2iLlMJIaFdPFYT8X6nSFpV8.css" media="print" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/jquery/1.11/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_38VWQ3jjQx0wRFj7gkntZr077GgJoGn5nv3v05IeLLo.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_XklFG3kfg0lBQ-7DD_t92S8L-ZsoZ29gklqc_A_ZH6o.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-86410002-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_0ri5u0t83fzlM17yaHG1aQGEln8kbFJP2gAtCU7MncM.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_gvpxcPEErmaiJn8qGSGx2O87lReivTR09hs10gIG3Yg.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"app","theme_token":"CXHIP8HQ6BXvlOfiD8GF_HyAA9qH0V0o_6Ruxxsj0xs","js":{"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.js":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.filter.js":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.js":1,"modules\/statistics\/statistics.js":1,"sites\/default\/themes\/bootstrap\/js\/bootstrap.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jQuery\/jquery-1.11.2.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jquery.ui\/1.11.4\/jquery-ui.min.js":1,"1":1,"sites\/default\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/default\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/default\/modules\/contrib\/field_group\/field_group.js":1,"sites\/default\/modules\/contrib\/rrssb\/rrssb.init.js":1,"sites\/default\/libraries\/rrssb-plus\/js\/rrssb.min.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/affix.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/alert.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/button.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/carousel.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/collapse.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/dropdown.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/modal.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tooltip.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/popover.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/scrollspy.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tab.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/transition.js":1,"sites\/default\/themes\/app\/scripts\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/default\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/default\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/default\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/default\/modules\/contrib\/extlink\/extlink.css":1,"sites\/default\/modules\/contrib\/views\/css\/views.css":1,"sites\/default\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.filter.css":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.css":1,"sites\/default\/modules\/contrib\/vefl\/css\/vefl-layouts.css":1,"public:\/\/rrssb\/rrssb.3c7a5cb3.css":1,"sites\/default\/libraries\/rrssb-plus\/css\/rrssb.css":1,"sites\/default\/themes\/app\/css\/style.css":1,"sites\/default\/themes\/app\/css\/oog.css":1,"sites\/default\/themes\/app\/css\/print.css":1}},"jquery_ui_multiselect_widget":{"module_path":"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget","multiple":1,"filter":1,"subselector":"#edit-category2","selectedlist":"4","autoOpen":0,"header":1,"height":"auto","classes":"app-uberselect","filter_auto_reset":1,"filter_width":"auto","jquery_ui_multiselect_widget_path_match_exclude":"admin\/*\r\nmedia\/*\r\nfile\/*\r\nsystem\/ajax"},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"dpg_docs_media":{"displays":{"block_2":{"filters":[]}}},"report_a_typo":{"displays":{"block":{"filters":[]}}},"document_attached_files":{"displays":{"block":{"filters":[]},"block_1":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/advanced-search":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]},"statistics":{"data":{"nid":"211931"},"url":"\/modules\/statistics\/statistics.php"},"field_group":{"div":"full"},"rrssb":{"size":"1","shrink":"1","regrow":"","minRows":"1","maxRows":"1","prefixReserve":"1em","prefixHide":"1em","alignRight":0},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-211931 node-type-documents" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div class="wrapper"> <!-- Wrapper for Sticky Footer -->
+
+      <div class="branding-region">
+      <div class="container">
+                  <div class="region region-branding">
+    <section id="block-block-1" class="block block-block site-title-block clearfix">
+
+      
+  <div class="site-title"><a href="https://www.presidency.ucsb.edu/">The American Presidency Project</a></div>
+
+</section>
+<section id="block-block-2" class="block block-block top-link-buttons clearfix">
+
+      
+  <p><a class="btn btn-default" href="https://www.presidency.ucsb.edu/about">About</a><a class="btn btn-default" href="/advanced-search"><span class="glyphicon glyphicon-search"></span> Search</a></p>
+<p id="ucScript"><a href="https://www.ucsb.edu/" target="_blank"><img alt="ucsb wordmark black" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/uc_santa_barbara_wordmark_black_rgb.svg" style="width: 175px; height: 13px;" /></a></p>
+
+</section>
+  </div>
+      </div>
+    </div>
+  
+  <div id="navbar" role="banner" class="navbar navbar-default"><!-- Only way to remove "container" class -->
+    <div class="container">
+      <div class="navbar-header">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+              <div class="navbar-collapse collapse">
+          <nav role="navigation">
+                          <ul class="menu nav navbar-nav"><li class="first expanded active-trail active dropdown"><a href="/documents" class="active-trail dropdown-toggle" data-toggle="dropdown">Documents <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/documents/presidential-documents-archive-guidebook">Guidebook</a></li>
+<li class="last leaf"><a href="/documents/category-attributes">Category Attributes</a></li>
+</ul></li>
+<li class="collapsed"><a href="/statistics">Statistics</a></li>
+<li class="leaf"><a href="/media" title="">Media Archive</a></li>
+<li class="leaf"><a href="/presidents" title="">Presidents</a></li>
+<li class="leaf"><a href="/analyses" title="">Analyses</a></li>
+<li class="last leaf"><a href="https://giving.ucsb.edu/Funds/Give?id=185" title="">GIVE</a></li>
+</ul>                                              </nav>
+        </div>
+          </div>
+  </div>
+
+  <div role="banner" id="page-header" class="site-header">
+      </div>
+
+  <div class="main-container container">
+    <div class="row">
+
+          <aside class="col-sm-3 no-print" role="complementary">
+            <div class="region region-sidebar-first well">
+    <section id="block-menu-block-8" class="block block-menu-block doc-sub clearfix">
+
+        <h2 class="block-title">Documents</h2>
+    
+  <div class="menu-block-wrapper menu-block-8 menu-name-menu-documents parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-10329"><a href="/documents/presidential-documents-archive-guidebook" title="">Archive Guidebook</a></li>
+<li class="leaf active-trail menu-mlid-10330 active"><a href="/documents" title="" class="active-trail">Categories</a></li>
+<li class="last leaf menu-mlid-10791"><a href="/documents/category-attributes" title="">Attributes</a></li>
+</ul></div>
+
+</section>
+<section id="block-menu-block-7" class="block block-menu-block dropdown clearfix">
+
+        <h2 class="block-title">Categories</h2>
+    
+  <div class="menu-block-wrapper menu-block-7 menu-name-menu-doc-cat-menu parent-mlid-0 menu-level-1">
+    <ul class="menu nav"><li class="first expanded menu-mlid-10954 dropdown"><a href="/documents/app-categories/presidential" title="Presidential (73842)" class="dropdown-toggle" data-toggle="dropdown">Presidential (259551) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10904"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/correspondents-association" title="Correspondents&#039; Association (31)">Correspondents&#039; Association (31)</a></li>
+<li class="leaf menu-mlid-10910"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/eulogies" title="Eulogies (55)">Eulogies (57)</a></li>
+<li class="leaf menu-mlid-10930"><a href="/documents/app-categories/written-presidential-orders/presidential/executive-orders" title="Executive Orders (5885)">Executive Orders (6135)</a></li>
+<li class="leaf menu-mlid-10912"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/fireside-chats" title="Fireside Chats (27)">Fireside Chats (27)</a></li>
+<li class="leaf menu-mlid-10906"><a href="/documents/app-categories/presidential/interviews" title="Interviews (950)">Interviews (955)</a></li>
+<li class="leaf menu-mlid-10894"><a href="/documents/app-categories/presidential/letters" title="Letters (4363)">Letters (4599)</a></li>
+<li class="leaf menu-mlid-10898"><a href="/documents/app-categories/presidential/miscellaneous-remarks" title="Miscellaneous Remarks (21956)">Miscellaneous Remarks (23689)</a></li>
+<li class="leaf menu-mlid-10899"><a href="/documents/app-categories/presidential/miscellaneous-written" title="Miscellaneous Written (741)">Miscellaneous Written (841)</a></li>
+<li class="leaf menu-mlid-10907"><a href="/documents/app-categories/presidential/news-conferences" title="News Conferences (2096)">News Conferences (2474)</a></li>
+<li class="leaf menu-mlid-10933"><a href="/documents/app-categories/written-statements/presidential/signing-statements" title="Signing Statements (2082)">Signing Statements (2151)</a></li>
+<li class="collapsed menu-mlid-10909"><a href="/documents/app-categories/presidential/spoken-addresses-and-remarks" title="Spoken Addresses and Remarks (5428)">Spoken Addresses and Remarks (10397)</a></li>
+<li class="leaf menu-mlid-10911"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/farewell-address" title="Farewell Address (10)">Farewell Address (11)</a></li>
+<li class="leaf menu-mlid-10913"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/inaugural-addresses" title="Inaugural Addresses (61)">Inaugural Addresses (62)</a></li>
+<li class="leaf menu-mlid-10895"><a href="/documents/app-categories/presidential/memoranda" title="Memoranda (1828)">Memoranda (2017)</a></li>
+<li class="leaf menu-mlid-10927"><a href="/documents/app-categories/written-messages/presidential/messages" title="Messages (11049)">Messages (11308)</a></li>
+<li class="leaf menu-mlid-10914"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/oral-address" title="Oral Address (618)">Oral Address (631)</a></li>
+<li class="leaf menu-mlid-10931"><a href="/documents/app-categories/written-presidential-orders/presidential/proclamations" title="Proclamations (7974)">Proclamations (8644)</a></li>
+<li class="leaf menu-mlid-10919"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/saturday-weekly-addresses-radio" title="Saturday Addresses (Radio and Webcast) (1629)">Saturday Weekly Addresses (Radio and Webcast) (1639)</a></li>
+<li class="leaf menu-mlid-10920"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-dinners" title="State Dinners (953)">State Dinners (953)</a></li>
+<li class="leaf menu-mlid-10921"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-the-union-addresses" title="State of the Union Addresses (98)">State of the Union Addresses (98)</a></li>
+<li class="leaf menu-mlid-10928"><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" title="State of the Union Messages (1)">State of the Union Messages (140)</a></li>
+<li class="leaf menu-mlid-10934"><a href="/documents/app-categories/written-statements/presidential/statements" title="Statements (8647)">Statements (9165)</a></li>
+<li class="leaf menu-mlid-10936"><a href="/documents/app-categories/written-statements/presidential/statements-administration-policy" title="Statements of Administration Policy (5081)">Statements of Administration Policy (5267)</a></li>
+<li class="leaf menu-mlid-10924"><a href="/documents/app-categories/presidential/vetoes" title="Vetoes (266)">Vetoes (1191)</a></li>
+<li class="collapsed menu-mlid-10925"><a href="/documents/app-categories/presidential/written-messages" title="Written Messages (11021)">Written Messages (23748)</a></li>
+<li class="expanded menu-mlid-10929"><a href="/documents/app-categories/presidential/written-presidential-orders" title="Written Presidential Orders (13858)">Written Presidential Orders (31697)</a></li>
+<li class="last collapsed menu-mlid-10932"><a href="/documents/app-categories/presidential/written-statements" title="Written Statements (16012)">Written Statements (33142)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10903 dropdown"><a href="/documents/app-categories/pressmedia" title="Press (9114)" class="dropdown-toggle" data-toggle="dropdown">Press/Media (17316) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first last leaf menu-mlid-10908"><a href="/documents/app-categories/pressmedia/press-briefings" title="Press Briefings (6037)">Press Briefings (6535)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10887 dropdown"><a href="/documents/app-categories/elections-and-transitions" title="Elections and Transitions (16448)" class="dropdown-toggle" data-toggle="dropdown">Elections and Transitions (24429) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10888"><a href="/documents/app-categories/elections-and-transitions/campaign-documents" title="Campaign Documents (2747)">Campaign Documents (4446)</a></li>
+<li class="expanded menu-mlid-10889"><a href="/documents/app-categories/elections-and-transitions/convention-speeches" title="Convention Speeches (50)">Convention Speeches (76)</a></li>
+<li class="leaf menu-mlid-10890"><a href="/documents/app-categories/elections-and-transitions/debates" title="Debates (152)">Debates (171)</a></li>
+<li class="leaf menu-mlid-10892"><a href="/documents/app-categories/elections-and-transitions/party-platforms" title="Party Platforms (98)">Party Platforms (101)</a></li>
+<li class="last leaf menu-mlid-10893"><a href="/documents/app-categories/elections-and-transitions/transition-documents" title="Transition Documents (346)">Transition Documents (549)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10896 dropdown"><a href="/documents/app-categories/miscellaneous" title="Miscellaneous (46156)" class="dropdown-toggle" data-toggle="dropdown">Miscellaneous (432) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10900"><a href="/documents/app-categories/miscellaneous/opposition-party-responses" title="Opposition Party Responses (28)">Opposition Party Responses (32)</a></li>
+<li class="last leaf menu-mlid-10915"><a href="/documents/app-categories/miscellaneous/post-presidential-remarks" title="Post Presidential Remarks (5)">Post Presidential Remarks (10)</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-10883"><a href="/documents/app-categories/congressional" title="Congressional (3)">Congressional (37)</a></li>
+</ul></div>
+
+</section>
+  </div>
+        </aside>  <!-- /#sidebar-first -->
+      
+      <section class="col-sm-9">
+                        <a id="main-content"></a>
+                
+                          
+                          <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  
+
+<div  about="/documents/address-before-joint-session-the-congress-the-state-the-union-23" typeof="sioc:Item foaf:Document" class="node node-documents view-mode-full ">
+    <div class="row">
+    <div class="col-sm-8 ">
+      
+  <div class="field-docs-person">
+    <div  about="/people/president/george-w-bush" typeof="sioc:Item foaf:Document" class="ds-1col node node-prez-diet view-mode-for_documents  clearfix">
+
+  
+  
+  <div class="field-diet-pictures">
+    <img typeof="foaf:Image" class="img-responsive" src="https://www.presidency.ucsb.edu/sites/default/files/styles/doc_img/public/people/george-w-bush_1.jpg?itok=v7dE_cDM" width="170" height="230" alt="George W. Bush photo" />  </div>
+
+  <div class="field-title">
+    <h3 class="diet-title"><a href="/people/president/george-w-bush">George W. Bush</a></h3>  </div>
+
+  <div class="field-ds-byline">
+    
+  <div class="field-resuable-byline">
+    <div class="diet-by-line president"><span class="presidential-ordinal-number">43rd</span> <span class="job-position">President of the United States:</span> <span class="dates">2001 ‐ 2009</span></div>
+  </div>
+  </div>
+
+  <div class="field-ds-doc-title">
+    <h1>Address Before a Joint Session of the Congress on the State of the Union</h1>
+  </div>
+</div>
+
+  </div>
+
+  <div class="field-docs-start-date-time">
+    <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2003-01-28T21:01:00+00:00">January 28, 2003</span>  </div>
+
+  <div class="field-docs-content">
+    <p>Mr. Speaker, Vice President Cheney, Members of Congress, distinguished citizens and fellow citizens: Every year, by law and by custom, we meet here to consider the state of the Union. This year, we gather in this Chamber deeply aware of decisive days that lie ahead.</p>
+<p>You and I serve our country in a time of great consequence. During this session of Congress, we have the duty to reform domestic programs vital to our country. We have the opportunity to save millions of lives abroad from a terrible disease. We will work for a prosperity that is broadly shared, and we will answer every danger and every enemy that threatens the American people.</p>
+<p>In all these days of promise and days of reckoning, we can be confident. In a whirlwind of change and hope and peril, our faith is sure; our resolve is firm; and our Union is strong.</p>
+<p>This country has many challenges. We will not deny, we will not ignore, we will not pass along our problems to other Congresses, to other Presidents, and other generations. We will confront them with focus and clarity and courage.</p>
+<p>During the last 2 years, we have seen what can be accomplished when we work together. To lift the standards of our public schools, we achieved historic education reform, which must now be carried out in every school and in every classroom so that every child in America can read and learn and succeed in life. To protect our country, we reorganized our Government and created the Department of Homeland Security, which is mobilizing against the threats of a new era. To bring our economy out of recession, we delivered the largest tax relief in a generation. To insist on integrity in American business, we passed tough reforms, and we are holding corporate criminals to account.</p>
+<p>Some might call this a good record. I call it a good start. Tonight I ask the House and the Senate to join me in the next bold steps to serve our fellow citizens.</p>
+<p>Our first goal is clear: We must have an economy that grows fast enough to employ every man and woman who seeks a job. After recession, terrorist attacks, corporate scandals, and stock market declines, our economy is recovering. Yet, it's not growing fast enough or strongly enough. With unemployment rising, our Nation needs more small businesses to open, more companies to invest and expand, more employers to put up the sign that says "Help Wanted."</p>
+<p>Jobs are created when the economy grows. The economy grows when Americans have more money to spend and invest, and the best and fairest way to make sure Americans have that money is not to tax it away in the first place.</p>
+<p>I am proposing that all the income-tax reductions set for 2004 and 2006 be made permanent and effective this year. And under my plan, as soon as I've signed the bill, this extra money will start showing up in workers' paychecks. Instead of gradually reducing the marriage penalty, we should do it now. Instead of slowly raising the child credit to $1,000, we should send the checks to American families now.</p>
+<p>The tax relief is for everyone who pays income taxes, and it will help our economy immediately. Ninety-two million Americans will keep, this year, an average of almost $1,100 more of their own money. A family of four with an income of $40,000 would see their Federal income taxes fall from $1,178 to $45 per year. Our plan will improve the bottom line for more than 23 million small businesses.</p>
+<p>You, the Congress, have already passed all these reductions and promised them for future years. If this tax relief is good for Americans 3 or 5 or 7 years from now, it is even better for Americans today.</p>
+<p>We should also strengthen the economy by treating investors equally in our tax laws. It's fair to tax a company's profits. It is not fair to again tax the shareholder on the same profits. To boost investor confidence and to help the nearly 10 million seniors who receive dividend income, I ask you to end the unfair double taxation of dividends.</p>
+<p>Lower taxes and greater investment will help this economy expand. More jobs mean more taxpayers and higher revenues to our Government. The best way to address the deficit and move toward a balanced budget is to encourage economic growth and to show some spending discipline in Washington, DC.</p>
+<p>We must work together to fund only our most important priorities. I will send you a budget that increases discretionary spending by 4 percent next year, about as much as the average family's income is expected to grow. And that is a good benchmark for us. Federal spending should not rise any faster than the paychecks of American families.</p>
+<p>A growing economy and a focus on essential priorities will be crucial to the future of Social Security. As we continue to work together to keep Social Security sound and reliable, we must offer younger workers a chance to invest in retirement accounts that they will control and they will own.</p>
+<p>Our second goal is high quality, affordable health for all Americans. The American system of medicine is a model of skill and innovation, with a pace of discovery that is adding good years to our lives. Yet for many people, medical care costs too much, and many have no health coverage at all. These problems will not be solved with a nationalized health care system that dictates coverage and rations care.</p>
+<p>Instead, we must work toward a system in which all Americans have a good insurance policy, choose their own doctors, and seniors and low-income Americans receive the help they need. Instead of bureaucrats and trial lawyers and HMOs, we must put doctors and nurses and patients back in charge of American medicine.</p>
+<p>Health care reform must begin with Medicare. Medicare is the binding commitment of a caring society. We must renew that commitment by giving seniors access to preventive medicine and new drugs that are transforming health care in America.</p>
+<p>Seniors happy with the current Medicare system should be able to keep their coverage just the way it is. And just like you, the Members of Congress, and your staffs and other Federal employees, all seniors should have the choice of a health care plan that provides prescription drugs.</p>
+<p>My budget will commit an additional $400 billion over the next decade to reform and strengthen Medicare. Leaders of both political parties have talked for years about strengthening Medicare. I urge the Members of this new Congress to act this year.</p>
+<p>To improve our health care system, we must address one of the prime causes of higher cost, the constant threat that physicians and hospitals will be unfairly sued. Because of excessive litigation, everybody pays more for health care, and many parts of America are losing fine doctors. No one has ever been healed by a frivolous lawsuit. I urge the Congress to pass medical liability reform.</p>
+<p>Our third goal is to promote energy independence for our country while dramatically improving the environment. I have sent you a comprehensive energy plan to promote energy efficiency and conservation, to develop cleaner technology, and to produce more energy at home. I have sent you Clear Skies legislation that mandates a 70-percent cut in air pollution from powerplants over the next 15 years. I have sent you a Healthy Forests Initiative, to help prevent the catastrophic fires that devastate communities, kill wildlife, and burn away millions of acres of treasured forests.</p>
+<p>I urge you to pass these measures, for the good of both our environment and our economy. Even more, I ask you to take a crucial step and protect our environment in ways that generations before us could not have imagined.</p>
+<p>In this century, the greatest environmental progress will come about not through endless lawsuits or command-and-control regulations but through technology and innovation. Tonight I'm proposing $1.2 billion in research funding so that America can lead the world in developing clean, hydrogen-powered automobiles.</p>
+<p>A simple chemical reaction between hydrogen and oxygen generates energy which can be used to power a car, producing only water, not exhaust fumes. With a new national commitment, our scientists and engineers will overcome obstacles to taking these cars from laboratory to showroom, so that the first car driven by a child born today could be powered by hydrogen and pollution-free. Join me in this important innovation to make our air significantly cleaner and our country much less dependent on foreign sources of energy.</p>
+<p>Our fourth goal is to apply the compassion of America to the deepest problems of America. For so many in our country, the homeless and the fatherless, the addicted, the need is great. Yet there's power, wonder-working power, in the goodness and idealism and faith of the American people.</p>
+<p>Americans are doing the work of compassion every day, visiting prisoners, providing shelter for battered women, bringing companionship to lonely seniors. These good works deserve our praise. They deserve our personal support, and when appropriate, they deserve the assistance of the Federal Government.</p>
+<p>I urge you to pass both my Faith-Based Initiative and the "Citizen Service Act," to encourage acts of compassion that can transform America, one heart and one soul at a time.</p>
+<p>Last year, I called on my fellow citizens to participate in the USA Freedom Corps, which is enlisting tens of thousands of new volunteers across America. Tonight I ask Congress and the American people to focus the spirit of service and the resources of Government on the needs of some of our most vulnerable citizens, boys and girls trying to grow up without guidance and attention and children who have to go through a prison gate to be hugged by their mom or dad. I propose a $450 million initiative to bring mentors to more than a million disadvantaged junior high students and children of prisoners. Government will support the training and recruiting of mentors. Yet it is the men and women of America who will fill the need. One mentor, one person, can change a life forever, and I urge you to be that one person.</p>
+<p>Another cause of hopelessness is addiction to drugs. Addiction crowds out friendship, ambition, moral conviction and reduces all the richness of life to a single destructive desire. As a government, we are fighting illegal drugs by cutting off supplies and reducing demand through antidrug education programs. Yet for those already addicted, the fight against drugs is a fight for their own lives. Too many Americans in search of treatment cannot get it. So tonight I propose a new $600 million program to help an additional 300,000 Americans receive treatment over the next 3 years.</p>
+<p>Our Nation is blessed with recovery programs that do amazing work. One of them is found at the Healing Place Church in Baton Rouge, Louisiana. A man in the program said, "God does miracles in people's lives, and you never think it could be you." Tonight let us bring to all Americans who struggle with drug addiction this message of hope: The miracle of recovery is possible, and it could be you.</p>
+<p>By caring for children who need mentors and for addicted men and women who need treatment, we are building a more welcoming society, a culture that values every life. And in this work, we must not overlook the weakest among us. I ask you to protect infants at the very hour of their birth and end the practice of partial-birth abortion. And because no human life should be started or ended as the object of an experiment, I ask you to set a high standard for humanity and pass a law against all human cloning.</p>
+<p>The qualities of courage and compassion that we strive for in America also determine our conduct abroad. The American flag stands for more than our power and our interests. Our Founders dedicated this country to the cause of human dignity, the rights of every person, and the possibilities of every life. This conviction leads us into the world to help the afflicted and defend the peace and confound the designs of evil men.</p>
+<p>In Afghanistan, we helped to liberate an oppressed people. And we will continue helping them secure their country, rebuild their society, and educate all their children, boys and girls. In the Middle East, we will continue to seek peace between a secure Israel and a democratic Palestine. Across the Earth, America is feeding the hungry. More than 60 percent of international food aid comes as a gift from the people of the United States. As our Nation moves troops and builds alliances to make our world safer, we must also remember our calling as a blessed country is to make the world better.</p>
+<p>Today, on the continent of Africa, nearly 30 million people have the AIDS virus, including 3 million children under the age 15. There are whole countries in Africa where more than one-third of the adult population carries the infection. More than 4 million require immediate drug treatment. Yet across that continent, only 50,000 AIDS victims—only 50,000—are receiving the medicine they need. Because the AIDS diagnosis is considered a death sentence, many do not seek treatment. Almost all who do are turned away. A doctor in rural South Africa describes his frustration. He says, "We have no medicines. Many hospitals tell people, ‘You've got AIDS. We can't help you. Go home and die."' In an age of miraculous medicines, no person should have to hear those words.</p>
+<p>AIDS can be prevented. Antiretroviral drugs can extend life for many years. And the cost of those drugs has dropped from $12,000 a year to under $300 a year, which places a tremendous possibility within our grasp. Ladies and gentlemen, seldom has history offered a greater opportunity to do so much for so many.</p>
+<p>We have confronted and will continue to confront HIV/AIDS in our own country. And to meet a severe and urgent crisis abroad, tonight I propose the Emergency Plan for AIDS Relief, a work of mercy beyond all current international efforts to help the people of Africa. This comprehensive plan will prevent 7 million new AIDS infections, treat at least 2 million people with life-extending drugs, and provide humane care for millions of people suffering from AIDS and for children orphaned by AIDS. I ask the Congress to commit $15 billion over the next 5 years, including nearly $10 billion in new money, to turn the tide against AIDS in the most afflicted nations of Africa and the Caribbean.</p>
+<p>This Nation can lead the world in sparing innocent people from a plague of nature. And this Nation is leading the world in confronting and defeating the manmade evil of international terrorism.</p>
+<p>There are days when our fellow citizens do not hear news about the war on terror. There's never a day when I do not learn of another threat or receive reports of operations in progress or give an order in this global war against a scattered network of killers. The war goes on, and we are winning.</p>
+<p>To date, we've arrested or otherwise dealt with many key commanders of Al Qaida. They include a man who directed logistics and funding for the September the 11th attacks, the chief of Al Qaida operations in the Persian Gulf who planned the bombings of our embassies in east Africa and the U.S.S. <em>Cole</em>, an Al Qaida operations chief from Southeast Asia, a former director of Al Qaida's training camps in Afghanistan, a key Al Qaida operative in Europe, a major Al Qaida leader in Yemen. All told, more than 3,000 suspected terrorists have been arrested in many countries. Many others have met a different fate. Let's put it this way: They are no longer a problem to the United States and our friends and allies.</p>
+<p>We are working closely with other nations to prevent further attacks. America and coalition countries have uncovered and stopped terrorist conspiracies targeting the Embassy in Yemen, the American Embassy in Singapore, a Saudi military base, ships in the Straits of Hormuz and the Straits of Gibraltar. We've broken Al Qaida cells in Hamburg, Milan, Madrid, London, Paris, as well as Buffalo, New York.</p>
+<p>We have the terrorists on the run. We're keeping them on the run. One by one, the terrorists are learning the meaning of American justice.</p>
+<p>As we fight this war, we will remember where it began: Here, in our own country. This Government is taking unprecedented measures to protect our people and defend our homeland. We've intensified security at the borders and ports of entry, posted more than 50,000 newly trained Federal screeners in airports, begun inoculating troops and first-responders against smallpox, and are deploying the Nation's first early warning network of sensors to detect biological attack. And this year, for the first time, we are beginning to field a defense to protect this Nation against ballistic missiles.</p>
+<p>I thank the Congress for supporting these measures. I ask you tonight to add to our future security with a major research and production effort to guard our people against bioterrorism, called Project Bio-Shield. The budget I send you will propose almost $6 billion to quickly make available effective vaccines and treatments against agents like anthrax, botulinum toxin, Ebola, and plague. We must assume that our enemies would use these diseases as weapons, and we must act before the dangers are upon us.</p>
+<p>Since September the 11th, our intelligence and law enforcement agencies have worked more closely than ever to track and disrupt the terrorists. The FBI is improving its ability to analyze intelligence and is transforming itself to meet new threats. Tonight I am instructing the leaders of the FBI, the CIA, the Homeland Security, and the Department of Defense to develop a Terrorist Threat Integration Center, to merge and analyze all threat information in a single location. Our Government must have the very best information possible, and we will use it to make sure the right people are in the right places to protect all our citizens.</p>
+<p>Our war against terror is a contest of will in which perseverance is power. In the ruins of two towers, at the western wall of the Pentagon, on a field in Pennsylvania, this Nation made a pledge, and we renew that pledge tonight: Whatever the duration of this struggle and whatever the difficulties, we will not permit the triumph of violence in the affairs of men; free people will set the course of history.</p>
+<p>Today, the gravest danger in the war on terror, the gravest danger facing America and the world, is outlaw regimes that seek and possess nuclear, chemical, and biological weapons. These regimes could use such weapons for blackmail, terror, and mass murder. They could also give or sell those weapons to terrorist allies, who would use them without the least hesitation.</p>
+<p>This threat is new. America's duty is familiar. Throughout the 20th century, small groups of men seized control of great nations, built armies and arsenals, and set out to dominate the weak and intimidate the world. In each case, their ambitions of cruelty and murder had no limit. In each case, the ambitions of Hitlerism, militarism, and communism were defeated by the will of free peoples, by the strength of great alliances, and by the might of the United States of America.</p>
+<p>Now, in this century, the ideology of power and domination has appeared again and seeks to gain the ultimate weapons of terror. Once again, this Nation and all our friends are all that stand between a world at peace and a world of chaos and constant alarm. Once again, we are called to defend the safety of our people and the hopes of all mankind. And we accept this responsibility.</p>
+<p>America is making a broad and determined effort to confront these dangers. We have called on the United Nations to fulfill its charter and stand by its demand that Iraq disarm. We're strongly supporting the International Atomic Energy Agency in its mission to track and control nuclear materials around the world. We're working with other governments to secure nuclear materials in the former Soviet Union and to strengthen global treaties banning the production and shipment of missile technologies and weapons of mass destruction.</p>
+<p>In all these efforts, however, America's purpose is more than to follow a process; it is to achieve a result, the end of terrible threats to the civilized world. All free nations have a stake in preventing sudden and catastrophic attacks. And we're asking them to join us, and many are doing so. Yet the course of this Nation does not depend on the decisions of others. Whatever action is required, whenever action is necessary, I will defend the freedom and security of the American people.</p>
+<p>Different threats require different strategies. In Iran, we continue to see a Government that represses its people, pursues weapons of mass destruction, and supports terror. We also see Iranian citizens risking intimidation and death as they speak out for liberty and human rights and democracy. Iranians, like all people, have a right to choose their own Government and determine their own destiny, and the United States supports their aspirations to live in freedom.</p>
+<p>On the Korean Peninsula, an oppressive regime rules a people living in fear and starvation. Throughout the 1990s, the United States relied on a negotiated framework to keep North Korea from gaining nuclear weapons. We now know that that regime was deceiving the world and developing those weapons all along. And today, the North Korean regime is using its nuclear program to incite fear and seek concessions. America and the world will not be blackmailed.</p>
+<p>America is working with the countries of the region, South Korea, Japan, China, and Russia, to find a peaceful solution and to show the North Korean Government that nuclear weapons will bring only isolation, economic stagnation, and continued hardship. The North Korean regime will find respect in the world and revival for its people only when it turns away from its nuclear ambitions.</p>
+<p>Our Nation and the world must learn the lessons of the Korean Peninsula and not allow an even greater threat to rise up in Iraq. A brutal dictator, with a history of reckless aggression, with ties to terrorism, with great potential wealth, will not be permitted to dominate a vital region and threaten the United States.</p>
+<p>Twelve years ago, Saddam Hussein faced the prospect of being the last casualty in a war he had started and lost. To spare himself, he agreed to disarm of all weapons of mass destruction. For the next 12 years, he systematically violated that agreement. He pursued chemical, biological, and nuclear weapons, even while inspectors were in his country. Nothing to date has restrained him from his pursuit of these weapons, not economic sanctions, not isolation from the civilized world, not even cruise missile strikes on his military facilities.</p>
+<p>Almost 3 months ago, the United Nations Security Council gave Saddam Hussein his final chance to disarm. He has shown instead utter contempt for the United Nations and for the opinion of the world. The 108 U.N. inspectors were sent to conduct— were not sent to conduct a scavenger hunt for hidden materials across a country the size of California. The job of the inspectors is to verify that Iraq's regime is disarming. It is up to Iraq to show exactly where it is hiding its banned weapons, lay those weapons out for the world to see, and destroy them as directed. Nothing like this has happened.</p>
+<p>The United Nations concluded in 1999 that Saddam Hussein had biological weapons sufficient to produce over 25,000 liters of anthrax, enough doses to kill several million people. He hasn't accounted for that material. He's given no evidence that he has destroyed it.</p>
+<p>The United Nations concluded that Saddam Hussein had materials sufficient to produce more than 38,000 liters of botulinum toxin, enough to subject millions of people to death by respiratory failure. He hasn't accounted for that material. He's given no evidence that he has destroyed it.</p>
+<p>Our intelligence officials estimate that Saddam Hussein had the materials to produce as much as 500 tons of sarin, mustard, and VX nerve agent. In such quantities, these chemical agents could also kill untold thousands. He's not accounted for these materials. He has given no evidence that he has destroyed them.</p>
+<p>U.S. intelligence indicates that Saddam Hussein had upwards of 30,000 munitions capable of delivering chemical agents. Inspectors recently turned up 16 of them, despite Iraq's recent declaration denying their existence. Saddam Hussein has not accounted for the remaining 29,984 of these prohibited munitions. He's given no evidence that he has destroyed them.</p>
+<p>From three Iraqi defectors we know that Iraq, in the late 1990s, had several mobile biological weapons labs. These are designed to produce germ warfare agents and can be moved from place to a place to evade inspectors. Saddam Hussein has not disclosed these facilities. He's given no evidence that he has destroyed them.</p>
+<p>The International Atomic Energy Agency confirmed in the 1990s that Saddam Hussein had an advanced nuclear weapons development program, had a design for a nuclear weapon, and was working on five different methods of enriching uranium for a bomb. The British Government has learned that Saddam Hussein recently sought significant quantities of uranium from Africa. Our intelligence sources tell us that he has attempted to purchase high-strength aluminum tubes suitable for nuclear weapons production. Saddam Hussein has not credibly explained these activities. He clearly has much to hide.</p>
+<p>The dictator of Iraq is not disarming. To the contrary, he is deceiving. From intelligence sources we know, for instance, that thousands of Iraqi security personnel are at work hiding documents and materials from the U.N. inspectors, sanitizing inspection sites, and monitoring the inspectors themselves. Iraqi officials accompany the inspectors in order to intimidate witnesses. Iraq is blocking U-2 surveillance flights requested by the United Nations. Iraqi intelligence officers are posing as the scientists inspectors are supposed to interview. Real scientists have been coached by Iraqi officials on what to say. Intelligence sources indicate that Saddam Hussein has ordered that scientists who cooperate with U.N. inspectors in disarming Iraq will be killed, along with their families.</p>
+<p>Year after year, Saddam Hussein has gone to elaborate lengths, spent enormous sums, taken great risks to build and keep weapons of mass destruction. But why? The only possible explanation, the only possible use he could have for those weapons, is to dominate, intimidate, or attack.</p>
+<p>With nuclear arms or a full arsenal of chemical and biological weapons, Saddam Hussein could resume his ambitions of conquest in the Middle East and create deadly havoc in that region. And this Congress and the American people must recognize another threat. Evidence from intelligence sources, secret communications, and statements by people now in custody reveal that Saddam Hussein aids and protects terrorists, including members of Al Qaida. Secretly and without fingerprints, he could provide one of his hidden weapons to terrorists or help them develop their own.</p>
+<p>Before September the 11th, many in the world believed that Saddam Hussein could be contained. But chemical agents, lethal viruses, and shadowy terrorist networks are not easily contained. Imagine those 19 hijackers with other weapons and other plans, this time armed by Saddam Hussein. It would take one vial, one canister, one crate slipped into this country to bring a day of horror like none we have ever known. We will do everything in our power to make sure that that day never comes.</p>
+<p>Some have said we must not act until the threat is imminent. Since when have terrorists and tyrants announced their intentions, politely putting us on notice before they strike? If this threat is permitted to fully and suddenly emerge, all actions, all words, and all recriminations would come too late. Trusting in the sanity and restraint of Saddam Hussein is not a strategy, and it is not an option.</p>
+<p>The dictator who is assembling the world's most dangerous weapons has already used them on whole villages, leaving thousands of his own citizens dead, blind, or disfigured. Iraqi refugees tell us how forced confessions are obtained, by torturing children while their parents are made to watch. International human rights groups have cataloged other methods used in the torture chambers of Iraq: electric shock, burning with hot irons, dripping acid on the skin, mutilation with electric drills, cutting out tongues, and rape. If this is not evil, then evil has no meaning.</p>
+<p>And tonight I have a message for the brave and oppressed people of Iraq: Your enemy is not surrounding your country; your enemy is ruling your country. And the day he and his regime are removed from power will be the day of your liberation.</p>
+<p>The world has waited 12 years for Iraq to disarm. America will not accept a serious and mounting threat to our country and our friends and our allies. The United States will ask the U.N. Security Council to convene on February the 5th to consider the facts of Iraq's ongoing defiance of the world. Secretary of State Powell will present information and intelligence about Iraqi's legal—Iraq's illegal weapons programs, its attempt to hide those weapons from inspectors, and its links to terrorist groups.</p>
+<p>We will consult. But let there be no misunderstanding: If Saddam Hussein does not fully disarm, for the safety of our people and for the peace of the world, we will lead a coalition to disarm him.</p>
+<p>Tonight I have a message for the men and women who will keep the peace, members of the American Armed Forces: Many of you are assembling in or near the Middle East, and some crucial hours may lay ahead. In those hours, the success of our cause will depend on you. Your training has prepared you. Your honor will guide you. You believe in America, and America believes in you.</p>
+<p>Sending Americans into battle is the most profound decision a President can make. The technologies of war have changed; the risks and suffering of war have not. For the brave Americans who bear the risk, no victory is free from sorrow. This Nation fights reluctantly, because we know the cost and we dread the days of mourning that always come.</p>
+<p>We seek peace. We strive for peace. And sometimes peace must be defended. A future lived at the mercy of terrible threats is no peace at all. If war is forced upon us, we will fight in a just cause and by just means, sparing, in every way we can, the innocent. And if war is forced upon us, we will fight with the full force and might of the United States military, and we will prevail.</p>
+<p>And as we and our coalition partners are doing in Afghanistan, we will bring to the Iraqi people food and medicines and supplies and freedom.</p>
+<p>Many challenges, abroad and at home, have arrived in a single season. In 2 years, America has gone from a sense of invulnerability to an awareness of peril, from bitter division in small matters to calm unity in great causes. And we go forward with confidence, because this call of history has come to the right country.</p>
+<p>Americans are a resolute people who have risen to every test of our time. Adversity has revealed the character of our country, to the world and to ourselves. America is a strong nation and honorable in the use of our strength. We exercise power without conquest, and we sacrifice for the liberty of strangers.</p>
+<p>Americans are a free people who know that freedom is the right of every person and the future of every nation. The liberty we prize is not America's gift to the world; it is God's gift to humanity.</p>
+<p>We Americans have faith in ourselves, but not in ourselves alone. We do not know—we do not claim to know all the ways of providence, yet we can trust in them, placing our confidence in the loving God behind all of life and all of history.</p>
+<p>May He guide us now. And may God continue to bless the United States of America.</p>
+  </div>
+<div class="field-docs-media-video-hosted">
+<div class="embedded-video">
+  <div class="player">
+    <iframe class="" width="640" height="360" src="//www.youtube.com/embed/egxMfR4I5po?width%3D640%26amp%3Bheight%3D360%26amp%3Btheme%3Ddark%26amp%3Bautoplay%3D0%26amp%3Bvq%3Dlarge%26amp%3Brel%3D0%26amp%3Bshowinfo%3D0%26amp%3Bmodestbranding%3D1%26amp%3Biv_load_policy%3D3%26amp%3Bcontrols%3D0%26amp%3Bautohide%3D2%26amp%3Bwmode%3Dopaque" frameborder="0" allowfullscreen></iframe>  </div>
+</div>
+</div><a name="docmedia"></a>
+  <div class="field-docs-footnote">
+    <p>NOTE: The President spoke at 9:01 p.m. in the House Chamber of the Capitol. In his remarks, he referred to President Saddam Hussein of Iraq. The Office of the Press Secretary also released a Spanish language transcript of this address.</p>
+  </div>
+
+  <div class="field-prez-document-citation">
+    <p class="ucsbapp_citation">George W. Bush, Address Before a Joint Session of the Congress on the State of the Union Online by Gerhard Peters and John T. Woolley, The American Presidency Project https://www.presidency.ucsb.edu/node/211931</p>  </div>
+    </div>
+    <div class="col-sm-4 ">
+      <div class="group-meta">
+  <div class="field-ds-filed-under-">
+    <h3 class="oog-label">Filed Under</h3>  </div>
+<h3 class="label-above oog-label ds ">Categories</h3><div><a href="/documents/app-categories/presidential/spoken-addresses-and-remarks" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Spoken Addresses and Remarks</a></div><div><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-the-union-addresses" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">State of the Union Addresses</a></div><div><a href="/documents/app-categories/presidential" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Presidential</a></div><div class="jump"><div class="view view-dpg-docs-media view-id-dpg_docs_media view-display-id-block_2 view-dom-id-bb66cba95a1e392c838aa378a4958746">
+        
+    
+      <div class="view-content">
+        <div>
+      
+          <a class="smoothScroll" href="#docmedia">Watch Video</a>    </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div>
+  <div class="field-docs-location">
+    
+
+<div  about="/node/200009" typeof="sioc:Item foaf:Document" class="node node-location-flag view-mode-for_documents ">
+    <div class="row">
+    <div class="col-sm-12 ">
+        <h3 class="field-label">
+    Location  </h3>
+
+  <div class="field-spot-state">
+    Washington, DC  </div>
+
+  <div class="field-spot-flag">
+    <img typeof="foaf:Image" class="img-responsive" src="https://www.presidency.ucsb.edu/sites/default/files/location-flags/DC.jpg" width="120" height="60" alt="" />  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+  </div>
+</div><div class="rrssb"><ul class="rrssb-buttons"><li class="rrssb-twitter"><a href="https://twitter.com/intent/tweet?text=Address%20Before%20a%20Joint%20Session%20of%20the%20Congress%20on%20the%20State%20of%20the%20Union&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-23" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">twitter</span></a></li><li class="rrssb-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-23" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">facebook</span></a></li><li class="rrssb-linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-23&title=Address%20Before%20a%20Joint%20Session%20of%20the%20Congress%20on%20the%20State%20of%20the%20Union" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">linkedin</span></a></li><li class="rrssb-googleplus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-23" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">google+</span></a></li><li class="rrssb-email"><a href="mailto:?subject=Address%20Before%20a%20Joint%20Session%20of%20the%20Congress%20on%20the%20State%20of%20the%20Union&body=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Faddress-before-joint-session-the-congress-the-state-the-union-23" ><span class="rrssb-icon"></span><span class="rrssb-text">email</span></a></li></ul></div>
+  <div class="field-ds-big-search-block">
+    <section id="block-views-5c12edf56060306972111336e0789cf4" class="block block-views other-frontpage-block clearfix">
+
+        <h2 class="block-title">Simple Search of Our Archives</h2>
+    
+  <form action="/advanced-search" method="get" id="views-exposed-form-prez-documents-archive-search2-page-1" accept-charset="UTF-8"><div>  <div class="views-exposed-form vefl-layout bootstrap-6-6-stacked">
+    <div class="views-exposed-widgets clearfix">
+              <div class="vefl-region vefl-region-top">
+                      
+<div id="edit-field-keywords-wrapper" class="views-exposed-widget views-widget-edit-field-keywords">
+    
+  <div class="views-widget">    <div class="form-item form-item-field-keywords form-type-textfield form-group"><input class="form-control form-text" type="text" id="edit-field-keywords" name="field-keywords" value="" size="30" maxlength="128" /></div>  </div>
+  </div>
+                  </div>
+              <div class="vefl-region vefl-region-left">
+                  </div>
+              <div class="vefl-region vefl-region-right">
+                  </div>
+              <div class="vefl-region vefl-region-bottom">
+                      
+<div id="items-per-page-wrapper" class="views-exposed-widget views-widget-items-per-page">
+    
+      <div class="form-item form-item-items-per-page form-type-select form-group"> <label class="control-label" for="edit-items-per-page"># per page</label>
+<select class="form-control form-select" id="edit-items-per-page" name="items_per_page"><option value="5">5</option><option value="10">10</option><option value="25" selected="selected">25</option><option value="50">50</option><option value="100">100</option></select></div>  
+  </div>
+                      
+<div id="button-wrapper" class="views-exposed-widget views-widget-button views-submit-button">
+    
+      <button type="submit" id="edit-submit-prez-documents-archive-search2" name="" value="Apply" class="btn btn-default form-submit">Apply</button>
+  
+  </div>
+                  </div>
+          </div>
+  </div>
+</div></form>
+</section>
+  </div>
+
+  <div class="field-ds-typo">
+    <div class="view view-report-a-typo view-id-report_a_typo view-display-id-block view-dom-id-177c1e38af85a4a775022cfbf62d6ddd">
+        
+    
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/report-a-typo?content_id=211931&amp;title=Address%20Before%20a%20Joint%20Session%20of%20the%20Congress%20on%20the%20State%20of%20the%20Union" class="report-typo" target="_blank"><h3>Report a Typo</h3></a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+
+</section>
+  </div>
+<!-- Content -->
+      </section>
+
+      
+    </div>
+  </div>
+  
+  
+</div>
+<footer class="site-footer no-print">
+  <div class="container">
+      <div class="region region-footer">
+    <section id="block-block-4" class="block block-block attribution clearfix">
+
+      
+  <p><span>The American Presidency Project</span><br />John Woolley and Gerhard Peters<br /><strong><a href="https://www.presidency.ucsb.edu/contact">Contact</a></strong></p>
+
+</section>
+<section id="block-block-6" class="block block-block foot ucsb clearfix">
+
+      
+  <p style="text-align: center;display:inline-block;"><a class="twitter" href="https://twitter.com/presidency_proj" target="_blank">Twitter</a> <a class="facebook" href="https://www.facebook.com/pg/american.presidency.project/" target="_blank">Facebook</a></p>
+
+</section>
+<section id="block-block-5" class="block block-block copyright clearfix">
+
+      
+  <p>Copyright &copy; The American Presidency Project<br /><a href="http://www.ucsb.edu/terms-of-use" target="_blank">Terms of Service</a> | <a href="http://www.policy.ucsb.edu/privacy-notification/" target="_blank">Privacy</a> | <a href="/accessibility">Accessibility</a></p><p><img alt="uc santa barbara logo" src="/sites/default/files/pictures/uc-santa-barbara-wordmark-white1x.svg" style="width: 197px; min-width: 150px; height: 14px;object-fit:cover;" /></p>
+</section>
+  </div>
+  </div>
+  </footer>
+  <script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_NKBfN5q_T2fdeVG6tE3pdNU7glYkyzgPuDTc4K3Ne1w.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"dee899de70","applicationID":"80106271","transactionName":"bl1XYxNYWkVYVxFdWVcXdFQVUFtYFlAWa1NBTEdWEmZaWV1ROkRXXl1qQQhcQw==","queueTime":0,"applicationTime":428,"atts":"QhpUFVtCSUs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"dee899de70",applicationID:"80106271"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/documents/state-the-union-message-the-congress-community-development" />
+<link rel="shortlink" href="/node/256178" />
+<link rel="shortcut icon" href="https://www.presidency.ucsb.edu/sites/default/files/favicon-app_0.png" type="image/png" />
+  <title>State of the Union Message to the Congress on Community Development | The American Presidency Project</title>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,700,600,300|Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_uuQd0L7qawhKpY0MHO8pVG2W6LSQqS5w9XHZMk3vO2U.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_Cq1R3m_ERXC2ynYnp57HZ-O7ehprd9pvLTuV32DY_ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_BXCmDYWIH6zmNsU0Js_WJYpLGUpEB4GhicAN6AdoPdM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_gsVew5cLoW8YoOz5wlq-MSojac7Ph5f6cujHg4HQfcM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_DW59q6nX-P3-D4cA08_V2iLlMJIaFdPFYT8X6nSFpV8.css" media="print" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/jquery/1.11/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_38VWQ3jjQx0wRFj7gkntZr077GgJoGn5nv3v05IeLLo.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_XklFG3kfg0lBQ-7DD_t92S8L-ZsoZ29gklqc_A_ZH6o.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-86410002-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_0ri5u0t83fzlM17yaHG1aQGEln8kbFJP2gAtCU7MncM.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_gvpxcPEErmaiJn8qGSGx2O87lReivTR09hs10gIG3Yg.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"app","theme_token":"aNOlFvbP4EMzYbxlWsVy_mkpD_by5Tr19g_bhV-g1TY","js":{"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.js":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.filter.js":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.js":1,"modules\/statistics\/statistics.js":1,"sites\/default\/themes\/bootstrap\/js\/bootstrap.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jQuery\/jquery-1.11.2.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jquery.ui\/1.11.4\/jquery-ui.min.js":1,"1":1,"sites\/default\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/default\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/default\/modules\/contrib\/field_group\/field_group.js":1,"sites\/default\/modules\/contrib\/rrssb\/rrssb.init.js":1,"sites\/default\/libraries\/rrssb-plus\/js\/rrssb.min.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/affix.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/alert.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/button.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/carousel.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/collapse.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/dropdown.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/modal.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tooltip.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/popover.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/scrollspy.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tab.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/transition.js":1,"sites\/default\/themes\/app\/scripts\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/default\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/default\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/default\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/default\/modules\/contrib\/extlink\/extlink.css":1,"sites\/default\/modules\/contrib\/views\/css\/views.css":1,"sites\/default\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.filter.css":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.css":1,"sites\/default\/modules\/contrib\/vefl\/css\/vefl-layouts.css":1,"public:\/\/rrssb\/rrssb.3c7a5cb3.css":1,"sites\/default\/libraries\/rrssb-plus\/css\/rrssb.css":1,"sites\/default\/themes\/app\/css\/style.css":1,"sites\/default\/themes\/app\/css\/oog.css":1,"sites\/default\/themes\/app\/css\/print.css":1}},"jquery_ui_multiselect_widget":{"module_path":"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget","multiple":1,"filter":1,"subselector":"#edit-category2","selectedlist":"4","autoOpen":0,"header":1,"height":"auto","classes":"app-uberselect","filter_auto_reset":1,"filter_width":"auto","jquery_ui_multiselect_widget_path_match_exclude":"admin\/*\r\nmedia\/*\r\nfile\/*\r\nsystem\/ajax"},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"dpg_docs_media":{"displays":{"block_2":{"filters":[]}}},"report_a_typo":{"displays":{"block":{"filters":[]}}},"document_attached_files":{"displays":{"block":{"filters":[]},"block_1":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/advanced-search":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]},"statistics":{"data":{"nid":"256178"},"url":"\/modules\/statistics\/statistics.php"},"field_group":{"div":"full"},"rrssb":{"size":"1","shrink":"1","regrow":"","minRows":"1","maxRows":"1","prefixReserve":"1em","prefixHide":"1em","alignRight":0},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-256178 node-type-documents" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div class="wrapper"> <!-- Wrapper for Sticky Footer -->
+
+      <div class="branding-region">
+      <div class="container">
+                  <div class="region region-branding">
+    <section id="block-block-1" class="block block-block site-title-block clearfix">
+
+      
+  <div class="site-title"><a href="https://www.presidency.ucsb.edu/">The American Presidency Project</a></div>
+
+</section>
+<section id="block-block-2" class="block block-block top-link-buttons clearfix">
+
+      
+  <p><a class="btn btn-default" href="https://www.presidency.ucsb.edu/about">About</a><a class="btn btn-default" href="/advanced-search"><span class="glyphicon glyphicon-search"></span> Search</a></p>
+<p id="ucScript"><a href="https://www.ucsb.edu/" target="_blank"><img alt="ucsb wordmark black" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/uc_santa_barbara_wordmark_black_rgb.svg" style="width: 175px; height: 13px;" /></a></p>
+
+</section>
+  </div>
+      </div>
+    </div>
+  
+  <div id="navbar" role="banner" class="navbar navbar-default"><!-- Only way to remove "container" class -->
+    <div class="container">
+      <div class="navbar-header">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+              <div class="navbar-collapse collapse">
+          <nav role="navigation">
+                          <ul class="menu nav navbar-nav"><li class="first expanded active-trail active dropdown"><a href="/documents" class="active-trail dropdown-toggle" data-toggle="dropdown">Documents <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/documents/presidential-documents-archive-guidebook">Guidebook</a></li>
+<li class="last leaf"><a href="/documents/category-attributes">Category Attributes</a></li>
+</ul></li>
+<li class="collapsed"><a href="/statistics">Statistics</a></li>
+<li class="leaf"><a href="/media" title="">Media Archive</a></li>
+<li class="leaf"><a href="/presidents" title="">Presidents</a></li>
+<li class="leaf"><a href="/analyses" title="">Analyses</a></li>
+<li class="last leaf"><a href="https://giving.ucsb.edu/Funds/Give?id=185" title="">GIVE</a></li>
+</ul>                                              </nav>
+        </div>
+          </div>
+  </div>
+
+  <div role="banner" id="page-header" class="site-header">
+      </div>
+
+  <div class="main-container container">
+    <div class="row">
+
+          <aside class="col-sm-3 no-print" role="complementary">
+            <div class="region region-sidebar-first well">
+    <section id="block-menu-block-8" class="block block-menu-block doc-sub clearfix">
+
+        <h2 class="block-title">Documents</h2>
+    
+  <div class="menu-block-wrapper menu-block-8 menu-name-menu-documents parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-10329"><a href="/documents/presidential-documents-archive-guidebook" title="">Archive Guidebook</a></li>
+<li class="leaf active-trail menu-mlid-10330 active"><a href="/documents" title="" class="active-trail">Categories</a></li>
+<li class="last leaf menu-mlid-10791"><a href="/documents/category-attributes" title="">Attributes</a></li>
+</ul></div>
+
+</section>
+<section id="block-menu-block-7" class="block block-menu-block dropdown clearfix">
+
+        <h2 class="block-title">Categories</h2>
+    
+  <div class="menu-block-wrapper menu-block-7 menu-name-menu-doc-cat-menu parent-mlid-0 menu-level-1">
+    <ul class="menu nav"><li class="first expanded menu-mlid-10954 dropdown"><a href="/documents/app-categories/presidential" title="Presidential (73842)" class="dropdown-toggle" data-toggle="dropdown">Presidential (259551) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10904"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/correspondents-association" title="Correspondents&#039; Association (31)">Correspondents&#039; Association (31)</a></li>
+<li class="leaf menu-mlid-10910"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/eulogies" title="Eulogies (55)">Eulogies (57)</a></li>
+<li class="leaf menu-mlid-10930"><a href="/documents/app-categories/written-presidential-orders/presidential/executive-orders" title="Executive Orders (5885)">Executive Orders (6135)</a></li>
+<li class="leaf menu-mlid-10912"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/fireside-chats" title="Fireside Chats (27)">Fireside Chats (27)</a></li>
+<li class="leaf menu-mlid-10906"><a href="/documents/app-categories/presidential/interviews" title="Interviews (950)">Interviews (955)</a></li>
+<li class="leaf menu-mlid-10894"><a href="/documents/app-categories/presidential/letters" title="Letters (4363)">Letters (4599)</a></li>
+<li class="leaf menu-mlid-10898"><a href="/documents/app-categories/presidential/miscellaneous-remarks" title="Miscellaneous Remarks (21956)">Miscellaneous Remarks (23689)</a></li>
+<li class="leaf menu-mlid-10899"><a href="/documents/app-categories/presidential/miscellaneous-written" title="Miscellaneous Written (741)">Miscellaneous Written (841)</a></li>
+<li class="leaf menu-mlid-10907"><a href="/documents/app-categories/presidential/news-conferences" title="News Conferences (2096)">News Conferences (2474)</a></li>
+<li class="leaf menu-mlid-10933"><a href="/documents/app-categories/written-statements/presidential/signing-statements" title="Signing Statements (2082)">Signing Statements (2151)</a></li>
+<li class="collapsed menu-mlid-10909"><a href="/documents/app-categories/presidential/spoken-addresses-and-remarks" title="Spoken Addresses and Remarks (5428)">Spoken Addresses and Remarks (10397)</a></li>
+<li class="leaf menu-mlid-10911"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/farewell-address" title="Farewell Address (10)">Farewell Address (11)</a></li>
+<li class="leaf menu-mlid-10913"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/inaugural-addresses" title="Inaugural Addresses (61)">Inaugural Addresses (62)</a></li>
+<li class="leaf menu-mlid-10895"><a href="/documents/app-categories/presidential/memoranda" title="Memoranda (1828)">Memoranda (2017)</a></li>
+<li class="leaf menu-mlid-10927"><a href="/documents/app-categories/written-messages/presidential/messages" title="Messages (11049)">Messages (11308)</a></li>
+<li class="leaf menu-mlid-10914"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/oral-address" title="Oral Address (618)">Oral Address (631)</a></li>
+<li class="leaf menu-mlid-10931"><a href="/documents/app-categories/written-presidential-orders/presidential/proclamations" title="Proclamations (7974)">Proclamations (8644)</a></li>
+<li class="leaf menu-mlid-10919"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/saturday-weekly-addresses-radio" title="Saturday Addresses (Radio and Webcast) (1629)">Saturday Weekly Addresses (Radio and Webcast) (1639)</a></li>
+<li class="leaf menu-mlid-10920"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-dinners" title="State Dinners (953)">State Dinners (953)</a></li>
+<li class="leaf menu-mlid-10921"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-the-union-addresses" title="State of the Union Addresses (98)">State of the Union Addresses (98)</a></li>
+<li class="leaf menu-mlid-10928"><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" title="State of the Union Messages (1)">State of the Union Messages (140)</a></li>
+<li class="leaf menu-mlid-10934"><a href="/documents/app-categories/written-statements/presidential/statements" title="Statements (8647)">Statements (9165)</a></li>
+<li class="leaf menu-mlid-10936"><a href="/documents/app-categories/written-statements/presidential/statements-administration-policy" title="Statements of Administration Policy (5081)">Statements of Administration Policy (5267)</a></li>
+<li class="leaf menu-mlid-10924"><a href="/documents/app-categories/presidential/vetoes" title="Vetoes (266)">Vetoes (1191)</a></li>
+<li class="collapsed menu-mlid-10925"><a href="/documents/app-categories/presidential/written-messages" title="Written Messages (11021)">Written Messages (23748)</a></li>
+<li class="expanded menu-mlid-10929"><a href="/documents/app-categories/presidential/written-presidential-orders" title="Written Presidential Orders (13858)">Written Presidential Orders (31697)</a></li>
+<li class="last collapsed menu-mlid-10932"><a href="/documents/app-categories/presidential/written-statements" title="Written Statements (16012)">Written Statements (33142)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10903 dropdown"><a href="/documents/app-categories/pressmedia" title="Press (9114)" class="dropdown-toggle" data-toggle="dropdown">Press/Media (17316) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first last leaf menu-mlid-10908"><a href="/documents/app-categories/pressmedia/press-briefings" title="Press Briefings (6037)">Press Briefings (6535)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10887 dropdown"><a href="/documents/app-categories/elections-and-transitions" title="Elections and Transitions (16448)" class="dropdown-toggle" data-toggle="dropdown">Elections and Transitions (24429) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10888"><a href="/documents/app-categories/elections-and-transitions/campaign-documents" title="Campaign Documents (2747)">Campaign Documents (4446)</a></li>
+<li class="expanded menu-mlid-10889"><a href="/documents/app-categories/elections-and-transitions/convention-speeches" title="Convention Speeches (50)">Convention Speeches (76)</a></li>
+<li class="leaf menu-mlid-10890"><a href="/documents/app-categories/elections-and-transitions/debates" title="Debates (152)">Debates (171)</a></li>
+<li class="leaf menu-mlid-10892"><a href="/documents/app-categories/elections-and-transitions/party-platforms" title="Party Platforms (98)">Party Platforms (101)</a></li>
+<li class="last leaf menu-mlid-10893"><a href="/documents/app-categories/elections-and-transitions/transition-documents" title="Transition Documents (346)">Transition Documents (549)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10896 dropdown"><a href="/documents/app-categories/miscellaneous" title="Miscellaneous (46156)" class="dropdown-toggle" data-toggle="dropdown">Miscellaneous (432) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10900"><a href="/documents/app-categories/miscellaneous/opposition-party-responses" title="Opposition Party Responses (28)">Opposition Party Responses (32)</a></li>
+<li class="last leaf menu-mlid-10915"><a href="/documents/app-categories/miscellaneous/post-presidential-remarks" title="Post Presidential Remarks (5)">Post Presidential Remarks (10)</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-10883"><a href="/documents/app-categories/congressional" title="Congressional (3)">Congressional (37)</a></li>
+</ul></div>
+
+</section>
+  </div>
+        </aside>  <!-- /#sidebar-first -->
+      
+      <section class="col-sm-9">
+                        <a id="main-content"></a>
+                
+                          
+                          <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  
+
+<div  about="/documents/state-the-union-message-the-congress-community-development" typeof="sioc:Item foaf:Document" class="node node-documents view-mode-full ">
+    <div class="row">
+    <div class="col-sm-8 ">
+      
+  <div class="field-docs-person">
+    <div  about="/people/president/richard-nixon" typeof="sioc:Item foaf:Document" class="ds-1col node node-prez-diet view-mode-for_documents  clearfix">
+
+  
+  
+  <div class="field-diet-pictures">
+    <img typeof="foaf:Image" class="img-responsive" src="https://www.presidency.ucsb.edu/sites/default/files/styles/doc_img/public/people/richard-nixon.jpg?itok=Sm080HCr" width="170" height="230" alt="Richard Nixon photo" />  </div>
+
+  <div class="field-title">
+    <h3 class="diet-title"><a href="/people/president/richard-nixon">Richard Nixon</a></h3>  </div>
+
+  <div class="field-ds-byline">
+    
+  <div class="field-resuable-byline">
+    <div class="diet-by-line president"><span class="presidential-ordinal-number">37th</span> <span class="job-position">President of the United States:</span> <span class="dates">1969 ‐ 1974</span></div>
+  </div>
+  </div>
+
+  <div class="field-ds-doc-title">
+    <h1>State of the Union Message to the Congress on Community Development</h1>
+  </div>
+</div>
+
+  </div>
+
+  <div class="field-docs-start-date-time">
+    <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="1973-03-08T00:00:00+00:00">March 08, 1973</span>  </div>
+
+  <div class="field-docs-content">
+    <p>To the Congress of the United States:</p>
+<p>Today, in this fifth report to the Congress on the State of the Union, I want to discuss the quality of life in our cities and towns and set forth new directions for community development in America.</p>
+<p>Not long ago we became accustomed to the constant rhetorical drumbeat of the "crisis of our cities." Problems were multiplying so rapidly for our larger urban areas that some observers said our cities were doomed as centers of culture, of commerce, and of constructive change.</p>
+<p>Many of these problems still persist, but I believe we have made sufficient progress in recent years that fears of doom are no longer justified.</p>
+<p>What is needed today is calm reflection upon the nature of modern community life in the United States, a reassessment of the manner in which we are trying to solve our remaining problems, and a firm resolve to get on with the task.</p>
+<p>America's communities are as diverse as our people themselves. They vary tremendously in size from massive cities to medium-sized urban and suburban areas, to small towns and rural communities.</p>
+<p>Just as importantly, each of our communities has built up strong individual characteristics over the years, shaped by region, climate, economic influences, ethnic origins and local culture.</p>
+<p>Of course, communities do share common needs and concerns. People in every community want adequate housing, transportation, and jobs, a clean environment, good health, education, recreation facilities, security from crime and fear, and other essential services. But local priorities differ; the intensity and order of local needs vary.</p>
+<p>Clearly, no single, rigid scheme, imposed by the Federal Government from Washington, is capable of meeting the changing and varied needs of this diverse and dynamic Nation.</p>
+<p>There is no "best" way, no magic, universal cure-all, that can be dispensed from hundreds or thousands of miles away.</p>
+<p>What is good for New York City is not necessarily good for Chicago, or San Francisco, much less for smaller communities with entirely different economies, traditions and populations.</p>
+<p>Too often in the past we have fallen into the trap of letting Washington make the final decisions for St. Louis, Detroit, Miami and our other cities. Sometimes the decisions were right, and programs have succeeded. Too often they were wrong, and we are still paying the price.</p>
+<p>The time has come to recognize the errors of past Federal efforts to support community development and to move swiftly to correct them.</p>
+<p>The results of past errors form a disturbing catalogue: --They have distorted local priorities. --They have spawned a massive glut of red tape.</p>
+<p>--They have created an adversary climate between local communities and Washington which has often led to waste, delay and mutual frustration.</p>
+<p>--They have contributed to a lack of confidence among our people in the ability of both local and national governments to solve problems and get results.</p>
+<p>--They have led to the creation of too many complex and often competing Federal programs.</p>
+<p>--Perhaps worst of all, they have undercut the will and the ability of local and State governments to take the initiative to mobilize their own energies and those of their citizens.</p>
+<p>The Federal policy that will work best in the last third of this century is not one that tries to force all of our communities into a single restrictive mold. The Federal policy that will work best is one that helps people and their leaders in each community meet their own needs in the way they think best.</p>
+<p>It is this policy which binds together the many aspects of our community development programs.</p>
+<p>THE BETTER COMMUNITIES ACT</p>
+<p>In the near future, I will submit to the Congress the Better Communities Act to provide revenue sharing for community development. Beginning July 1, 1974, this act would provide $2.3 billion a year to communities to be spent as they desire to meet their community development needs. In the interim period before the legislation becomes effective, funds already available to the Department of Housing and Urban Development will be used to maintain and support community development.</p>
+<p>The Better Communities Act is intended to replace inflexible and fragmented categorical grant-in-aid programs, and to reduce the excessive Federal control that has been so frustrating to local governments.</p>
+<p>Rather than focusing and concentrating resources in a coordinated assault on a set of problems, the categorical system scatters these resources, and diminishes their impact upon the most needy. Excessive Federal influence also limits the variety and diversity of development programs. Local officials should be able to focus their time, their resources and their talents on meeting local needs and producing results, instead of trying to please Washington with an endless torrent of paperwork.</p>
+<p>I first proposed such legislation in 1971, and although the Congress failed to enact it, significant support was expressed in both the Senate and the House. Since that time, members of my Administration have been consulting with Congressional leaders, mayors, Governors, other local officials and their representatives. Many constructive suggestions have been received and will be incorporated in my new legislative proposal. As a result, I believe the Better Communities Act will represent our best hope for the future of community development and will deserve rapid approval by the Congress.</p>
+<p>Among the most significant features of the Better Communities Act are these:</p>
+<p>---Hold-Harmless Provision: The flow of money to cities and urban counties is to be based on a formula reflecting community needs, as determined by objective standards. In the years immediately following enactment, funds would be used to assure that no city receives less money for community development than it has received under the categorical grant programs.</p>
+<p>--Assistance for Smaller Communities: Funding is also to be provided for our smaller communities, recognizing the vital importance of small towns and rural communities to the future of the Nation.</p>
+<p>--The Role of State Government: State governments have always played an important part in meeting the community development needs of their communities. The Act will recognize this role.</p>
+<p>--Local Decision Making: While each of the activities now supported by categorical grants may be continued, it would be up to local leaders to determine how that money will be spent.</p>
+<p>--Minimizing Red Tape: Recipients would be required to show the Federal Government only that they are complying with Federal statutes in the way they are spending their revenue sharing money.</p>
+<p>--Elimination of Matching: Shared revenues would not have to be matched by local funds.</p>
+<p>--Protection for Minorities: Under no circumstances could funds provided under the Better Communities Act be used for purposes that would violate the civil rights of any person.</p>
+<p>A DEPARTMENT OF COMMUNITY DEVELOPMENT</p>
+<p>One of the most serious deficiencies in the effort of the Federal Government to assist in community development has been the fragmentation and scattering of Federal programs among a variety of departments and agencies. All too often State or local officials seeking help for a particular project must shuttle back and forth from one Federal office to another, wasting precious time and resources in a bureaucratic wild goose chase.</p>
+<p>In order to coordinate our community development activities more effectively, I proposed nearly two years ago that we create a Department of Community Development which would pull under one roof various programs now in the Departments of Housing and Urban Development, Transportation, Agriculture, and other agencies.</p>
+<p>After extensive hearings on this proposal, the Committee on Government Operations of the House of Representatives reached this conclusion:</p>
+<p>"The Department of Community Development will be a constructive center in the Federal Government for assistance to communities, large and small. It will facilitate rational planning, orderly growth, and the effective employment of resources to build viable communities throughout the United States. It will help to strengthen the physical and institutional bases for cooperative action by Federal, State and local governments."</p>
+<p>This Administration fully agrees, of course, and will continue to work with the Congress for the prompt creation of a Department of Community Development.</p>
+<p>In the interim, I recently appointed a Presidential Counsellor on Community Development who will coordinate community development programs and policies in the executive branch. But only when the Congress approves the basic departmental reorganization proposed by the Administration can our efforts to eliminate waste, confusion and duplication, and to promote community betterment more efficiently, be fully effective.</p>
+<p>THE RESPONSIVE GOVERNMENTS ACT</p>
+<p>For nearly 20 years, the Federal Government has provided assistance to State and local governments in order to strengthen their planning and management capabilities.</p>
+<p>This aid, provided under the Comprehensive Planning Assistance Program, has always been helpful, but the program itself has several major flaws. It has tended, for instance, to stress one aspect of public administration--planning--without adequately recognizing other essential features such as budgeting, management, personnel administration, and information-gathering. Planning has often been irrelevant to the problems and the actual decisions. State and local governments have also found it difficult to coordinate their planning because of the fragmented way in which funds have been sent from Washington.</p>
+<p>This Administration proposed new planning and management legislation to the 92nd Congress, but it was not approved. In the meantime, we took what steps we could to improve the existing program. Some progress has been made, but corrective legislation is still needed.</p>
+<p>I shall therefore propose that the 93rd Congress enact a new Responsive Governments Act. I shall also propose that we provide $110 million for this act in fiscal year 1974--almost one-fifth of the entire amount that has been spent under the present law in the last two decades.</p>
+<p>This Responsive Governments Act would assist State and local governments in meeting several important goals:</p>
+<p>--Developing reliable information on their problems and opportunities;</p>
+<p>--Developing and analyzing alternative policies and programs;</p>
+<p>--Managing the programs;</p>
+<p>--And evaluating the results, so that appropriate adjustments can be made.</p>
+<p>The ability to plan and manage is vital to effective government. It will be even more important to State and local governments as they are freed from the restraints of narrow categorical Federal programs and must decide how to spend revenue sharing funds. Thus the Responsive Governments Act is a vitally necessary companion piece to the Better Communities Act.</p>
+<p>HOUSING</p>
+<p>This Administration is firmly committed to the goal first set forth for America in the 1949 Housing Act: "a decent home and a suitable living environment for every American family." While we believe that some of our housing programs have failed and should be replaced, we should never waiver in our commitment.</p>
+<p>During the past four years, the Federal Government has provided housing assistance to an additional 1.5 million American families of low and moderate income. This represents more housing assistance than the total provided by the Federal Government during the entire 34-year history of our national housing program preceding this Administration.</p>
+<p>In addition, a healthy, vigorous, private housing industry has provided 6 million new unsubsidized units of housing for Americans in the last four years. Housing starts for each of the last three years have reached record high levels--levels, in fact, that are more than double the average for the preceding 21 years.</p>
+<p>Most importantly, the percentage of Americans living in substandard housing has dropped dramatically from 46 percent in 1940 to 37 percent in 1950 to 18 percent in 1960 to 8 percent in 1970. Americans today are better housed than ever before in our history.</p>
+<p>At the same time, however, there has been mounting evidence of basic defects in some of our housing programs. It is now clear that all too frequently the needy have not been the primary beneficiaries of these programs; that the programs have been riddled with inequities; and that the cost for each unit of subsidized housing produced under these programs has been too high. In short, we shall be making far more progress than we have been and we should now move to place our housing policies on a much firmer foundation.</p>
+<p>That is why we suspended new activity under Federal subsidized housing programs effective January 5th of this year. I would emphasize, however, that commitments that were made under these programs prior to their suspension will be honored. This will mean that approximately 300,000 units of new subsidized housing will be started in 1973.</p>
+<p>In pursuing our goal of decent homes for all Americans, we know that better means are needed--that the old and wasteful programs, programs which have already obligated the taxpayer to payments of between $63 billion and $95 billion during the next 40 years, are not the answer.</p>
+<p>One of my highest domestic priorities this year will be the development of new policies that will provide aid to genuinely needy families and eliminate waste.</p>
+<p>A major housing study is now underway within the Government, under the direction of my Counsellor for Community Development. Within the next six months, I intend to submit to the Congress my policy recommendations in this field, based upon the results of that study.</p>
+<p>TRANSPORTATION</p>
+<p>To thrive, a community must provide for the efficient movement of its people and its products. Yet in recent years, the growing separation of the city from its suburbs and changing employment patterns have made transportation more of a community problem than a community asset. To improve community development we must meet the challenge of transportation planning and provide more flexible means for communities to meet their transportation needs.</p>
+<p>Without better transportation, our communities will either stagnate or choke.</p>
+<p>Four years ago we initiated programs to renew and redirect our transportation systems. We took action to expand the capacity of our airways, to preserve and improve intercity rail passenger service, to continue the Nation's highway program with greater emphasis on safety, and to bring needed progress to our surface public transportation. The Federal commitment has been substantial:</p>
+<p>--The enlarged Airport Development Aid Program established under the Airport-Airways Development Act of 1970 has quadrupled Federal assistance to airports to $295 million per year.</p>
+<p>--Under the Rail Passenger Service Act of 1970 we have begun to rejuvenate rail service as part of a balanced transportation system.</p>
+<p>--From 1970 through 1974 we will have invested some $23 billion in highways. In 1972 alone we committed $3.3 billion to the Interstate system, which is now 80 percent complete. In that same year, $870 million was designated for primary and secondary roads. Equally important, we have emphasized safety on our highways, both in their design and use.</p>
+<p>--We have progressively increased the levels of Federal funding for transportation research, development, and demonstration projects. This support focuses on new transportation technology. It is designed to encourage private industry to join aggressively in the search for better transportation.</p>
+<p>--Concurrent with our programs to improve transportation between our cities, we have undertaken programs to develop free flowing corridors for people and commerce within our cities.</p>
+<p>--Since 1970, when I proposed and the Congress passed the Urban Mass Transportation Assistance Act, we have committed more than 2 billion Federal dollars to preserve and upgrade public transportation. Nationally, urban public transportation has become a billion-dollar-a-year Federal program.</p>
+<p>--Over the past four years, Federal dollars have helped 60 American cities to help those who depend on public systems for transportation to jobs, hospitals, shops and recreational centers. Now we must deal even more aggressively with community development challenges in transportation by building on the strong foundations we have laid.</p>
+<p>Nothing can do more to lift the face of our cities, and the spirit of our city dwellers, than truly adequate systems of modern transportation. With the best highway system in the world, and with 75 percent of our people owning and operating automobiles, we have more transportation assets per capita than any other people on earth. Yet the commuter who uses a two ton vehicle to transport only himself to and from work each day is not making the most efficient use of our transportation system and is himself contributing to our transportation and environmental problems.</p>
+<p>Good public transportation is essential not only to assure adequate transportation for all citizens, but to forward the common goal of less congested, cleaner and safer communities. As I pointed out a few weeks ago in my message on the environment and natural resources, effective mass transit systems that relieve urban congestion will also reduce pollution and the waste of our limited energy resources.</p>
+<p>As we build such systems, we must be aware of the two special challenges in coordinating the needs of the inner city and the suburb and in alleviating potential disruptions which new transportation systems can bring to neighborhood life.</p>
+<p>To further these efforts I again continue to urge Congress to permit a portion of the Highway Trust Fund to be used in a more flexible fashion, thus allowing mass transit capital investments where communities so desire.</p>
+<p>I recommend that the Congress authorize the expenditure by State and local governments of $3.65 billion over the next three years from the Highway Trust Fund for urban transportation needs, including capital improvements for bus and rapid rail systems. I also recommend continuing the rural highway program at the $1 billion a year level, and providing ample resources to advance the Interstate system as it approaches its 1980 funding completion date. This legislation can meet old needs while at the same time addressing new ones.</p>
+<p>Some communities now feel unduly obligated to spend Federal monies on controversial Interstate highway segments in urban areas. I urge the Congress to allow States and localities to transfer such funds to the construction of other Federal-aid highways and mass transit capital improvements. In this way, we can help resolve controversies which have slowed work on a number of Interstate links in urban areas.</p>
+<p>It is very important to recognize that this proposal does not represent an arbitrary Federal shift of funds from highways to transit. What it does stress is the right of local governments to choose the best solutions for their urban transportation problems.</p>
+<p>This year, in a companion measure to our Federal Highway Bill, I am also proposing that funding for mass transit capital grants be increased by $3 billion, bringing the obligational authority for the mass transit program to $6.1 billion. This provision would maintain a forward looking mass transit program through at least 1977- I am also asking the Congress to amend the Urban Mass Transportation Assistance Act, increasing the Federal share for urban mass transit capital grant assistance programs to 70 percent and thereby achieving parity with Federal aid for urban and rural road building projects.</p>
+<p>RURAL DEVELOPMENT</p>
+<p>Community Development is sometimes thought of primarily in terms of urban areas. However, as this Administration has often pointed out--and will continue to emphasize--no element of our national well-being is more important than the health and vitality of our rural communities. Thus, in pursuing a policy of balanced development for our community life, we must always keep the needs of rural America clearly in sight.</p>
+<p>Twice in the last two years, I have recommended legislation which would provide new revenues for rural development. Under my latest proposal, loans and guarantees would have been made for projects selected and prepared by the States.</p>
+<p>While the 92nd Congress did not enact either of these proposals, it did enact the Rural Development Act of 1972, establishing additional lending authority for rural needs. Like the Administration's proposals, this lending authority provides for insured loans and guaranteed loans which allow maximum participation of the private sector.</p>
+<p>Several new programs are proposed to be funded under the Rural Development Act. One is a $200 million loan program to assist communities with a population of less than 50,000 in developing commercial and industrial facilities. A previously existing loan program has been increased by $100 million--to a total of $445 million-and, under the new law, can now be used to construct a wide variety of essential community facilities. In addition, grants and other programs under the act will be funded at a level of $33 million.</p>
+<p>This Administration will implement the Rural Development Act in a manner consistent with the revenue sharing concept, allowing major project selections and priority decisions to be made by the State and local governments whenever possible. It is our intent, after fully evaluating the effectiveness of this approach, to seek whatever additional legislation may be needed.</p>
+<p>DISASTER ASSISTANCE</p>
+<p>To a community suffering the ravages of a natural disaster, nothing is more important than prompt and effective relief assistance. As our population grows and spreads, each storm, earthquake, drought or freeze affects larger numbers of people.</p>
+<p>During the past four years, we have tried to reduce personal injury, deaths, and property damage by emphasizing adequate preventive measures. During the same period, however, I have had to declare i I I major disasters in 39 States and three Territories. This past year alone set a tragic record for major disaster activity, as I had to declare 48 major disasters--43 caused by storms and floodings. There were a number of especially devastating disaster emergencies in this period: the flooding in Buffalo Creek, West Virginia; flash flood in Rapid City, South Dakota; and, of course, Tropical Storm Agnes which rampaged through the eastern United States. Agues alone caused 118 deaths and some $3 billion in property damage.</p>
+<p>Until now, disaster relief efforts have involved a number of different agencies and have been coordinated by the Executive Office of the President. The experience of the past few years has demonstrated that:</p>
+<p>--We are not doing nearly enough to prepare in advance for disasters.</p>
+<p>--States, local governments and private individuals should assume a larger role in preparing for disasters, and in relieving the damage after they have occurred.</p>
+<p>--Responsibility for relief is presently too fragmented among too many authorities.</p>
+<p>--At the Federal level, disaster relief should be managed by a single agency.</p>
+<p>I intend to make 1973 a turning point in the quality of governmental response to natural disasters.</p>
+<p>To achieve this goal, I have already proposed Reorganization Plan Number i of 1973, which is now before the Congress. It calls for the delegation of all responsibility for coordinating disaster relief to the Secretary of Housing and Urban Development, who is also my Counsellor for Community Development. This transfer of operations would take place at the beginning of the new fiscal year and would be carried out in such a way that the effective relations which now exist with State disaster officials would in no way be harmed, while a new sense of unity and mobility at the Federal level would be fostered.</p>
+<p>If the Congress enacts my proposal for a new Department of Community Development, that new department would be responsible for directing all Federal disaster activities, including those of several other agencies which perform disaster roles.</p>
+<p>In addition to the improvements I have proposed in Reorganization Plan Number 1, I will shortly submit a new Disaster Assistance Act to the Congress. This new act is designed to improve the delivery of Federal assistance, to provide a more equitable basis for financing individual property losses, and to forge a more balanced partnership for meeting disasters head-on--a partnership not only among governments at all levels but also between governments and private citizens.</p>
+<p>Under these proposals, each level of government would accept responsibility for those things it can do best. While the Federal Government would continue to assist with financing, State and local governments would have far more latitude and responsibility in the use of those funds. They would also be encouraged to assert stronger leadership in efforts to minimize the damage of future disasters.</p>
+<p>For homeowners, farmers and businessmen who have suffered disaster losses, the Federal Government would continue to provide direct assistance.</p>
+<p>I will also recommend to the Congress an expansion of the national flood insurance program to allow participation by more communities in flood-prone areas and to increase the limits of coverage.</p>
+<p>CONCLUSION</p>
+<p>As reflected by the proposals set forth here, I believe that we must strike out on broad, new paths of community development in America.</p>
+<p>During the last few years, we have taken genuine, measurable strides toward better communities.</p>
+<p>All of this is good; it is not good enough. It is clear that we can and should be accomplishing more in the field of community development. There are too many programs that have been tried and found wanting. There are too many programs that strengthen the bureaucracy in Washington but sap the strength of our State and local governments.</p>
+<p>People today want to have a real say in the way their communities are run. They want to feel that, once again, they can play a significant role in shaping the kind of world their children will inherit. And they expect their institutions to respond to their needs and aspirations.</p>
+<p>That feeling will never flourish if the Federal Government, however vast its financial resources and however good its intentions, tries to direct the pattern of our lives. That feeling cannot be manufactured in Washington, it must come from within.</p>
+<p>But the Federal Government can and should eliminate some of the barriers that have impeded the development of that feeling by returning resources and initiatives to the people and their locally elected leaders. It is in that spirit that I urge the 93rd Congress to give favorable consideration to my proposals for community development.</p>
+<p>RICHARD NIXON<br /><br />
+The White House,<br /><br />
+March 8, 1973.</p>
+  </div>
+
+  <div class="field-docs-footnote">
+    <p>Note: The message was the fifth in a series of six messages to the Congress on the state of the Union.
+</p><p>On the same day, the White House released a fact sheet and the transcript of a news briefing on the message. Participants in the news briefing were James T. Lynn, Secretary, and Floyd H. Hyde, Assistant Secretary for Community Development, Department of Housing and Urban Development; and Theodore C. Lutz, Deputy Under Secretary of Transportation for Budget and Program Review.</p>
+  </div>
+
+  <div class="field-prez-document-citation">
+    <p class="ucsbapp_citation">Richard Nixon, State of the Union Message to the Congress on Community Development Online by Gerhard Peters and John T. Woolley, The American Presidency Project https://www.presidency.ucsb.edu/node/256178</p>  </div>
+    </div>
+    <div class="col-sm-4 ">
+      <div class="group-meta">
+  <div class="field-ds-filed-under-">
+    <h3 class="oog-label">Filed Under</h3>  </div>
+<h3 class="label-above oog-label ds ">Categories</h3><div><a href="/documents/app-categories/presidential" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Presidential</a></div><div><a href="/documents/app-categories/presidential/written-messages" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Written Messages</a></div><div><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">State of the Union Messages</a></div><div class="jump"><div class="view view-dpg-docs-media view-id-dpg_docs_media view-display-id-block_2 view-dom-id-c7db84107f6a521b0e84ccc0c919605f">
+        
+    
+      <div class="view-content">
+        <div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div></div><div class="rrssb"><ul class="rrssb-buttons"><li class="rrssb-twitter"><a href="https://twitter.com/intent/tweet?text=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Community%20Development&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-community-development" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">twitter</span></a></li><li class="rrssb-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-community-development" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">facebook</span></a></li><li class="rrssb-linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-community-development&title=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Community%20Development" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">linkedin</span></a></li><li class="rrssb-googleplus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-community-development" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">google+</span></a></li><li class="rrssb-email"><a href="mailto:?subject=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Community%20Development&body=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-community-development" ><span class="rrssb-icon"></span><span class="rrssb-text">email</span></a></li></ul></div>
+  <div class="field-ds-big-search-block">
+    <section id="block-views-5c12edf56060306972111336e0789cf4" class="block block-views other-frontpage-block clearfix">
+
+        <h2 class="block-title">Simple Search of Our Archives</h2>
+    
+  <form action="/advanced-search" method="get" id="views-exposed-form-prez-documents-archive-search2-page-1" accept-charset="UTF-8"><div>  <div class="views-exposed-form vefl-layout bootstrap-6-6-stacked">
+    <div class="views-exposed-widgets clearfix">
+              <div class="vefl-region vefl-region-top">
+                      
+<div id="edit-field-keywords-wrapper" class="views-exposed-widget views-widget-edit-field-keywords">
+    
+  <div class="views-widget">    <div class="form-item form-item-field-keywords form-type-textfield form-group"><input class="form-control form-text" type="text" id="edit-field-keywords" name="field-keywords" value="" size="30" maxlength="128" /></div>  </div>
+  </div>
+                  </div>
+              <div class="vefl-region vefl-region-left">
+                  </div>
+              <div class="vefl-region vefl-region-right">
+                  </div>
+              <div class="vefl-region vefl-region-bottom">
+                      
+<div id="items-per-page-wrapper" class="views-exposed-widget views-widget-items-per-page">
+    
+      <div class="form-item form-item-items-per-page form-type-select form-group"> <label class="control-label" for="edit-items-per-page"># per page</label>
+<select class="form-control form-select" id="edit-items-per-page" name="items_per_page"><option value="5">5</option><option value="10">10</option><option value="25" selected="selected">25</option><option value="50">50</option><option value="100">100</option></select></div>  
+  </div>
+                      
+<div id="button-wrapper" class="views-exposed-widget views-widget-button views-submit-button">
+    
+      <button type="submit" id="edit-submit-prez-documents-archive-search2" name="" value="Apply" class="btn btn-default form-submit">Apply</button>
+  
+  </div>
+                  </div>
+          </div>
+  </div>
+</div></form>
+</section>
+  </div>
+
+  <div class="field-ds-typo">
+    <div class="view view-report-a-typo view-id-report_a_typo view-display-id-block view-dom-id-bb362c7580b9324431b6cf7cefbc4903">
+        
+    
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/report-a-typo?content_id=256178&amp;title=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Community%20Development" class="report-typo" target="_blank"><h3>Report a Typo</h3></a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+
+</section>
+  </div>
+<!-- Content -->
+      </section>
+
+      
+    </div>
+  </div>
+  
+  
+</div>
+<footer class="site-footer no-print">
+  <div class="container">
+      <div class="region region-footer">
+    <section id="block-block-4" class="block block-block attribution clearfix">
+
+      
+  <p><span>The American Presidency Project</span><br />John Woolley and Gerhard Peters<br /><strong><a href="https://www.presidency.ucsb.edu/contact">Contact</a></strong></p>
+
+</section>
+<section id="block-block-6" class="block block-block foot ucsb clearfix">
+
+      
+  <p style="text-align: center;display:inline-block;"><a class="twitter" href="https://twitter.com/presidency_proj" target="_blank">Twitter</a> <a class="facebook" href="https://www.facebook.com/pg/american.presidency.project/" target="_blank">Facebook</a></p>
+
+</section>
+<section id="block-block-5" class="block block-block copyright clearfix">
+
+      
+  <p>Copyright &copy; The American Presidency Project<br /><a href="http://www.ucsb.edu/terms-of-use" target="_blank">Terms of Service</a> | <a href="http://www.policy.ucsb.edu/privacy-notification/" target="_blank">Privacy</a> | <a href="/accessibility">Accessibility</a></p><p><img alt="uc santa barbara logo" src="/sites/default/files/pictures/uc-santa-barbara-wordmark-white1x.svg" style="width: 197px; min-width: 150px; height: 14px;object-fit:cover;" /></p>
+</section>
+  </div>
+  </div>
+  </footer>
+  <script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_NKBfN5q_T2fdeVG6tE3pdNU7glYkyzgPuDTc4K3Ne1w.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"dee899de70","applicationID":"80106271","transactionName":"bl1XYxNYWkVYVxFdWVcXdFQVUFtYFlAWa1NBTEdWEmZaWV1ROkRXXl1qQQhcQw==","queueTime":0,"applicationTime":520,"atts":"QhpUFVtCSUs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

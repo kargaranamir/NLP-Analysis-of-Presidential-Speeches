@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"dee899de70",applicationID:"80106271"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/documents/state-the-union-message-the-congress-natural-resources-and-the-environment" />
+<link rel="shortlink" href="/node/255945" />
+<link rel="shortcut icon" href="https://www.presidency.ucsb.edu/sites/default/files/favicon-app_0.png" type="image/png" />
+  <title>State of the Union Message to the Congress on Natural Resources and the Environment | The American Presidency Project</title>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,700,600,300|Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_uuQd0L7qawhKpY0MHO8pVG2W6LSQqS5w9XHZMk3vO2U.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_Cq1R3m_ERXC2ynYnp57HZ-O7ehprd9pvLTuV32DY_ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_BXCmDYWIH6zmNsU0Js_WJYpLGUpEB4GhicAN6AdoPdM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_gsVew5cLoW8YoOz5wlq-MSojac7Ph5f6cujHg4HQfcM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_DW59q6nX-P3-D4cA08_V2iLlMJIaFdPFYT8X6nSFpV8.css" media="print" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/jquery/1.11/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_38VWQ3jjQx0wRFj7gkntZr077GgJoGn5nv3v05IeLLo.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_XklFG3kfg0lBQ-7DD_t92S8L-ZsoZ29gklqc_A_ZH6o.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-86410002-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_0ri5u0t83fzlM17yaHG1aQGEln8kbFJP2gAtCU7MncM.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_gvpxcPEErmaiJn8qGSGx2O87lReivTR09hs10gIG3Yg.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"app","theme_token":"EK02efroTLjB0zp3Doa1XbCADSdABlvolgQARt2J4Wk","js":{"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.js":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.filter.js":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.js":1,"modules\/statistics\/statistics.js":1,"sites\/default\/themes\/bootstrap\/js\/bootstrap.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jQuery\/jquery-1.11.2.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jquery.ui\/1.11.4\/jquery-ui.min.js":1,"1":1,"sites\/default\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/default\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/default\/modules\/contrib\/field_group\/field_group.js":1,"sites\/default\/modules\/contrib\/rrssb\/rrssb.init.js":1,"sites\/default\/libraries\/rrssb-plus\/js\/rrssb.min.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/affix.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/alert.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/button.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/carousel.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/collapse.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/dropdown.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/modal.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tooltip.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/popover.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/scrollspy.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tab.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/transition.js":1,"sites\/default\/themes\/app\/scripts\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/default\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/default\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/default\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/default\/modules\/contrib\/extlink\/extlink.css":1,"sites\/default\/modules\/contrib\/views\/css\/views.css":1,"sites\/default\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.filter.css":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.css":1,"sites\/default\/modules\/contrib\/vefl\/css\/vefl-layouts.css":1,"public:\/\/rrssb\/rrssb.3c7a5cb3.css":1,"sites\/default\/libraries\/rrssb-plus\/css\/rrssb.css":1,"sites\/default\/themes\/app\/css\/style.css":1,"sites\/default\/themes\/app\/css\/oog.css":1,"sites\/default\/themes\/app\/css\/print.css":1}},"jquery_ui_multiselect_widget":{"module_path":"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget","multiple":1,"filter":1,"subselector":"#edit-category2","selectedlist":"4","autoOpen":0,"header":1,"height":"auto","classes":"app-uberselect","filter_auto_reset":1,"filter_width":"auto","jquery_ui_multiselect_widget_path_match_exclude":"admin\/*\r\nmedia\/*\r\nfile\/*\r\nsystem\/ajax"},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"dpg_docs_media":{"displays":{"block_2":{"filters":[]}}},"report_a_typo":{"displays":{"block":{"filters":[]}}},"document_attached_files":{"displays":{"block":{"filters":[]},"block_1":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/advanced-search":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]},"statistics":{"data":{"nid":"255945"},"url":"\/modules\/statistics\/statistics.php"},"field_group":{"div":"full"},"rrssb":{"size":"1","shrink":"1","regrow":"","minRows":"1","maxRows":"1","prefixReserve":"1em","prefixHide":"1em","alignRight":0},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-255945 node-type-documents" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div class="wrapper"> <!-- Wrapper for Sticky Footer -->
+
+      <div class="branding-region">
+      <div class="container">
+                  <div class="region region-branding">
+    <section id="block-block-1" class="block block-block site-title-block clearfix">
+
+      
+  <div class="site-title"><a href="https://www.presidency.ucsb.edu/">The American Presidency Project</a></div>
+
+</section>
+<section id="block-block-2" class="block block-block top-link-buttons clearfix">
+
+      
+  <p><a class="btn btn-default" href="https://www.presidency.ucsb.edu/about">About</a><a class="btn btn-default" href="/advanced-search"><span class="glyphicon glyphicon-search"></span> Search</a></p>
+<p id="ucScript"><a href="https://www.ucsb.edu/" target="_blank"><img alt="ucsb wordmark black" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/uc_santa_barbara_wordmark_black_rgb.svg" style="width: 175px; height: 13px;" /></a></p>
+
+</section>
+  </div>
+      </div>
+    </div>
+  
+  <div id="navbar" role="banner" class="navbar navbar-default"><!-- Only way to remove "container" class -->
+    <div class="container">
+      <div class="navbar-header">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+              <div class="navbar-collapse collapse">
+          <nav role="navigation">
+                          <ul class="menu nav navbar-nav"><li class="first expanded active-trail active dropdown"><a href="/documents" class="active-trail dropdown-toggle" data-toggle="dropdown">Documents <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/documents/presidential-documents-archive-guidebook">Guidebook</a></li>
+<li class="last leaf"><a href="/documents/category-attributes">Category Attributes</a></li>
+</ul></li>
+<li class="collapsed"><a href="/statistics">Statistics</a></li>
+<li class="leaf"><a href="/media" title="">Media Archive</a></li>
+<li class="leaf"><a href="/presidents" title="">Presidents</a></li>
+<li class="leaf"><a href="/analyses" title="">Analyses</a></li>
+<li class="last leaf"><a href="https://giving.ucsb.edu/Funds/Give?id=185" title="">GIVE</a></li>
+</ul>                                              </nav>
+        </div>
+          </div>
+  </div>
+
+  <div role="banner" id="page-header" class="site-header">
+      </div>
+
+  <div class="main-container container">
+    <div class="row">
+
+          <aside class="col-sm-3 no-print" role="complementary">
+            <div class="region region-sidebar-first well">
+    <section id="block-menu-block-8" class="block block-menu-block doc-sub clearfix">
+
+        <h2 class="block-title">Documents</h2>
+    
+  <div class="menu-block-wrapper menu-block-8 menu-name-menu-documents parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-10329"><a href="/documents/presidential-documents-archive-guidebook" title="">Archive Guidebook</a></li>
+<li class="leaf active-trail menu-mlid-10330 active"><a href="/documents" title="" class="active-trail">Categories</a></li>
+<li class="last leaf menu-mlid-10791"><a href="/documents/category-attributes" title="">Attributes</a></li>
+</ul></div>
+
+</section>
+<section id="block-menu-block-7" class="block block-menu-block dropdown clearfix">
+
+        <h2 class="block-title">Categories</h2>
+    
+  <div class="menu-block-wrapper menu-block-7 menu-name-menu-doc-cat-menu parent-mlid-0 menu-level-1">
+    <ul class="menu nav"><li class="first expanded menu-mlid-10954 dropdown"><a href="/documents/app-categories/presidential" title="Presidential (73842)" class="dropdown-toggle" data-toggle="dropdown">Presidential (259551) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10904"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/correspondents-association" title="Correspondents&#039; Association (31)">Correspondents&#039; Association (31)</a></li>
+<li class="leaf menu-mlid-10910"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/eulogies" title="Eulogies (55)">Eulogies (57)</a></li>
+<li class="leaf menu-mlid-10930"><a href="/documents/app-categories/written-presidential-orders/presidential/executive-orders" title="Executive Orders (5885)">Executive Orders (6135)</a></li>
+<li class="leaf menu-mlid-10912"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/fireside-chats" title="Fireside Chats (27)">Fireside Chats (27)</a></li>
+<li class="leaf menu-mlid-10906"><a href="/documents/app-categories/presidential/interviews" title="Interviews (950)">Interviews (955)</a></li>
+<li class="leaf menu-mlid-10894"><a href="/documents/app-categories/presidential/letters" title="Letters (4363)">Letters (4599)</a></li>
+<li class="leaf menu-mlid-10898"><a href="/documents/app-categories/presidential/miscellaneous-remarks" title="Miscellaneous Remarks (21956)">Miscellaneous Remarks (23689)</a></li>
+<li class="leaf menu-mlid-10899"><a href="/documents/app-categories/presidential/miscellaneous-written" title="Miscellaneous Written (741)">Miscellaneous Written (841)</a></li>
+<li class="leaf menu-mlid-10907"><a href="/documents/app-categories/presidential/news-conferences" title="News Conferences (2096)">News Conferences (2474)</a></li>
+<li class="leaf menu-mlid-10933"><a href="/documents/app-categories/written-statements/presidential/signing-statements" title="Signing Statements (2082)">Signing Statements (2151)</a></li>
+<li class="collapsed menu-mlid-10909"><a href="/documents/app-categories/presidential/spoken-addresses-and-remarks" title="Spoken Addresses and Remarks (5428)">Spoken Addresses and Remarks (10397)</a></li>
+<li class="leaf menu-mlid-10911"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/farewell-address" title="Farewell Address (10)">Farewell Address (11)</a></li>
+<li class="leaf menu-mlid-10913"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/inaugural-addresses" title="Inaugural Addresses (61)">Inaugural Addresses (62)</a></li>
+<li class="leaf menu-mlid-10895"><a href="/documents/app-categories/presidential/memoranda" title="Memoranda (1828)">Memoranda (2017)</a></li>
+<li class="leaf menu-mlid-10927"><a href="/documents/app-categories/written-messages/presidential/messages" title="Messages (11049)">Messages (11308)</a></li>
+<li class="leaf menu-mlid-10914"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/oral-address" title="Oral Address (618)">Oral Address (631)</a></li>
+<li class="leaf menu-mlid-10931"><a href="/documents/app-categories/written-presidential-orders/presidential/proclamations" title="Proclamations (7974)">Proclamations (8644)</a></li>
+<li class="leaf menu-mlid-10919"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/saturday-weekly-addresses-radio" title="Saturday Addresses (Radio and Webcast) (1629)">Saturday Weekly Addresses (Radio and Webcast) (1639)</a></li>
+<li class="leaf menu-mlid-10920"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-dinners" title="State Dinners (953)">State Dinners (953)</a></li>
+<li class="leaf menu-mlid-10921"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-the-union-addresses" title="State of the Union Addresses (98)">State of the Union Addresses (98)</a></li>
+<li class="leaf menu-mlid-10928"><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" title="State of the Union Messages (1)">State of the Union Messages (140)</a></li>
+<li class="leaf menu-mlid-10934"><a href="/documents/app-categories/written-statements/presidential/statements" title="Statements (8647)">Statements (9165)</a></li>
+<li class="leaf menu-mlid-10936"><a href="/documents/app-categories/written-statements/presidential/statements-administration-policy" title="Statements of Administration Policy (5081)">Statements of Administration Policy (5267)</a></li>
+<li class="leaf menu-mlid-10924"><a href="/documents/app-categories/presidential/vetoes" title="Vetoes (266)">Vetoes (1191)</a></li>
+<li class="collapsed menu-mlid-10925"><a href="/documents/app-categories/presidential/written-messages" title="Written Messages (11021)">Written Messages (23748)</a></li>
+<li class="expanded menu-mlid-10929"><a href="/documents/app-categories/presidential/written-presidential-orders" title="Written Presidential Orders (13858)">Written Presidential Orders (31697)</a></li>
+<li class="last collapsed menu-mlid-10932"><a href="/documents/app-categories/presidential/written-statements" title="Written Statements (16012)">Written Statements (33142)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10903 dropdown"><a href="/documents/app-categories/pressmedia" title="Press (9114)" class="dropdown-toggle" data-toggle="dropdown">Press/Media (17316) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first last leaf menu-mlid-10908"><a href="/documents/app-categories/pressmedia/press-briefings" title="Press Briefings (6037)">Press Briefings (6535)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10887 dropdown"><a href="/documents/app-categories/elections-and-transitions" title="Elections and Transitions (16448)" class="dropdown-toggle" data-toggle="dropdown">Elections and Transitions (24429) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10888"><a href="/documents/app-categories/elections-and-transitions/campaign-documents" title="Campaign Documents (2747)">Campaign Documents (4446)</a></li>
+<li class="expanded menu-mlid-10889"><a href="/documents/app-categories/elections-and-transitions/convention-speeches" title="Convention Speeches (50)">Convention Speeches (76)</a></li>
+<li class="leaf menu-mlid-10890"><a href="/documents/app-categories/elections-and-transitions/debates" title="Debates (152)">Debates (171)</a></li>
+<li class="leaf menu-mlid-10892"><a href="/documents/app-categories/elections-and-transitions/party-platforms" title="Party Platforms (98)">Party Platforms (101)</a></li>
+<li class="last leaf menu-mlid-10893"><a href="/documents/app-categories/elections-and-transitions/transition-documents" title="Transition Documents (346)">Transition Documents (549)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10896 dropdown"><a href="/documents/app-categories/miscellaneous" title="Miscellaneous (46156)" class="dropdown-toggle" data-toggle="dropdown">Miscellaneous (432) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10900"><a href="/documents/app-categories/miscellaneous/opposition-party-responses" title="Opposition Party Responses (28)">Opposition Party Responses (32)</a></li>
+<li class="last leaf menu-mlid-10915"><a href="/documents/app-categories/miscellaneous/post-presidential-remarks" title="Post Presidential Remarks (5)">Post Presidential Remarks (10)</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-10883"><a href="/documents/app-categories/congressional" title="Congressional (3)">Congressional (37)</a></li>
+</ul></div>
+
+</section>
+  </div>
+        </aside>  <!-- /#sidebar-first -->
+      
+      <section class="col-sm-9">
+                        <a id="main-content"></a>
+                
+                          
+                          <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  
+
+<div  about="/documents/state-the-union-message-the-congress-natural-resources-and-the-environment" typeof="sioc:Item foaf:Document" class="node node-documents view-mode-full ">
+    <div class="row">
+    <div class="col-sm-8 ">
+      
+  <div class="field-docs-person">
+    <div  about="/people/president/richard-nixon" typeof="sioc:Item foaf:Document" class="ds-1col node node-prez-diet view-mode-for_documents  clearfix">
+
+  
+  
+  <div class="field-diet-pictures">
+    <img typeof="foaf:Image" class="img-responsive" src="https://www.presidency.ucsb.edu/sites/default/files/styles/doc_img/public/people/richard-nixon.jpg?itok=Sm080HCr" width="170" height="230" alt="Richard Nixon photo" />  </div>
+
+  <div class="field-title">
+    <h3 class="diet-title"><a href="/people/president/richard-nixon">Richard Nixon</a></h3>  </div>
+
+  <div class="field-ds-byline">
+    
+  <div class="field-resuable-byline">
+    <div class="diet-by-line president"><span class="presidential-ordinal-number">37th</span> <span class="job-position">President of the United States:</span> <span class="dates">1969 ‐ 1974</span></div>
+  </div>
+  </div>
+
+  <div class="field-ds-doc-title">
+    <h1>State of the Union Message to the Congress on Natural Resources and the Environment</h1>
+  </div>
+</div>
+
+  </div>
+
+  <div class="field-docs-start-date-time">
+    <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="1973-02-15T00:00:00+00:00">February 15, 1973</span>  </div>
+
+  <div class="field-docs-content">
+    <p>To the Congress of the United States:</p>
+<p>With the opening of a new Congress and the beginning of a new Presidential term come fresh opportunities for achievement in America. To help us consider more adequately the very special challenges of this new year, I am presenting my 1973 State of the Union Message in' a number of sections.</p>
+<p>Two weeks ago I sent the first of those sections to the Congress--an overview reporting that "the basic state of our Union today is sound, and full of promise."</p>
+<p>Today I wish to report to the Congress on the state of our natural resources and environment. It is appropriate that this topic be first of our substantive policy discussions in the State of the Union presentation, since nowhere in our national affairs do we have more gratifying progress--nor more urgent, remaining problems.</p>
+<p>There was a time when Americans took our natural resources largely for granted. For example, President Lincoln observed in his State of the Union message for 1862 that "A nation may be said to consist of its territory, its people, and its laws. The territory is the only part which is of certain durability."</p>
+<p>In recent years, however, we have come to realize that our "territory"--that is, our land, air, water, minerals, and the like--is not of "certain durability" after all. We have learned that these natural resources are fragile and finite, and that many have been seriously damaged or despoiled.</p>
+<p>When we came to office in 1969, we tackled this problem with all the power at our command. Now there is encouraging evidence that the United States has moved away from the environmental crisis that could have been and toward a new era of restoration and renewal. Today, in 1973, I can report to the Congress that we are well on the way to winning the war against environmental degradation-well on the way to making our peace with nature.</p>
+<p>YEARS OF PROGRESS</p>
+<p>While I am disappointed that the 92nd Congress failed to act upon 19 of my key natural resources and environment proposals, I am pleased to have signed many of the proposals I supported into law during the past four years. They have included air quality legislation, strengthened water quality and pesticide control legislation, new authorities to control noise and ocean dumping, regulations to prevent oil and other spills in our ports and waterways, and legislation establishing major national recreation areas at America's Atlantic and Pacific gateways, New York and San Francisco.</p>
+<p>On the organizational front, the National Environmental Policy Act of 1969 has reformed programs and decision-making processes in our Federal agencies and has given citizens a greater opportunity to contribute as decisions are made. In 1970 I appointed the first Council on Environmental Quality--a group which has provided active leadership in environmental policies. In the same year, I established the Environmental Protection Agency and the National Oceanic and Atmospheric Administration to provide more coordinated and vigorous environmental management. Our natural resource programs still need to be consolidated, however, and I will again submit legislation to the Congress to meet this need.</p>
+<p>The results of these efforts are tangible and measurable. Day by day, our air is getting cleaner; in virtually every one of our major cities the levels of air pollution are declining. Month by month, our water pollution problems are also being conquered, our noise and pesticide problems are coming under control, our parklands and protected wilderness areas are increasing.</p>
+<p>Year by year, our commitment of public funds for environmental programs continues to grow; it has increased four-fold in the last four years. In the area of water quality alone, it has grown fifteen-fold. In fact, we are now buying new facilities nearly as fast as the construction industry can build them. Spending still more money would not buy us more pollution control facilities but only more expensive ones.</p>
+<p>In addition to what Government is doing in the battle against pollution, our private industries are assuming a steadily growing share of responsibility in this field. Last year industrial spending for pollution control jumped by 50 percent, and this year it could reach as much as $5 billion.</p>
+<p>All nations, regardless of their economic systems, share to some extent in the environmental problem--but with vigorous United States leadership, joint efforts to solve this global problem are showing results. The United Nations has adopted the American proposal for a special U.N. environmental fund to coordinate and support international environmental programs.</p>
+<p>Some 92 nations have concluded an international convention to control the ocean dumping of wastes. An agreement is now being forged in the Intergovernmental Maritime Consultative Organization to end the intentional discharge of oil from ships into the ocean..This objective, first recommended by my Administration, was adopted by the NATO Committee on the Challenges of Modern Society.</p>
+<p>Representatives of almost 70 countries are meeting in Washington this week at our initiative to draft a treaty to protect endangered species of plant and animal wildlife. The U.S.-USSR environmental cooperation agreement which I signed in Moscow last year makes two of the world's greatest industrial powers allies against pollution. Another agreement which we concluded last year with Canada will help to clean up the Great Lakes.</p>
+<p>Domestically, we can also be proud of the steady progress being made in improving the quality of life in rural and agricultural America. We are beginning to break away from the old rigid system of controls which eroded the farmer's freedom through Government intrusion in the marketplace. The new flexibility permitted by the Agricultural Act of 1970 has enabled us to help expand farm markets and take advantage of the opportunity to increase exports by almost 60 percent in just three years. Net farm income is at an all-time high, up from $16.1 billion in 1971 to $19 billion in 1972.</p>
+<p>PRINCIPLES TO GUIDE US</p>
+<p>A record is not something to stand on; it is something to build on. And in this field of natural resources and the environment, we intend to build diligently and well.</p>
+<p>As we strive to transform our concern into action, our efforts will be guided by five basic principles:</p>
+<p>The first principle is that we must strike a balance so that the protection of our irreplaceable heritage becomes as important as its use. The price of economic growth need not and will not be deterioration in the quality of our lives and our surroundings.</p>
+<p>Second, because there are no local or State boundaries to the problems of our environment, the Federal Government must play an active, positive role. We can and will set standards and exercise leadership. We are providing necessary funding support. And we will provide encouragement and incentive for others to help with the job. But Washington must not displace State and local initiative, and we shall expect the State and local governments-along with the private sector--to play the central role in making the difficult, particular decisions which lie ahead.</p>
+<p>Third, the costs of pollution should be more fully met in the free marketplace, not in the Federal budget. For example, the price of pollution control devices for automobiles should be borne by the owner and the user and not by the general taxpayer. The costs of eliminating pollution should be reflected in the ,costs of goods and services.</p>
+<p>Fourth, we must realize that each individual must take the responsibility for 'looking after his own home and workplace. These daily surroundings are the environment where most Americans spend most of their time. They reflect people's pride in themselves and their consideration for their communities. A person's backyard is not the domain of the Federal Government.</p>
+<p>Finally, we must remain confident that America's technological and economic ingenuity will be equal to our environmental challenges. We will not look upon these challenges as insurmountable obstacles.</p>
+<p>Instead, we shall convert the so-called crisis of the environment into an opportunity for unprecedented progress.</p>
+<p>CONTROLLING POLLUTION</p>
+<p>We have made great progress in developing the laws and institutions to clean up pollution. We now have formidable new tools to protect against air, water and noise pollution and the special problem of pesticides. But to protect ourselves fully from harmful contaminants, we must still close several gaps in governmental authority.</p>
+<p>I was keenly disappointed when the last Congress failed to take action on many of my legislative requests related to our natural resources and environment. In the coming weeks I shall once again send these urgently needed proposals to the Congress so that the unfinished environmental business of the 92nd Congress can become the environmental achievements of the 93rd.</p>
+<p>Among these 19 proposals are eight whose passage would give us much greater control over the sources of pollution:</p>
+<p>--Toxic Substances. Many new chemicals can pose hazards to humans and the environment and are not well regulated. Authority is now needed to provide adequate testing standards for chemical substances and to restrict or prevent their distribution if testing confirms a hazard.</p>
+<p>--Hazardous Wastes. Land disposal of hazardous wastes has always been widely practiced but is now becoming more prevalent because of strict air and water pollution control programs. The disposal of the extremely hazardous wastes which endanger the health of humans and other organisms is a problem requiring direct Federal regulation. For other hazardous wastes, Federal standards should be established with guidelines for State regulatory programs to carry them out.</p>
+<p>--Safe Drinking Water. Federal action is also needed to stimulate greater State and local action to ensure high standards for our drinking water. We should establish national drinking water standards, with primary enforcement and monitoring powers retained by the State and local agencies, as well as a Federal requirement that suppliers notify their customers of the quality of their water.</p>
+<p>-Sulfur Oxides Emissions Charge. We now have national standards to help curtail sulfur emitted into the atmosphere from combustion, refining, smelting and other processes, but sulfur oxides continue to be among our most harmful air pollutants. For that reason, I favor legislation which would allow the Federal Government to impose a special financial charge on those who produce sulfur oxide emissions. This legislation would also help to ensure that low-sulfur fuels are allocated to areas where they are most urgently needed to protect the public health.</p>
+<p>--Sediment Control. Sediment from soil erosion and runoff continues to be a pervasive pollutant of our waters. Legislation is needed to ensure that the States make the control of sediment from new construction a vital part of their water quality programs.</p>
+<p>--Controlling Environmental Impacts of Transportation. As we have learned in recent years, we urgently need a mass transportation system not only to relieve urban congestion but also to reduce the concentrations of pollution that are too often the result of our present methods of transportation. Thus I will continue to place high priority upon my request to permit use of the Highway Trust Fund for mass transit purposes and to help State and local governments achieve air quality, conserve energy, and meet other environmental objectives.</p>
+<p>--United Nations Environmental Fund. Last year the United Nations adopted my proposal to establish a fund to coordinate and support international environmental programs. My 1974 budget includes a request for $10 million as our initial contribution toward the Fund's five-year goal of $100 million, and I recommend authorizing legislation for this purpose.</p>
+<p>--Ocean Dumping Convention. Along with 91 other nations, the United States recently concluded an international convention calling for regulation of ocean dumping. I am most anxious to obtain the advice and consent of the Senate for this convention as soon as possible. Congressional action is also needed on several other international conventions and amendments to control oil pollution from ships in the oceans.</p>
+<p>MANAGING THE LAND</p>
+<p>AS we steadily bring our pollution problems under control, more effective and sensible use of our land is rapidly emerging as among the highest of our priorities. The land is our Nation's basic natural resource, and our stewardship of this resource today will affect generations to come.</p>
+<p>America's land once seemed inexhaustible. There was always more of it beyond the horizon. Until the twentieth century we displayed a carelessness about our land, born of our youthful innocence and desire to expand. But our land is no longer an open frontier.</p>
+<p>Americans not only need, but also very much want to preserve diverse and beautiful landscapes, to maintain essential farm lands, to save wetlands and wildlife habitats, to keep open recreational space near crowded population centers, and to protect our shorelines and beaches. Our goal is to harmonize development with environmental quality and to add creatively to the beauty and long-term worth of land already being used.</p>
+<p>Land use policy is a basic responsibility of State and local governments. They are closer to the problems and closer to the people. Some localities are already reforming land use regulation--a trend I hope will accelerate. But because land is a national heritage, the Federal Government must exercise leadership in land use decision processes, and I am today again proposing that we provide it. In the coming weeks, I will ask the Congress to enact a number of legislative initiatives which will help us achieve this goal:</p>
+<p>--National Land Use Policy. Our greatest need is for comprehensive new legislation to stimulate State land use controls. We especially need a National Land Use Policy Act authorizing Federal assistance to encourage the States, in cooperation with local governments, to protect lands of critical environmental concern and to regulate the siting of key facilities such as airports, highways and major private developments. Appropriate Federal funds should be withheld from States that fail to act.</p>
+<p>--Power plant Siting. An open, long-range planning process is needed to help meet our power needs while also protecting the environment. We can avoid unnecessary delays with a power plant siting law which assures that electric power facilities are constructed on a timely basis, but with early and thorough review of long-range plans and specific provisions to protect the environment.</p>
+<p>--Protection of Wetlands. Our coastal wetlands are increasingly threatened by residential and commercial development. To increase their protection, I believe we should use the Federal tax laws to discourage unwise development in wetlands.</p>
+<p>--Historic Preservation and Rehabilitation. An important part of our national heritage are those historic structures in our urban areas which should be rehabilitated and preserved, not demolished. To help meet this goal, our tax laws should be revised to encourage rehabilitation of older buildings, and we should provide Federal insurance of loans to restore historic buildings for residential purposes.</p>
+<p>--Management of Public Lands. Approximately one-fifth of the Nation's land is considered "public domain", and lacks the protection of an overall management policy with environmental safeguards. Legislation is required to enable the Secretary of the Interior to protect our environmental interest on those lands.</p>
+<p>--Legacy of Parks. Under the Legacy of Parks program which I initiated in 1971, 257 separate parcels of parklands and underused Federal lands in all 50 States have been turned over to local control for park and recreational purposes. Most of these parcels are near congested urban areas, so that millions of citizens can now have easy access to parklands. I am pleased to announce today that 16 more parcels of Federal land will soon be made available under this same program <sup>1</sup></p>
+<p><sup>1</sup>A list of the 16 properties was issued by the White House on the same day. Included were lands in California, Colorado, Indiana, Kansas, Michigan, New York, Ohio, Rhode Island, Texas, and Washington.</p>
+<p>We must not be content, however, with just the Legacy of Parks program. New authority is needed to revise the formula for allocating grant funds to the States from the Land and Water Conservation Fund. More of these funds should be channelled to States with large urban populations.</p>
+<p>--Mining on Public Lands. Under a statute now over a century old, public lands must be transferred to private ownership at the request of any person who discovers minerals on them. We thus have no effective control over mining on these properties. Because the public lands belong to all Americans, this 1872 Mining Act should be repealed and replaced with new legislation which I shall send to the Congress.</p>
+<p>--Mined Area Protection. Surface and underground mining can too often cause serious air and water pollution as well as unnecessary destruction of wildlife habitats and aesthetic and recreational areas. New legislation with stringent performance standards is required to regulate abuses of surface and underground mining in a manner compatible with the environment.</p>
+<p>AMERICAN AGRICULTURE A BASIC NATIONAL RESOURCE</p>
+<p>Nearly three-fifths of America's land is in the stewardship of the farmer and the rancher. We can be grateful that farmers have been among our best conservationists over the years. Farmers know better than most that sound conservation means better long-term production and improved land values. More importantly, no one respects and understands our soil and land better than those who make their living by the land.</p>
+<p>But Americans know their farmers and ranchers best for all they have done to keep us the best-fed and best-clothed people in the history of mankind. A forward-looking agricultural economy is not only essential for environmental progress, but also to provide for our burgeoning food and fiber needs.</p>
+<p>My Administration is not going to express its goal for farmers in confusing terms. Our goal, instead, is very simple. The farmer wants, has earned, and deserves more freedom to make his own decisions. The Nation wants and needs expanded supplies of reasonably priced goods and commodities.</p>
+<p>These goals are complementary. Both have been advanced by the basic philosophy of the Agricultural Act of 1970. They must be further advanced by Congressional action this year.</p>
+<p>The Agricultural Act of 1970 expires with the 1973 crop. We now face the fundamental challenge of developing legislation appropriate to the economy of the 1970'S. Over the next several months, the future direction of the farm program must he discussed, debated and written into law. The outcome of this process will be crucial not only to farmers and ranchers, but to consumers and taxpayers as well.</p>
+<p>My Administration's fundamental approach to farm policy is to build on the forward course set by the 1970 Act. These principles should guide us in enacting new farm legislation:</p>
+<p>--Farmers must be provided with greater freedom to make production and marketing decisions. I have never known anyone in Washington who knows better than a farmer what is in his own best interest.</p>
+<p>--Government influence in the farm commodity marketplace must be reduced. Old fashioned Federal intrusion is as inappropriate to today's farm economy as the old McCormick reaper would be on a highly sophisticated modern farm.</p>
+<p>--We must allow farmers the opportunity to produce for expanding domestic demands and to continue our vigorous competition in export markets. We will not accomplish that goal by telling the farmer how much he can grow or the rancher how much livestock he can raise. Fidelity to this principle will have the welcome effect of encouraging both fair food prices for consumers and growing income from the marketplace for farmers.</p>
+<p>--We must reduce the farmer's dependence on Government payments through increased returns from sales of farm products at home and abroad. Because some of our current methods of handling farm problems are outmoded, the farmer has been unfairly saddled with the unflattering image of drinking primarily at the Federal well. Let us remember that more than 93 percent of gross farm income comes directly through the marketplace. Farmers and ranchers are strong and independent businessmen; we should expand their opportunity to exercise their strength and independence.</p>
+<p>--Finally, we need a program that will put the United States in a good posture for forthcoming trade negotiations.</p>
+<p>In pursuing all of these goals, we will work closely through the Secretary of Agriculture with the Senate Committee on Agriculture and Forestry and the House Committee on Agriculture to formulate and enact new legislation in areas where it is needed.</p>
+<p>I believe, for example, that dairy support systems, wheat, feed grains and cotton allotments and bases--some established decades ago---are drastically outdated. They tend to be discriminatory for many farm operators.</p>
+<p>It would be desirable to establish, after a reasonable transition period, a more equitable basis for production adjustment in the agricultural economy should such adjustment be needed in the years ahead. Direct Federal payments should, at the end of the transition period, be limited to the amounts necessary to compensate farmers for withholding unneeded land from crop production.</p>
+<p>As new farm legislation is debated in the months ahead, I hope the Congress will address this important subject with a deep appreciation of the need to keep the Government off the farm as well as keeping the farmer on.</p>
+<p>PROTECTING, OUR NATURAL HERITAGE</p>
+<p>An important measure of our true commitment to environmental quality is our dedication to protecting the wilderness and its inhabitants. We must recognize their ecological significance and preserve them as sources of inspiration and education. And we need them as places of quiet refuge and reflection.</p>
+<p>Important progress has been made in recent years, but still further action is needed in the Congress. Specifically, I will ask the 93rd Congress to direct its attention to the following areas of concern:</p>
+<p>--Endangered Species. The limited scope of existing laws requires new authority to identify and protect endangered species before they are so depleted that it is too late. New legislation must also make the taking of an endangered animal a Federal offense.</p>
+<p>--Predator Control. The widespread use of highly toxic poisons to kill coyotes and other predatory animals has spread persistent poisons to range and forest lands without adequate foresight of environmental effects. I believe Federal assistance is now required so that we can find better means of controlling predators without endangering other wildlife.</p>
+<p>--Wilderness Areas. Historically, Americans have always looked westward to enjoy wilderness areas. Today we realize that we must also preserve the remaining areas of wilderness in the East, if the majority of our people are to have the full benefit of our natural glories. Therefore I will ask the Congress to amend the legislation that established the Wilderness Preservation System so that more of our Eastern lands can be included.<br /><br />
+--Wild and Scenic Rivers. New legislation is also needed to continue our expansion of the national system of wild and scenic rivers. Funding authorization must be increased by $20 million to complete acquisitions in seven areas, and we must extend the moratorium on Federal licensing for water resource projects on those rivers being considered for inclusion in the system.</p>
+<p>--Big Cypress National Fresh Water Preserve. It is our great hope that we can create a reserve of Florida's Big Cypress Swamp in order to protect the outstanding wildlife in that area, preserve the water supply of Everglades National Park and provide the Nation with an outstanding recreation area. Prompt passage of Federal legislation would allow the Interior Department to forestall private or commercial development and inflationary pressures that will build if we delay.</p>
+<p>--Protecting Marine Fisheries. Current regulation of fisheries off U.S. coasts is inadequate to conserve and manage these resources. Legislation is needed to authorize U.S. regulation of foreign fishing off U.S. coasts to the fullest extent authorized by international agreements. In addition, domestic fishing should be regulated in the U.S. fisheries zone and in the high seas beyond that zone.</p>
+<p>--World Heritage Trust. The United States has endorsed an international convention for a World Heritage Trust embodying our proposals to accord special recognition and protection to areas of the world which are of such unique natural, historical, or cultural value that they are a part of the heritage of all mankind. I am hopeful that this convention will be ratified early in 1973.</p>
+<p>--Weather Modification. Our capacity to affect the weather has grown considerably in sophistication and predictability, but with this advancement has also come a new potential for endangering lives and property and causing adverse environmental effects. With additional Federal regulations, I believe that we can minimize these dangers.</p>
+<p>MEETING OUR ENERGY NEEDS</p>
+<p>One of the highest priorities of my Administration during the coming year will be a concern for energy supplies--a concern underscored this winter by occasional fuel shortages. We must face up to a stark fact in America: we are now consuming more energy than we produce.</p>
+<p>A year and a half ago I sent to the Congress the first Presidential message ever devoted to the energy question. I shall soon submit a new and far more comprehensive energy message containing wide-ranging initiatives to ensure necessary supplies of energy at acceptable economic and environmental costs. In the meantime, to help meet immediate needs, I have temporarily suspended import quotas on home heating oil east of the Rocky Mountains.</p>
+<p>As we work to expand our supplies of energy, we should also recognize that we must balance those efforts with our concern to preserve our environment. In the past, as we have sought new energy sources, we have too often damaged or despoiled our land. Actions to avoid such damage will probably aggravate our energy problems to some extent and may lead to higher prices. But all development and use of energy sources carry environmental risks, and we must find ways to minimize those risks while also providing adequate supplies of energy. I am fully confident that we can satisfy both of these imperatives.</p>
+<p>GOING FORWARD IN CONFIDENCE</p>
+<p>The environmental awakening of recent years has triggered substantial progress in the fight to preserve and renew the great legacies of nature. Unfortunately, it has also triggered a certain tendency to despair. Some people have moved from complacency to the opposite extreme of alarmism, suggesting that our pollution problems were hopeless and predicting impending ecological disaster. Some have suggested that we could never reconcile environmental protection with continued economic growth.</p>
+<p>I reject this doomsday mentality--and I hope the Congress will also reject it. I believe that we can meet our environmental challenges without turning our back on progress. What we must do is to stop the hand-wringing, roll up our sleeves and get on with the job.</p>
+<p>The advocates of defeatism warn us of all that is wrong. But I believe they underestimate this Nation's genius for responsive adaptability and its enormous reservoir of spirit.</p>
+<p>I believe there is always a sensible middle ground between the Cassandras and the Pollyannas. We must take our stand upon that ground.</p>
+<p>I have profound respect for the enormous challenge ahead, but I have even stronger respect for the capacity and character of the American people. Many of us have heard the adage that the last letters of the word, "American," say "I can." I am confident that we can, and we will, meet our natural resource challenges.</p>
+<p>RICHARD NIXON<br /><br />
+The White House,<br /><br />
+February 15, 1973.</p>
+  </div>
+
+  <div class="field-docs-footnote">
+    <p>Note: The message was the second in a series of six messages to the Congress on the state of the Union.
+</p><p>On the same day, the White House released a fact sheet and the transcript of a news briefing on programs contained in the message. Participants in the news briefing were Rogers C. B. Morton, Secretary of the Interior; J. Phil Campbell, Under Secretary of Agriculture; Russell E. Train, Chairman of the Council on Environmental Quality; and William D. Ruckelshaus, Administrator of the Environmental Protection Agency.</p>
+  </div>
+
+  <div class="field-prez-document-citation">
+    <p class="ucsbapp_citation">Richard Nixon, State of the Union Message to the Congress on Natural Resources and the Environment Online by Gerhard Peters and John T. Woolley, The American Presidency Project https://www.presidency.ucsb.edu/node/255945</p>  </div>
+    </div>
+    <div class="col-sm-4 ">
+      <div class="group-meta">
+  <div class="field-ds-filed-under-">
+    <h3 class="oog-label">Filed Under</h3>  </div>
+<h3 class="label-above oog-label ds ">Categories</h3><div><a href="/documents/app-categories/presidential" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Presidential</a></div><div><a href="/documents/app-categories/presidential/written-messages" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Written Messages</a></div><div><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">State of the Union Messages</a></div><div class="jump"><div class="view view-dpg-docs-media view-id-dpg_docs_media view-display-id-block_2 view-dom-id-0b488f257eaf53134850dad6c5bc57b9">
+        
+    
+      <div class="view-content">
+        <div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div></div><div class="rrssb"><ul class="rrssb-buttons"><li class="rrssb-twitter"><a href="https://twitter.com/intent/tweet?text=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Natural%20Resources%20and%20the%20Environment&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-natural-resources-and-the-environment" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">twitter</span></a></li><li class="rrssb-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-natural-resources-and-the-environment" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">facebook</span></a></li><li class="rrssb-linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-natural-resources-and-the-environment&title=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Natural%20Resources%20and%20the%20Environment" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">linkedin</span></a></li><li class="rrssb-googleplus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-natural-resources-and-the-environment" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">google+</span></a></li><li class="rrssb-email"><a href="mailto:?subject=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Natural%20Resources%20and%20the%20Environment&body=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-natural-resources-and-the-environment" ><span class="rrssb-icon"></span><span class="rrssb-text">email</span></a></li></ul></div>
+  <div class="field-ds-big-search-block">
+    <section id="block-views-5c12edf56060306972111336e0789cf4" class="block block-views other-frontpage-block clearfix">
+
+        <h2 class="block-title">Simple Search of Our Archives</h2>
+    
+  <form action="/advanced-search" method="get" id="views-exposed-form-prez-documents-archive-search2-page-1" accept-charset="UTF-8"><div>  <div class="views-exposed-form vefl-layout bootstrap-6-6-stacked">
+    <div class="views-exposed-widgets clearfix">
+              <div class="vefl-region vefl-region-top">
+                      
+<div id="edit-field-keywords-wrapper" class="views-exposed-widget views-widget-edit-field-keywords">
+    
+  <div class="views-widget">    <div class="form-item form-item-field-keywords form-type-textfield form-group"><input class="form-control form-text" type="text" id="edit-field-keywords" name="field-keywords" value="" size="30" maxlength="128" /></div>  </div>
+  </div>
+                  </div>
+              <div class="vefl-region vefl-region-left">
+                  </div>
+              <div class="vefl-region vefl-region-right">
+                  </div>
+              <div class="vefl-region vefl-region-bottom">
+                      
+<div id="items-per-page-wrapper" class="views-exposed-widget views-widget-items-per-page">
+    
+      <div class="form-item form-item-items-per-page form-type-select form-group"> <label class="control-label" for="edit-items-per-page"># per page</label>
+<select class="form-control form-select" id="edit-items-per-page" name="items_per_page"><option value="5">5</option><option value="10">10</option><option value="25" selected="selected">25</option><option value="50">50</option><option value="100">100</option></select></div>  
+  </div>
+                      
+<div id="button-wrapper" class="views-exposed-widget views-widget-button views-submit-button">
+    
+      <button type="submit" id="edit-submit-prez-documents-archive-search2" name="" value="Apply" class="btn btn-default form-submit">Apply</button>
+  
+  </div>
+                  </div>
+          </div>
+  </div>
+</div></form>
+</section>
+  </div>
+
+  <div class="field-ds-typo">
+    <div class="view view-report-a-typo view-id-report_a_typo view-display-id-block view-dom-id-7c8da2fa8283e0fe3fa6c0a8b4c896ad">
+        
+    
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/report-a-typo?content_id=255945&amp;title=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Natural%20Resources%20and%20the%20Environment" class="report-typo" target="_blank"><h3>Report a Typo</h3></a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+
+</section>
+  </div>
+<!-- Content -->
+      </section>
+
+      
+    </div>
+  </div>
+  
+  
+</div>
+<footer class="site-footer no-print">
+  <div class="container">
+      <div class="region region-footer">
+    <section id="block-block-4" class="block block-block attribution clearfix">
+
+      
+  <p><span>The American Presidency Project</span><br />John Woolley and Gerhard Peters<br /><strong><a href="https://www.presidency.ucsb.edu/contact">Contact</a></strong></p>
+
+</section>
+<section id="block-block-6" class="block block-block foot ucsb clearfix">
+
+      
+  <p style="text-align: center;display:inline-block;"><a class="twitter" href="https://twitter.com/presidency_proj" target="_blank">Twitter</a> <a class="facebook" href="https://www.facebook.com/pg/american.presidency.project/" target="_blank">Facebook</a></p>
+
+</section>
+<section id="block-block-5" class="block block-block copyright clearfix">
+
+      
+  <p>Copyright &copy; The American Presidency Project<br /><a href="http://www.ucsb.edu/terms-of-use" target="_blank">Terms of Service</a> | <a href="http://www.policy.ucsb.edu/privacy-notification/" target="_blank">Privacy</a> | <a href="/accessibility">Accessibility</a></p><p><img alt="uc santa barbara logo" src="/sites/default/files/pictures/uc-santa-barbara-wordmark-white1x.svg" style="width: 197px; min-width: 150px; height: 14px;object-fit:cover;" /></p>
+</section>
+  </div>
+  </div>
+  </footer>
+  <script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_NKBfN5q_T2fdeVG6tE3pdNU7glYkyzgPuDTc4K3Ne1w.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"dee899de70","applicationID":"80106271","transactionName":"bl1XYxNYWkVYVxFdWVcXdFQVUFtYFlAWa1NBTEdWEmZaWV1ROkRXXl1qQQhcQw==","queueTime":0,"applicationTime":544,"atts":"QhpUFVtCSUs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

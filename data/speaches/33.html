@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"dee899de70",applicationID:"80106271"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/documents/state-the-union-message-the-congress-human-resources" />
+<link rel="shortlink" href="/node/256088" />
+<link rel="shortcut icon" href="https://www.presidency.ucsb.edu/sites/default/files/favicon-app_0.png" type="image/png" />
+  <title>State of the Union Message to the Congress on Human Resources | The American Presidency Project</title>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,700,600,300|Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_uuQd0L7qawhKpY0MHO8pVG2W6LSQqS5w9XHZMk3vO2U.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_Cq1R3m_ERXC2ynYnp57HZ-O7ehprd9pvLTuV32DY_ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_BXCmDYWIH6zmNsU0Js_WJYpLGUpEB4GhicAN6AdoPdM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_gsVew5cLoW8YoOz5wlq-MSojac7Ph5f6cujHg4HQfcM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_DW59q6nX-P3-D4cA08_V2iLlMJIaFdPFYT8X6nSFpV8.css" media="print" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/jquery/1.11/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_38VWQ3jjQx0wRFj7gkntZr077GgJoGn5nv3v05IeLLo.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_XklFG3kfg0lBQ-7DD_t92S8L-ZsoZ29gklqc_A_ZH6o.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-86410002-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_0ri5u0t83fzlM17yaHG1aQGEln8kbFJP2gAtCU7MncM.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_gvpxcPEErmaiJn8qGSGx2O87lReivTR09hs10gIG3Yg.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"app","theme_token":"w7DLxSJCuXp24tWi2pr0l_lh6VaYpA9rJ9BOJpKOwq4","js":{"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.js":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.filter.js":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.js":1,"modules\/statistics\/statistics.js":1,"sites\/default\/themes\/bootstrap\/js\/bootstrap.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jQuery\/jquery-1.11.2.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jquery.ui\/1.11.4\/jquery-ui.min.js":1,"1":1,"sites\/default\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/default\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/default\/modules\/contrib\/field_group\/field_group.js":1,"sites\/default\/modules\/contrib\/rrssb\/rrssb.init.js":1,"sites\/default\/libraries\/rrssb-plus\/js\/rrssb.min.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/affix.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/alert.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/button.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/carousel.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/collapse.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/dropdown.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/modal.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tooltip.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/popover.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/scrollspy.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tab.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/transition.js":1,"sites\/default\/themes\/app\/scripts\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/default\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/default\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/default\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/default\/modules\/contrib\/extlink\/extlink.css":1,"sites\/default\/modules\/contrib\/views\/css\/views.css":1,"sites\/default\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.filter.css":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.css":1,"sites\/default\/modules\/contrib\/vefl\/css\/vefl-layouts.css":1,"public:\/\/rrssb\/rrssb.3c7a5cb3.css":1,"sites\/default\/libraries\/rrssb-plus\/css\/rrssb.css":1,"sites\/default\/themes\/app\/css\/style.css":1,"sites\/default\/themes\/app\/css\/oog.css":1,"sites\/default\/themes\/app\/css\/print.css":1}},"jquery_ui_multiselect_widget":{"module_path":"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget","multiple":1,"filter":1,"subselector":"#edit-category2","selectedlist":"4","autoOpen":0,"header":1,"height":"auto","classes":"app-uberselect","filter_auto_reset":1,"filter_width":"auto","jquery_ui_multiselect_widget_path_match_exclude":"admin\/*\r\nmedia\/*\r\nfile\/*\r\nsystem\/ajax"},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"dpg_docs_media":{"displays":{"block_2":{"filters":[]}}},"report_a_typo":{"displays":{"block":{"filters":[]}}},"document_attached_files":{"displays":{"block":{"filters":[]},"block_1":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/advanced-search":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]},"statistics":{"data":{"nid":"256088"},"url":"\/modules\/statistics\/statistics.php"},"field_group":{"div":"full"},"rrssb":{"size":"1","shrink":"1","regrow":"","minRows":"1","maxRows":"1","prefixReserve":"1em","prefixHide":"1em","alignRight":0},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-256088 node-type-documents" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div class="wrapper"> <!-- Wrapper for Sticky Footer -->
+
+      <div class="branding-region">
+      <div class="container">
+                  <div class="region region-branding">
+    <section id="block-block-1" class="block block-block site-title-block clearfix">
+
+      
+  <div class="site-title"><a href="https://www.presidency.ucsb.edu/">The American Presidency Project</a></div>
+
+</section>
+<section id="block-block-2" class="block block-block top-link-buttons clearfix">
+
+      
+  <p><a class="btn btn-default" href="https://www.presidency.ucsb.edu/about">About</a><a class="btn btn-default" href="/advanced-search"><span class="glyphicon glyphicon-search"></span> Search</a></p>
+<p id="ucScript"><a href="https://www.ucsb.edu/" target="_blank"><img alt="ucsb wordmark black" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/uc_santa_barbara_wordmark_black_rgb.svg" style="width: 175px; height: 13px;" /></a></p>
+
+</section>
+  </div>
+      </div>
+    </div>
+  
+  <div id="navbar" role="banner" class="navbar navbar-default"><!-- Only way to remove "container" class -->
+    <div class="container">
+      <div class="navbar-header">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+              <div class="navbar-collapse collapse">
+          <nav role="navigation">
+                          <ul class="menu nav navbar-nav"><li class="first expanded active-trail active dropdown"><a href="/documents" class="active-trail dropdown-toggle" data-toggle="dropdown">Documents <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/documents/presidential-documents-archive-guidebook">Guidebook</a></li>
+<li class="last leaf"><a href="/documents/category-attributes">Category Attributes</a></li>
+</ul></li>
+<li class="collapsed"><a href="/statistics">Statistics</a></li>
+<li class="leaf"><a href="/media" title="">Media Archive</a></li>
+<li class="leaf"><a href="/presidents" title="">Presidents</a></li>
+<li class="leaf"><a href="/analyses" title="">Analyses</a></li>
+<li class="last leaf"><a href="https://giving.ucsb.edu/Funds/Give?id=185" title="">GIVE</a></li>
+</ul>                                              </nav>
+        </div>
+          </div>
+  </div>
+
+  <div role="banner" id="page-header" class="site-header">
+      </div>
+
+  <div class="main-container container">
+    <div class="row">
+
+          <aside class="col-sm-3 no-print" role="complementary">
+            <div class="region region-sidebar-first well">
+    <section id="block-menu-block-8" class="block block-menu-block doc-sub clearfix">
+
+        <h2 class="block-title">Documents</h2>
+    
+  <div class="menu-block-wrapper menu-block-8 menu-name-menu-documents parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-10329"><a href="/documents/presidential-documents-archive-guidebook" title="">Archive Guidebook</a></li>
+<li class="leaf active-trail menu-mlid-10330 active"><a href="/documents" title="" class="active-trail">Categories</a></li>
+<li class="last leaf menu-mlid-10791"><a href="/documents/category-attributes" title="">Attributes</a></li>
+</ul></div>
+
+</section>
+<section id="block-menu-block-7" class="block block-menu-block dropdown clearfix">
+
+        <h2 class="block-title">Categories</h2>
+    
+  <div class="menu-block-wrapper menu-block-7 menu-name-menu-doc-cat-menu parent-mlid-0 menu-level-1">
+    <ul class="menu nav"><li class="first expanded menu-mlid-10954 dropdown"><a href="/documents/app-categories/presidential" title="Presidential (73842)" class="dropdown-toggle" data-toggle="dropdown">Presidential (259551) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10904"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/correspondents-association" title="Correspondents&#039; Association (31)">Correspondents&#039; Association (31)</a></li>
+<li class="leaf menu-mlid-10910"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/eulogies" title="Eulogies (55)">Eulogies (57)</a></li>
+<li class="leaf menu-mlid-10930"><a href="/documents/app-categories/written-presidential-orders/presidential/executive-orders" title="Executive Orders (5885)">Executive Orders (6135)</a></li>
+<li class="leaf menu-mlid-10912"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/fireside-chats" title="Fireside Chats (27)">Fireside Chats (27)</a></li>
+<li class="leaf menu-mlid-10906"><a href="/documents/app-categories/presidential/interviews" title="Interviews (950)">Interviews (955)</a></li>
+<li class="leaf menu-mlid-10894"><a href="/documents/app-categories/presidential/letters" title="Letters (4363)">Letters (4599)</a></li>
+<li class="leaf menu-mlid-10898"><a href="/documents/app-categories/presidential/miscellaneous-remarks" title="Miscellaneous Remarks (21956)">Miscellaneous Remarks (23689)</a></li>
+<li class="leaf menu-mlid-10899"><a href="/documents/app-categories/presidential/miscellaneous-written" title="Miscellaneous Written (741)">Miscellaneous Written (841)</a></li>
+<li class="leaf menu-mlid-10907"><a href="/documents/app-categories/presidential/news-conferences" title="News Conferences (2096)">News Conferences (2474)</a></li>
+<li class="leaf menu-mlid-10933"><a href="/documents/app-categories/written-statements/presidential/signing-statements" title="Signing Statements (2082)">Signing Statements (2151)</a></li>
+<li class="collapsed menu-mlid-10909"><a href="/documents/app-categories/presidential/spoken-addresses-and-remarks" title="Spoken Addresses and Remarks (5428)">Spoken Addresses and Remarks (10397)</a></li>
+<li class="leaf menu-mlid-10911"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/farewell-address" title="Farewell Address (10)">Farewell Address (11)</a></li>
+<li class="leaf menu-mlid-10913"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/inaugural-addresses" title="Inaugural Addresses (61)">Inaugural Addresses (62)</a></li>
+<li class="leaf menu-mlid-10895"><a href="/documents/app-categories/presidential/memoranda" title="Memoranda (1828)">Memoranda (2017)</a></li>
+<li class="leaf menu-mlid-10927"><a href="/documents/app-categories/written-messages/presidential/messages" title="Messages (11049)">Messages (11308)</a></li>
+<li class="leaf menu-mlid-10914"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/oral-address" title="Oral Address (618)">Oral Address (631)</a></li>
+<li class="leaf menu-mlid-10931"><a href="/documents/app-categories/written-presidential-orders/presidential/proclamations" title="Proclamations (7974)">Proclamations (8644)</a></li>
+<li class="leaf menu-mlid-10919"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/saturday-weekly-addresses-radio" title="Saturday Addresses (Radio and Webcast) (1629)">Saturday Weekly Addresses (Radio and Webcast) (1639)</a></li>
+<li class="leaf menu-mlid-10920"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-dinners" title="State Dinners (953)">State Dinners (953)</a></li>
+<li class="leaf menu-mlid-10921"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-the-union-addresses" title="State of the Union Addresses (98)">State of the Union Addresses (98)</a></li>
+<li class="leaf menu-mlid-10928"><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" title="State of the Union Messages (1)">State of the Union Messages (140)</a></li>
+<li class="leaf menu-mlid-10934"><a href="/documents/app-categories/written-statements/presidential/statements" title="Statements (8647)">Statements (9165)</a></li>
+<li class="leaf menu-mlid-10936"><a href="/documents/app-categories/written-statements/presidential/statements-administration-policy" title="Statements of Administration Policy (5081)">Statements of Administration Policy (5267)</a></li>
+<li class="leaf menu-mlid-10924"><a href="/documents/app-categories/presidential/vetoes" title="Vetoes (266)">Vetoes (1191)</a></li>
+<li class="collapsed menu-mlid-10925"><a href="/documents/app-categories/presidential/written-messages" title="Written Messages (11021)">Written Messages (23748)</a></li>
+<li class="expanded menu-mlid-10929"><a href="/documents/app-categories/presidential/written-presidential-orders" title="Written Presidential Orders (13858)">Written Presidential Orders (31697)</a></li>
+<li class="last collapsed menu-mlid-10932"><a href="/documents/app-categories/presidential/written-statements" title="Written Statements (16012)">Written Statements (33142)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10903 dropdown"><a href="/documents/app-categories/pressmedia" title="Press (9114)" class="dropdown-toggle" data-toggle="dropdown">Press/Media (17316) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first last leaf menu-mlid-10908"><a href="/documents/app-categories/pressmedia/press-briefings" title="Press Briefings (6037)">Press Briefings (6535)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10887 dropdown"><a href="/documents/app-categories/elections-and-transitions" title="Elections and Transitions (16448)" class="dropdown-toggle" data-toggle="dropdown">Elections and Transitions (24429) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10888"><a href="/documents/app-categories/elections-and-transitions/campaign-documents" title="Campaign Documents (2747)">Campaign Documents (4446)</a></li>
+<li class="expanded menu-mlid-10889"><a href="/documents/app-categories/elections-and-transitions/convention-speeches" title="Convention Speeches (50)">Convention Speeches (76)</a></li>
+<li class="leaf menu-mlid-10890"><a href="/documents/app-categories/elections-and-transitions/debates" title="Debates (152)">Debates (171)</a></li>
+<li class="leaf menu-mlid-10892"><a href="/documents/app-categories/elections-and-transitions/party-platforms" title="Party Platforms (98)">Party Platforms (101)</a></li>
+<li class="last leaf menu-mlid-10893"><a href="/documents/app-categories/elections-and-transitions/transition-documents" title="Transition Documents (346)">Transition Documents (549)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10896 dropdown"><a href="/documents/app-categories/miscellaneous" title="Miscellaneous (46156)" class="dropdown-toggle" data-toggle="dropdown">Miscellaneous (432) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10900"><a href="/documents/app-categories/miscellaneous/opposition-party-responses" title="Opposition Party Responses (28)">Opposition Party Responses (32)</a></li>
+<li class="last leaf menu-mlid-10915"><a href="/documents/app-categories/miscellaneous/post-presidential-remarks" title="Post Presidential Remarks (5)">Post Presidential Remarks (10)</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-10883"><a href="/documents/app-categories/congressional" title="Congressional (3)">Congressional (37)</a></li>
+</ul></div>
+
+</section>
+  </div>
+        </aside>  <!-- /#sidebar-first -->
+      
+      <section class="col-sm-9">
+                        <a id="main-content"></a>
+                
+                          
+                          <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  
+
+<div  about="/documents/state-the-union-message-the-congress-human-resources" typeof="sioc:Item foaf:Document" class="node node-documents view-mode-full ">
+    <div class="row">
+    <div class="col-sm-8 ">
+      
+  <div class="field-docs-person">
+    <div  about="/people/president/richard-nixon" typeof="sioc:Item foaf:Document" class="ds-1col node node-prez-diet view-mode-for_documents  clearfix">
+
+  
+  
+  <div class="field-diet-pictures">
+    <img typeof="foaf:Image" class="img-responsive" src="https://www.presidency.ucsb.edu/sites/default/files/styles/doc_img/public/people/richard-nixon.jpg?itok=Sm080HCr" width="170" height="230" alt="Richard Nixon photo" />  </div>
+
+  <div class="field-title">
+    <h3 class="diet-title"><a href="/people/president/richard-nixon">Richard Nixon</a></h3>  </div>
+
+  <div class="field-ds-byline">
+    
+  <div class="field-resuable-byline">
+    <div class="diet-by-line president"><span class="presidential-ordinal-number">37th</span> <span class="job-position">President of the United States:</span> <span class="dates">1969 ‐ 1974</span></div>
+  </div>
+  </div>
+
+  <div class="field-ds-doc-title">
+    <h1>State of the Union Message to the Congress on Human Resources</h1>
+  </div>
+</div>
+
+  </div>
+
+  <div class="field-docs-start-date-time">
+    <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="1973-03-01T00:00:00+00:00">March 01, 1973</span>  </div>
+
+  <div class="field-docs-content">
+    <p>To the Congress of the United States:</p>
+<p>"Information of the State of the Union," which our Constitution directs shall be communicated from time to time to the Congress by the President, must consist above all of information about the well-being of the American people.</p>
+<p>As the opening words of the Constitution proclaim, America began with "We the People." The people are the Union, and its condition depends wholly on theirs.</p>
+<p>While the Nation's land and resources, its communities, its economy, and its political institutions are also vital concerns to be addressed in my reports to the Congress this year, all of these in the final analysis are no more than means to a greater end. For each of them must ultimately be measured according to a single standard: what will serve the millions of individual Americans for whom all public officials serve as trustees.</p>
+<p>Too often in the past that standard has not prevailed. Too often public policy decisions have been founded not on the long-run interests of all the people, but on the short-run interests of special groups of people. Programs once set in motion tend to stay in motion--sometimes long after their useful life has ended. They acquire a constituency of their own, even within the Government, and they cannot easily be reformed or stopped. Means come to be regarded as ends in themselves. And no one suffers more than the people they were designed to serve.</p>
+<p>Despite all of the factors which conspire to hinder both the executive and the legislative branches in being as objective and analytical as we should be about the soundness of activities that continue from year to year supposedly in the public interest, we can and must discipline ourselves to take a larger view.</p>
+<p>As we consider the subject of human resources in this fourth section of my 1973 State of the Union Message, we must not confine ourselves solely to a discussion of the year past and the year ahead. Nor can we be content to frame the choices we face in strictly governmental and programmatic terms--as though Federal money and programs were the only variables that mattered in meeting human needs.</p>
+<p>FULFILLING THE AMERICAN DREAM</p>
+<p>I am irrevocably committed, as Presidents before me have been and as I know each Member of the Congress is, to fulfilling the American dream for all Americans.</p>
+<p>But I also believe deeply that in seeking progress and reform we must neither underestimate our society's present greatness, nor mistake the sources of that greatness. To do so would be to run a serious risk of damaging, with unproven panaceas applied in excessive haste and zeal, the very institutions we seek to improve.</p>
+<p>Let us begin then, by recognizing that by almost any measure, life is better for Americans in 1973 than ever before in our history, and better than in any other society of the world in this or any earlier age.</p>
+<p>No previous generation of our people has ever enjoyed higher incomes, better health and nutrition, longer life-expectancy, or greater mobility and convenience in their lives than we enjoy today. None before us has had a better chance for fulfillment and advancement in their work, more leisure time and recreational opportunities, more widespread access to culture and the arts, or a higher level of education and awareness of the world around them. None has had greater access to and control over the natural and human forces that shape their lives, or better protection against suffering, inhumanity, injustice, and discrimination. And none has enjoyed greater freedom.</p>
+<p>Secondly, let us recognize that the American system which has brought us so far so fast is not simply a system of Government helping people. Rather it is a system under which Government helps people to help themselves and one another.</p>
+<p>The real miracles in raising millions out of poverty, for example, have been performed by the free-enterprise economy, not by Government anti-poverty programs. The integration of one disadvantaged minority after another into the American mainstream has been accomplished by the inherent responsiveness of our political and social system, not by quotas and coercion. The dramatic gains in health and medical care have come primarily through private medicine, not from federally-operated systems.</p>
+<p>Even where the public sector has played a major role, as in education, the great strength of the system has derived from State and local governments' primacy and from the diverse mixture of private and public institutions in the educational process--both factors which have facilitated grass roots influence and popular participation.</p>
+<p>We should not tamper lightly, then, with the delicately balanced social, economic, and political system which has been responsible for making this country the best place on earth to live--and which has tremendous potential to rectify whatever shortcomings may still persist.</p>
+<p>But we Americans--to our great credit--are a restless and impatient people, a nation of idealists. We dream not simply of alleviating poverty, hunger, discrimination, ignorance, disease, and fear, but of eradicating them altogether--and we would like to do it all today.</p>
+<p>During the middle and late 1960's, under the pressure of this impatient idealism, Federal intervention to help meet human needs increased sharply. Provision of services from Federal programs directly to individuals began to be regarded as the rule in human resources policy, rather than the rare exception if had been in the past.</p>
+<p>The Government in those years undertook sweeping, sometimes almost utopian, commitments in one area of social concern after another. The State and local governments and the private sector were elbowed aside with little regard for the dislocations that might result. Literally hundreds of new programs were established on the assumption that even the most complex problems could be quickly solved by throwing enough Federal dollars at them.</p>
+<p>Well-intentioned as this effort may have been, the results in case after case amounted to dismal failure. It was a classic case of elevating means to the status of ends in themselves. Hard evidence of actual betterment in people's lives was seldom demanded. Ever-larger amounts of funds, new agencies, and increased staff were treated as proof enough of success, simply because the motive was compassionate.</p>
+<p>The American people deserve better than this. They deserve compassion that works--not simply compassion that means well. They deserve programs that say yes to human needs by saying no to paternalism, social exploitation and waste.</p>
+<p>Protecting and enhancing the greatness of our society is a great goal. It is doubly important, therefore, that we not permit the worthiness of our objective to render us uncritical or careless in the means we select for attaining that objective.</p>
+<p>It will increase our greatness as a society, for example, to establish the principle that no American family should be denied good health care because of inability to pay. But it will diminish our greatness if we deprive families of the freedom to make their own health care arrangements without bureaucratic meddling.</p>
+<p>It will increase our greatness to ensure that no boy or girl is denied a quality education. But it will diminish our greatness if we force hundreds of thousands of children to ride buses miles away from their neighborhood schools in order to achieve an arbitrary racial balance.</p>
+<p>It will increase our greatness to establish an income security system under which no American family will have to suffer for lack of income or break up because welfare regulations encourage it. But it would erode the very foundations of our stability and our prosperity if we ever made it more comfortable or more profitable to live on a welfare check than on a paycheck.</p>
+<p>PRINCIPLES FOR THE 1970's</p>
+<p>Consistently since 1969, this Administration has worked to establish a new human resources policy, based on a healthy skepticism about Federal Government omniscience and omnicompetence, and on a strong reaffirmation of the right and the capacity of individuals to chart their own lives and solve their own problems through State and local government and private endeavor. We have achieved a wide variety of significant reforms.</p>
+<p>Now the progress made and the experience gained over the past four years, together with the results of careful program reviews which were conducted over this period, have prepared us to seek broader reforms in 1973 than any we have requested before.</p>
+<p>In the time since the outlines of these proposals emerged in the new budget, intense controversy and considerable misunderstanding about both their purposes and their effects have understandably arisen among persons of goodwill on all sides.</p>
+<p>To provide a more rational, less emotional basis for the national debate which will--and properly should--surround my recommendations, I would invite the Congress to consider four basic principles which I believe should govern our human resources policy in the 1970's:</p>
+<p>--Government at all levels should seek to support and nurture, rather than limit, the diversity and freedom of choice which are hallmarks of the American system. The Federal Government in particular must work to guarantee an equal chance at the starting line by removing barriers which might impede an individual's opportunity to realize his or her full potential.</p>
+<p>--The Federal Government should concentrate more on providing incentives and opening opportunities, and less on delivering direct services.</p>
+<p>Such programs of direct assistance to individuals as the Federal Government does conduct must provide evenhanded treatment for all, and must be carefully designed to ensure that the benefits are actually received by those who are intended to receive them.</p>
+<p>--Rather than stifling initiative by trying to direct everything from Washington, Federal efforts should encourage State and local governments to make those decisions and supply those services for which their closeness to the people best qualifies them. In addition, the Federal Government should seek means of encouraging the private sector to address social problems, thereby utilizing the market mechanism to marshal resources behind clearly stated national objectives.</p>
+<p>--Finally, all Federal policy must adhere to a strict standard of fiscal responsibility. Ballooning deficits which spent our economy into a new inflationary spiral or a recessionary tailspin in the name of social welfare would punish most cruelly the very people whom they seek to help. On the other hand, continued additions to a personal tax burden which has already doubled since 1950 would reduce incentives for excellence and would conflict directly with the goal of allowing each individual to keep as much as possible of what he or she earns to permit maximum personal freedom of choice.</p>
+<p>The new post of Counsellor to the President for Human Resources, which I have recently created within the Executive Office of the President, will provide a much needed focal point for our efforts to see that these principles are carried out in all Federal activities aimed at meeting human needs, as well as in the Federal Government's complex relationships with State and local governments in this field. The coordinating function to be performed by this Counsellor should materially increase the unity, coherence, and effectiveness of our policies.</p>
+<p>The following sections present a review of the progress we have made over the past four years in bringing each of the various human resources activities into line with these principles, and they outline our agenda for the years ahead.</p>
+<p>HEALTH</p>
+<p>I am committed to removing financial barriers that would limit access to quality medical care for all American families. To that end, we have nearly doubled Federal outlays for health since the beginning of this Administration. Next year, they will exceed $30 billion.</p>
+<p>Nearly 60 percent of these funds will go to finance health care for older Americans, the disabled, and the poor, through Medicare and Medicaid.</p>
+<p>But we have taken significant steps to meet other priority needs as well. In the last four years, funding for cancer and heart and lung disease research has more than doubled; it will amount to more than three-quarters of a billion dollars in 1974.</p>
+<p>We have supported reform of the health care delivery system and have proposed legislation to assist in the development of health maintenance organizations on a demonstration basis. We have increased funds for programs which help prevent illness, such as those which help carry out our pure food and drug laws and those which promote consumer safety.</p>
+<p>We have declared total war on the epidemic problem of drug abuse--and we are winning that war. We have come a long way toward our goal of creating sufficient treatment services so that any addict desiring treatment can obtain it. We are also making substantial investments in research to develop innovative treatment approaches to drug abuse. I will report in greater detail on our anti-drug effort in a later section of this year's State of the Union message.</p>
+<p>Strong measures have been taken to ensure that health care costs do not contribute to inflation and price people out of the care they need. The rate of increase in physicians' fees was cut by two-thirds last year alone, and hospital price rises have also been slowed. To build on these gains, controls on the health services industry have been retained and will be strengthened under Phase III of the Economic Stabilization Program.</p>
+<p>A major goal of this Administration has been to develop an insurance system which can guarantee adequate financing of health care for every American family. The 92nd Congress failed to act upon my 1971 proposal to accomplish this goal, and now the need for legislation has grown still more pressing. I shall once again submit to the Congress legislation to help meet the Nation's health insurance needs.</p>
+<p>Federal health policy should seek to safeguard this country's pluralistic health care system and to build on its strengths, minimizing reliance on Government-run arrangements. We must recognize appropriate limits to the Federal role, and we must see that every health care dollar is spent as effectively as possible.</p>
+<p>This means discontinuing federally funded health programs which have served their purpose, or which have proved ineffective, or which involve functions more suitably performed by State and local government or the private sector.</p>
+<p>The Hill-Burton hospital grants program, for example, can no longer be justified on the basis of the shortage of hospital facilities which prompted its creation in 1946. That shortage has given way to a surplus--so that to continue this program would only add to the Nation's excess of hospital beds and lead to higher charges to patients. It should be terminated.</p>
+<p>We are also proposing to phase out the community mental health center demonstration program while providing funding for commitments to existing arrangements extending up to eight years. This program has helped to build and establish some 500 such centers, which have demonstrated new ways to deliver mental health services at the community level.</p>
+<p>Regional Medical Programs likewise can now be discontinued. The planning function they have performed can better be conducted by comprehensive State planning efforts. A second function of these programs, the continuing education of physicians who are already licensed, is an inappropriate burden for Federal taxpayers to bear.</p>
+<p>EDUCATION</p>
+<p>1973 must be a year of decisive action to restructure Federal aid programs for education. Our goal is to provide continued Federal financial support for our schools while expanding State and local control over basic educational decisions.</p>
+<p>I shall again ask the Congress to establish a new program of Education Revenue Sharing. This program would replace the complex and inefficient tangle of approximately 30 separate programs for elementary and secondary education with a single flexible authority for use in a few broad areas such as compensatory education for the disadvantaged, education for the handicapped, vocational education, needed assistance in federally affected areas, and supporting services.</p>
+<p>Education Revenue Sharing would enlarge the opportunities for State and local decision-makers to tailor programs and resources to meet the specific educational needs of their own localities. It would mean less red tape, less paper work, and greater freedom for those at the local level to do what they think is best for their schools--not what someone in Washington tells them is best.</p>
+<p>It would help to strengthen the principle of diversity and freedom in education that is as old as America itself, and would give educators a chance to create fresher, more individual approaches to the educational challenges of the Seventies. At the same time, it would affirm and further the national interest in promoting equal educational opportunities for economically disadvantaged children.</p>
+<p>If there is any one area of human activity where decisions are best made at the local level by the people who know local conditions and local needs, it is in the field of primary and secondary education. I urge the Congress to join me in making this year, the third in which Education Revenue Sharing has been on the legislative agenda, the year when this much needed reform becomes law.</p>
+<p>The time has also come to redefine the Federal role in higher education, by replacing categorical support programs for institutions with substantially .increased funds for student assistance. My budget proposals have already outlined a plan to channel much more of our higher education support through students themselves, including a new grant program which would increase funds provided to $948 million and the number assisted to over 1,500,000 people--almost a five-fold increase over the current academic year.</p>
+<p>These proposals would help to ensure for the first time that no qualified student seeking postsecondary education would be barred from attaining it by a lack of funds--and they would at the same time reinforce the spirit of competition among institutions that has made American higher education strong. I urge their prompt enactment.</p>
+<p>As we work to eliminate the unnecessary bureaucratic constraints currently hampering Federal education aid, we will also be devoting more attention to educational research and development through the new National Institute of Education.</p>
+<p>Funding for NIE will increase by almost 50 percent in fiscal year 1974, reaching $162 million.</p>
+<p>Finally, in order to enhance the diversity provided by our mixed educational system of public and private schools, I will propose to the Congress legislation to provide a tax credit for tuition payments made by parents of children who attend non-public elementary and secondary schools.</p>
+<p>MANPOWER</p>
+<p>The Federal manpower program is a vital part of our total effort to conserve and develop our human resources.</p>
+<p>Up to the present time, however, the "manpower program" has been not a unified effort, but a collection of separate categorical activities, many of them overlapping. These activities now include such programs as Manpower Development and Training Act Institutional Training programs, on-the-job training, Neighborhood Youth Corps, Public Service Careers, Operation Mainstream, and the Concentrated Employment Program. The net effect of several such programs operating in a single city seldom amounts to a coherent strategy for meeting the needs of people in that community.</p>
+<p>While many well-run local programs are more than worth what they cost, many other individual projects are largely ineffective--and their failure wastes money which could be used to bolster the solid accomplishments of the rest.</p>
+<p>Manpower programs ought to offer golden "second chances" for the less fortunate to acquire the skills and work habits which will help them become self-supporting, fully productive citizens. But as presently organized and managed, these second chance opportunities too often become just another dead-end exercise in frustration, rather than a genuine entree into a good job.</p>
+<p>I believe that the answer to much of this problem lies in our program of Manpower Revenue Sharing--uniting several previously fragmented manpower activities under a single umbrella and then giving most of the responsibility for running this effort to those governments which are closest to the working men and women who need assistance. In the next 16 months, administrative measures will be taken to institute this needed reform of the manpower system within the present legal framework.</p>
+<p>Manpower Revenue Sharing assistance will be freed from unnecessary Federal constraints, and aimed at developing jobs, equipping unemployed workers with useful work skills, and moving trainees into regular employment.</p>
+<p>WELFARE</p>
+<p>With the failure of the past two Congresses to enact my proposals for fundamental reform of the Nation's public assistance system, that system remains as I described it in a message last year--"a crazy quilt of injustice and contradiction that has developed in bits and pieces over the years."</p>
+<p>The major existing program, Aid to Families with Dependent Children (AFDC), is as inequitable, inefficient, and inadequate as ever.</p>
+<p>--The administration of this program is unacceptably loose. The latest national data indicate that in round numbers, one of every 20 persons on the AFDC rolls is totally ineligible for welfare; 3 more are paid more benefits than they are entitled to; and another is underpaid. About one-quarter of AFDC recipients, in other words, are receiving improper payments.</p>
+<p>--Complex program requirements and administrative red tape at the Federal and State levels have created bureaucracies that are difficult to manage.</p>
+<p>--Inconsistent and unclear definitions of need have diluted resources that should be targeted on those who need help most.</p>
+<p>--Misguided incentives have discouraged employable persons from work and induced fathers to leave home so that their families can qualify for welfare.</p>
+<p>After several years of skyrocketing increases, however, outlays for this program have begun to level off. This results from the strong resurgence of our economy and expansion of the job market, along with some management improvements in the AFDC program and strengthened work requirements which were introduced into the program last year.</p>
+<p>Since the legislative outlook seems to preclude passage of an overall structural reform bill in the immediate future, I have directed that vigorous steps be taken to strengthen the management of AFDC through administrative measures and legislative proposals.</p>
+<p>Under these reforms, Federal impediments to efficient State administration of the current AFDC system will be removed wherever possible. Changes will be proposed to reduce the complexities of current eligibility and payment processes. Work will continue to be required of all those who can reasonably be considered available for employment, while Federal funds to help welfare recipients acquire needed job skills will increase.</p>
+<p>One thing is certain: the welfare mess cannot be permitted to continue. A system which penalizes a person for going to work and rewards a person for going on welfare is totally alien to the American tradition of self-reliance and self-respect. That is why welfare reform has been and will continue to be one of our major goals; and we will work diligently with the Congress in developing ways to achieve it.</p>
+<p>NUTRITION</p>
+<p>During the past four years, Federal outlays for food assistance have increased more than three-fold. Food stamp and food distribution programs for needy families have been extended to virtually every community in the country. More than 15 million persons are now receiving food stamps or distributed foods, more than double the 1969 total. More than 8 million schoolchildren' are now being provided with free or reduced-price lunches-up from only 3 million in 1969.</p>
+<p>We have made great strides toward banishing hunger and malnutrition from American life--and we shall continue building on that progress until the job is done.</p>
+<p>OLDER AMERICANS</p>
+<p>One measure of the Nation's devotion to our older citizens is the fact that programs benefitting them--including Social Security and a wide range of other activities-now account for nearly one-fourth of the entire Federal budget.</p>
+<p>Social Security benefits levels have been increased 51 percent in the last four years--the most rapid increase in history. Under new legislation which I initially proposed, benefits have also become inflation-proof, increasing automatically as the cost of living increases.</p>
+<p>Over 1 I/2 million older Americans or their dependents can now receive higher Social Security benefits while continuing to work. Nearly 4 million widows and widowers are also starting to receive larger benefits--$1 billion in additional income in the next fiscal year. And millions of older Americans will be helped by the new Supplemental Security Income program which establishes a Federal income floor for the aging, blind, and disabled poor.</p>
+<p>Nevertheless, we are confronted with a major item of unfinished business. Approximately two-thirds of the twenty million persons who are 65 and over own their own homes. A disproportionate amount of their fixed income must now be used for property taxes. I will submit to the Congress recommendations for alleviating the often crushing burdens which property taxes place upon many older Americans.</p>
+<p>I also ask the cooperation of the Congress in passing my 1974 budget request for $200 million to fund the programs of the Administration on Aging--a funding level more than four times that appropriated for AoA programs in fiscal year 1972. Half of this amount will be devoted to nutrition projects for the elderly, with the remainder going to assist States and localities in developing comprehensive service programs for older Americans.</p>
+<p>In 1973, we shall continue to carry out the commitment I made in 1971 at the White House Conference on Aging: to help make the last days of our older Americans their best days.</p>
+<p>ECONOMIC OPPORTUNITY</p>
+<p>No one who started life in a family at the bottom of the income scale, as I did and as many Members of the Congress did, can ever forget how that condition felt, or ever turn his back on an opportunity to help alleviate it in the lives of others.</p>
+<p>We in the Federal Government have such an opportunity to help combat poverty. Our commitment to this fight has grown steadily during the past decade, without regard to which party happened to be in power, from under $8 billion in total Federal anti-poverty expenditures in 1964 to more than $30 billion in my proposed budget for 1974.</p>
+<p>And we have moved steadily closer to the goal of a society in which all our citizens, regardless of economic status, will have both the resources and the opportunity to fully control their own destinies.</p>
+<p>At the beginning of this period, when Government found itself unprepared to respond to the sharp new national awareness of the plight of the disadvantaged, creation of an institutional structure separate from the regular machinery of Government and specifically charged with helping the poor seemed a wise first step to take. Thus the Office of Economic Opportunity was brought into being in 1964.</p>
+<p>A wide range of useful anti-poverty programs has been conceived and put into operation over the years by the Office of Economic Opportunity. Some programs which got their start within OEO have been moved out into the operating departments and agencies of the Government when they matured, and they are thriving there. VISTA, for example, became part of ACTION in 1971, and Head Start was integrated with other activities focused on the first five years of life under HEW's Office of Child Development. OEO's other programs have now developed to a point where they can be similarly integrated.</p>
+<p>Accordingly, in keeping with my determination to make every dollar devoted to human resources programs return 100 cents worth of real benefits to the people who most need those benefits, I have decided that most of the anti-poverty activities now conducted by the Office of Economic Opportunity should be delegated or transferred into the Cabinet departments relating to their respective fields of activity. Adhering strictly to statutory procedures, and requesting Congressional approval whenever necessary, I shall take action to effect this change.</p>
+<p>This reorganization will increase the efficiency of the various programs by grouping them 'with other functionally related Federal efforts and by minimizing the overhead costs which in the past have diverted too much money from human needs into staff payrolls and administrative expenses. Funding for the transferred activities will stay level, or in many cases will even increase.</p>
+<p>The only major OEO program for which termination of Federal funding is recommended in my budget is Community Action. New funding for Community Action activities in fiscal year 1974 will be at the discretion of local communities.</p>
+<p>After more than 7 years of existence, Community Action has had an adequate opportunity to demonstrate its value within the communities it serves, and to build locally based agencies. OEO has taken steps to help Community Action agencies put down local roots through a program of incentives and training, and has incorporated the basic community action concept--participation in programs by the people whom the programs seek to serve--into all Federal anti-poverty activities. Further Federal spending on behalf of this concept, beyond the $2.8 billion which has been spent on it since 1965, no longer seems necessary or desirable.</p>
+<p>LEGAL SERVICES</p>
+<p>One other economic opportunity effort deserving special mention is the Legal Services Program. Notwithstanding some abuses, legal services has done much in its seven-year history to breathe new life into the cherished concept of equal justice for all by providing access to quality legal representation for millions of Americans who would otherwise have been denied it for want of funds.</p>
+<p>The time has now come to institutionalize legal services as a permanent, responsible, and responsive component of the American system of justice.</p>
+<p>I shall soon propose legislation to the Congress to form a legal services corporation so constituted as to permit its attorneys to practice according to the highest professional standards, provided with safeguards against politicization of its activities, and held accountable to the people through appropriate monitoring and evaluation procedures.</p>
+<p>CIVIL RIGHTS</p>
+<p>Protecting the civil rights of every American is one of my firmest commitments as President. No citizen should be denied equal justice and equal opportunity in our society because of race, color, sex, religion, or national origin.</p>
+<p>This Administration has steadily increased the Federal financial commitment in this field. Outlays for civil rights and equal opportunity in 1974 will pass $3 billion--3 1/2 times what they were when we took office.</p>
+<p>We have worked hard--and with good results--to end de jure school segregation, to promote equal job opportunity, to combat housing discrimination, to foster minority business enterprise, to uphold voting rights, to assist minority higher education, to meet minority health problems like sickle cell anemia, and to make progress on many other fronts.</p>
+<p>Now that equal opportunity is clearly written into the statute books, the next and in many ways more difficult step involves moving from abstract legal rights to concrete economic opportunities. We must ensure real social mobility--the freedom of all Americans to make their own choices and to go as far and as high as their abilities will take them. Legislation and court decisions play a major part in establishing that freedom. But community attitudes, government programs, and the vigor of the economic system all play large parts as well.</p>
+<p>I believe that we have made progress, and we shall continue building on that progress in the coming year:</p>
+<p>--The Department of Justice will expand its efforts to guarantee equal access to, and equal benefit from, Federal financial assistance programs.</p>
+<p>--The Equal Employment Opportunity Commission will receive additional resources to carry out its expanded responsibilities.</p>
+<p>--The Civil Service Commission will expand its monitoring of equal employment opportunities within the Federal Government.</p>
+<p>--Efforts to assure that Federal contractors provide equal access to job opportunities will be expanded.</p>
+<p>--The Small Business Administration will expand its loan program for minority business by nearly one-third.</p>
+<p>--The Commission on Civil Rights will receive additional resources to carry out its newly granted responsibilities. Additionally, in the year ahead, we will continue to support ratification of the Equal Rights Amendment to the Constitution so that American women--not a minority group but a majority of the whole population--need never again be denied equal opportunity.</p>
+<p>THE AMERICAN INDIAN</p>
+<p>For Indian people the policy of this Administration will continue to be one of advancing their opportunities for self- determination, without termination of the special Federal relationship with recognized Indian tribes.</p>
+<p>Just as it is essential to put more decision-making in the hands of State and local governments, I continue to believe that Indian tribal governments should assume greater responsibility for programs of the Bureau of Indian Affairs and the Department of Health, Education, and Welfare which operate on their reservations. As I first proposed in 1970, I recommend that the Congress enact the necessary legislation to facilitate this take-over of responsibility. Also, I recommend that the 1953 termination resolution be repealed. Meanwhile the new statutory provisions for Indian tribal governments under General Revenue Sharing will assist responsible tribal governments in allocating extra resources with greater flexibility.</p>
+<p>I shall also propose new legislation to foster local Indian self-determination by developing an Interior Department program of bloc grants to Federally recognized tribes as a replacement for a number of existing economic and resource development programs. The primary purpose of these grants would be to provide tribal governments with funds which they could use at their own discretion to promote development of their reservations.</p>
+<p>Indian tribal organizations and Indians seeking to enter business need easier access to loan and credit opportunities; I proposed in 1970 and will again propose legislation to accomplish this objective.</p>
+<p>Because Indian rights to natural resources need better protection, I am again urging the Congress to create an Indian Trust Counsel Authority to guarantee that protection.</p>
+<p>In the two and one-half years that Indians have been waiting for the Congress to enact the major legislation I have proposed, we have moved ahead administratively whenever possible. We have restored 21,000 acres of wrongfully acquired Government land to the Yakima Tribe. We have filed a precedent-setting suit in the Supreme Court to protect Indian water rights in Pyramid Lake. My fiscal year 1974 budget proposes total Federal outlays of $1.45 billion for Indian affairs, an increase of more than 15 percent over 1973.</p>
+<p>To accelerate organizational reform, I have directed the Secretary of the Interior to transfer day 'to day operational activities of the Bureau of Indian Affairs out of Washington to its field offices. And I am again asking the Congress to create a new Assistant Secretary position within the Interior Department to deal with Indian matters.</p>
+<p>VETERANS</p>
+<p>With the coming of peace, the Nation's inestimable debt to our veterans and their dependents will continue to command a high priority among the human resource efforts of this Administration.</p>
+<p>During the past four years, I have twice signed legislation increasing the allowances for educational assistance to veterans. Nearly e million veterans are now in some form of training under the GI Bill for Vietnam-era veterans. Pension payments to veterans or their survivors who need income support have also been raised twice and the test of need has been greatly improved, including a more equitable formula for adjusting the VA pension rate when other sources of income, such as Social Security, are increased. The VA pension program now directly benefits over 2 million individuals.</p>
+<p>Compensation payments for service related disabilities have been raised on two occasions, and more than e million veterans of all wars now receive this benefit. The service-disabled veteran deserves special concern. In addition to top-priority consideration in medical care, my budget calls for VA outlays to provide disabled Vietnam-era veterans with vocational rehabilitation, housing grants, and specially equipped automobiles to be nearly doubled in 1974 compared to their 1971 level. Disability compensation is also being intensively reviewed to ensure that disabled veterans will receive compensation payments which fully recognize their earnings impairment.</p>
+<p>VA guaranteed home loans for veterans have risen by almost two-thirds since we took office. And high-priority job programs have decreased the unemployment rate among Vietnam-era veterans by almost one-third during the past year alone.</p>
+<p>Dramatic progress has been made in the veterans medical care program. A high level of construction and modernization of VA medical facilities has been carried on. The total number of medical care personnel staffing VA facilities has increased by one-sixth since 1969. The total number of veterans treated--both in VA facilities and as outpatients--has risen to new highs. Beneficiaries treated as hospital inpatients will go over the million mark in fiscal 1974 for the first time. Outpatient visits will climb to almost 14,000,000--about twice the level of 1969.</p>
+<p>Since 1969, there has also been a steady shortening of the average length of stay in VA hospitals, a highly desirable objective from every viewpoint. This means that VA hospitals have fewer patients in bed on an average day, with shorter waiting lists, even though the total number of patients treated has gone up.</p>
+<p>Misunderstanding these statistics, some have sought to establish by law a numerical minimum average daily patient census in VA hospitals. But such a fixed daily census would represent a backward step: it would force a sharply increased length-of-stay--an effect that is medically, economically, and socially undesirable. It is far better that our veterans be restored to their families and jobs as rapidly as feasible, consistent with good medical care. A fixed patient census would tie the hands of those seeking to serve veterans' health needs; I urge the Congress not to enact such a requirement.</p>
+<p>The Congress is now studying several bills involving the VA pension program and cemetery and burial benefits for veterans. I hope that the Congress will work to see that the veterans pension program is realistically structured and compatible with other major income maintenance programs. On the burial benefits question, I urge that legislative action be deferred until completion of a study currently being conducted by the Administrator of Veterans Affairs to determine the most equitable approach to improving burial and cemetery benefits for veterans. The Administrator's recommendations will be made available to the Congress in the near future.</p>
+<p>CONSUMER AFFAIRS</p>
+<p>The self-reliance and resourcefulness of our people when they enter the marketplace as consumers, the generally high standard of ethics and social responsibility upheld by business and industry, and the restrained intervention of government at various levels as a vigorous but not heavy-handed referee of commerce-that combination of factors, in that order, has been largely responsible for confounding predictions that American capitalism would breed its own downfall in the 20th century. We must build on each of these strengths in our efforts to protect the rights of the consumer as well as the vigor of the free enterprise economy in the 1970's.</p>
+<p>Early in 1971, after the Congress had failed to act on my "Buyer's Bill of Rights" proposal for a new Office of Consumer Affairs directly under the President, I established such an office by executive order. Under the direction of my Special Assistant for Consumer Affairs, OCA has helped to create a stronger consumer consciousness throughout the executive branch.</p>
+<p>This office is now ready to integrate its operations more fully with the line departments of the Government, and has accordingly been transferred into the Department of Health, Education and Welfare-the logical base for an agency concerned with human well-being.</p>
+<p>From this new base the Office of Consumer Affairs will continue its policy formation role and educational efforts, and will also take on additional responsibilities, including representing consumer interests in testimony before the Congress and acting as a general ombudsman for the individual consumer.</p>
+<p>VOLUNTARY ACTION</p>
+<p>Many thousands of Americans already are volunteering their time to meet human needs in their communities--fighting disease, teaching children to read, working to solve local social problems. But now we must do more to tap the enormous reservoir of energy represented by millions of other potential citizen volunteers.</p>
+<p>That is why three years ago I encouraged a number of our leading citizens to create the National Center for Voluntary Action to support private volunteer efforts; that is why two years ago I established the new ACTION agency to strengthen Federal volunteer programs.</p>
+<p>We must now continue seeking new avenues of citizen service. As we turn from the concerns of war, may all Americans accept the challenge of peace by volunteering to help meet the needs of their communities--so that we can mobilize a new army of concerned, dedicated, able volunteers across the Nation.</p>
+<p>ARTS AND HUMANITIES</p>
+<p>I know that many in the Congress share the concern I have often expressed that some Americans, particularly younger people, lost faith in their country during the 1960's. I believe this faith is now being reborn out of the knowledge that our country is moving toward an era of lasting peace in the world, toward a healthier environment, and toward a new era of progress and equality of opportunity for all our people.</p>
+<p>But renewed faith in ourselves also arises from a deeper understanding of who we are, where we have come from, and where we are going--an understanding to which the arts and the humanities can make a great contribution.</p>
+<p>Government has a limited but important function in encouraging the arts and the humanities--that of reinforcing local initiatives and helping key institutions to help themselves. With the approach of our Bicentennial, we have a special opportunity to draw on the enrichment and renewal which cultural activity can provide in our national life. With this in mind, my 1974 budget requests further expansion of the funds for the National Foundation on the Arts and the Humanities, to a new high of $168 million. I ask continued full support from the Congress for this funding.</p>
+<p>SAYING YES</p>
+<p>Carl Sandburg spoke volumes about this country's past and future in three simple words that became the title for one of his greatest poems: "The People, Yes."</p>
+<p>America has risen to greatness because again and again when the chips were down, the American people have said yes--yes to the challenge of freedom, yes to the dare of progress, and yes to the hope of peace--even when defending the peace has meant paying the price of war.</p>
+<p>America's greatness will endure in the future only if our institutions continually rededicate themselves to saying yes to the people--yes to human needs and aspirations, yes to democracy and the consent of the governed, yes to equal opportunity and unlimited horizons of achievement for every American.</p>
+<p>1973 is a year full of opportunity for great advances on this front. After more than a decade of war, we have successfully completed one of the most unselfish missions ever undertaken by one nation in the defense of another. Now the coming of peace permits us to turn our attention more fully to the works of compassion, concern, and social betterment here at home.</p>
+<p>The seriousness of my commitment to make the most of this opportunity is demonstrated by the record level of funding for human resource programs proposed in our new budget--$125 billion in all-nearly twice the amount that was being spent on such programs when I took office in 1969.</p>
+<p>This is both a generous budget and a reform budget. The reforms it proposes will put muscle behind the generosity it intends. The overall effect of these reforms will be the elimination of programs that are wasteful so that we can concentrate on programs that work. They will make possible the continued growth of Federal efforts to meet human needs-while at the same time helping to prevent a runaway deficit that could lead to higher taxes, higher prices, and higher interest rates for all Americans.</p>
+<p>The opportunity is ours, executive and legislative branches together, to lead America to a new standard of fairness, of freedom, and of vitality within our federal system. We can forge a new approach to human services in this country--an approach which will treat people as more than mere statistics--an approach which recognizes that problems like poverty and unemployment, health care and the costs of education are more than cold abstractions in a government file drawer.</p>
+<p>We know how tough these problems are, because many of us grew up with them ourselves. But we also know that with the right kind of help and the right kind of spirit they can be overcome.</p>
+<p>Let us give all our citizens the help they need. But let us remember that each of us also bears a basic obligation to help himself and to help our fellowman, and that no one else can assume that obligation for us--least of all the Federal Government.</p>
+<p>If we shirk our individual responsibility, the American dream will never be more than a dream.</p>
+<p>But if the people say yes to this challenge, if government says yes to the people-and if all of us in Washington say no to petty quarrels and partisanship and yes to our public trust--then we can truly bring that dream to life for all Americans in the new day of peace that is dawning.</p>
+<p>RICHARD NIXON<br /><br />
+The White House,<br /><br />
+March 1, 1973.</p>
+  </div>
+
+  <div class="field-docs-footnote">
+    <p>Note: The message was the fourth in a series of six messages to the Congress on the state of the Union.
+</p><p>On the same day, the White House re. leased the transcript of a news briefing on the message by Secretary of Health, Education, and Welfare Caspar W. Weinberger.</p>
+  </div>
+
+  <div class="field-prez-document-citation">
+    <p class="ucsbapp_citation">Richard Nixon, State of the Union Message to the Congress on Human Resources Online by Gerhard Peters and John T. Woolley, The American Presidency Project https://www.presidency.ucsb.edu/node/256088</p>  </div>
+    </div>
+    <div class="col-sm-4 ">
+      <div class="group-meta">
+  <div class="field-ds-filed-under-">
+    <h3 class="oog-label">Filed Under</h3>  </div>
+<h3 class="label-above oog-label ds ">Categories</h3><div><a href="/documents/app-categories/presidential" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Presidential</a></div><div><a href="/documents/app-categories/presidential/written-messages" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Written Messages</a></div><div><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">State of the Union Messages</a></div><div class="jump"><div class="view view-dpg-docs-media view-id-dpg_docs_media view-display-id-block_2 view-dom-id-cb29be4e4e20fe394ea9cf226203d59a">
+        
+    
+      <div class="view-content">
+        <div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div></div><div class="rrssb"><ul class="rrssb-buttons"><li class="rrssb-twitter"><a href="https://twitter.com/intent/tweet?text=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Human%20Resources&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-human-resources" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">twitter</span></a></li><li class="rrssb-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-human-resources" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">facebook</span></a></li><li class="rrssb-linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-human-resources&title=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Human%20Resources" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">linkedin</span></a></li><li class="rrssb-googleplus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-human-resources" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">google+</span></a></li><li class="rrssb-email"><a href="mailto:?subject=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Human%20Resources&body=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-message-the-congress-human-resources" ><span class="rrssb-icon"></span><span class="rrssb-text">email</span></a></li></ul></div>
+  <div class="field-ds-big-search-block">
+    <section id="block-views-5c12edf56060306972111336e0789cf4" class="block block-views other-frontpage-block clearfix">
+
+        <h2 class="block-title">Simple Search of Our Archives</h2>
+    
+  <form action="/advanced-search" method="get" id="views-exposed-form-prez-documents-archive-search2-page-1" accept-charset="UTF-8"><div>  <div class="views-exposed-form vefl-layout bootstrap-6-6-stacked">
+    <div class="views-exposed-widgets clearfix">
+              <div class="vefl-region vefl-region-top">
+                      
+<div id="edit-field-keywords-wrapper" class="views-exposed-widget views-widget-edit-field-keywords">
+    
+  <div class="views-widget">    <div class="form-item form-item-field-keywords form-type-textfield form-group"><input class="form-control form-text" type="text" id="edit-field-keywords" name="field-keywords" value="" size="30" maxlength="128" /></div>  </div>
+  </div>
+                  </div>
+              <div class="vefl-region vefl-region-left">
+                  </div>
+              <div class="vefl-region vefl-region-right">
+                  </div>
+              <div class="vefl-region vefl-region-bottom">
+                      
+<div id="items-per-page-wrapper" class="views-exposed-widget views-widget-items-per-page">
+    
+      <div class="form-item form-item-items-per-page form-type-select form-group"> <label class="control-label" for="edit-items-per-page"># per page</label>
+<select class="form-control form-select" id="edit-items-per-page" name="items_per_page"><option value="5">5</option><option value="10">10</option><option value="25" selected="selected">25</option><option value="50">50</option><option value="100">100</option></select></div>  
+  </div>
+                      
+<div id="button-wrapper" class="views-exposed-widget views-widget-button views-submit-button">
+    
+      <button type="submit" id="edit-submit-prez-documents-archive-search2" name="" value="Apply" class="btn btn-default form-submit">Apply</button>
+  
+  </div>
+                  </div>
+          </div>
+  </div>
+</div></form>
+</section>
+  </div>
+
+  <div class="field-ds-typo">
+    <div class="view view-report-a-typo view-id-report_a_typo view-display-id-block view-dom-id-574601089ea41e6b3ff749a6dbae7004">
+        
+    
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/report-a-typo?content_id=256088&amp;title=State%20of%20the%20Union%20Message%20to%20the%20Congress%20on%20Human%20Resources" class="report-typo" target="_blank"><h3>Report a Typo</h3></a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+
+</section>
+  </div>
+<!-- Content -->
+      </section>
+
+      
+    </div>
+  </div>
+  
+  
+</div>
+<footer class="site-footer no-print">
+  <div class="container">
+      <div class="region region-footer">
+    <section id="block-block-4" class="block block-block attribution clearfix">
+
+      
+  <p><span>The American Presidency Project</span><br />John Woolley and Gerhard Peters<br /><strong><a href="https://www.presidency.ucsb.edu/contact">Contact</a></strong></p>
+
+</section>
+<section id="block-block-6" class="block block-block foot ucsb clearfix">
+
+      
+  <p style="text-align: center;display:inline-block;"><a class="twitter" href="https://twitter.com/presidency_proj" target="_blank">Twitter</a> <a class="facebook" href="https://www.facebook.com/pg/american.presidency.project/" target="_blank">Facebook</a></p>
+
+</section>
+<section id="block-block-5" class="block block-block copyright clearfix">
+
+      
+  <p>Copyright &copy; The American Presidency Project<br /><a href="http://www.ucsb.edu/terms-of-use" target="_blank">Terms of Service</a> | <a href="http://www.policy.ucsb.edu/privacy-notification/" target="_blank">Privacy</a> | <a href="/accessibility">Accessibility</a></p><p><img alt="uc santa barbara logo" src="/sites/default/files/pictures/uc-santa-barbara-wordmark-white1x.svg" style="width: 197px; min-width: 150px; height: 14px;object-fit:cover;" /></p>
+</section>
+  </div>
+  </div>
+  </footer>
+  <script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_NKBfN5q_T2fdeVG6tE3pdNU7glYkyzgPuDTc4K3Ne1w.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"dee899de70","applicationID":"80106271","transactionName":"bl1XYxNYWkVYVxFdWVcXdFQVUFtYFlAWa1NBTEdWEmZaWV1ROkRXXl1qQQhcQw==","queueTime":0,"applicationTime":550,"atts":"QhpUFVtCSUs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>

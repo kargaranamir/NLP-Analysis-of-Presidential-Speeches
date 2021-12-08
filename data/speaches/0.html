@@ -1,0 +1,508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam-cell.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"dee899de70",applicationID:"80106271"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;p("lcp",[r])}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){if(t instanceof g&&!y){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=l.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d,p=t("handle"),l=t("loader"),v=t(9),m=t(3),g=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(h){}s=new PerformanceObserver(i);try{s.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}d=new PerformanceObserver(o);try{d.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var y=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,m(!1))})}v(c)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){y[t]=m(t).concat(e)}function v(t,e){var n=y[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return y[t]||[]}function g(t){return p[t]=p[t]||i(n)}function h(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var y={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:h,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!T++){var t=P.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+P.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+P.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,h="addEventListener",y="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1212.min.js"},M=w&&b&&b[h]&&!/CriOS/.test(navigator.userAgent),P=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:M,userAgent:s,disabled:E};if(!E){t(1),t(7),g[h]?(g[h]("DOMContentLoaded",o,l(!1)),m[h]("load",r,l(!1))):(g[y]("onreadystatechange",i),m[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var T=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="/documents/state-the-union-address" />
+<link rel="shortlink" href="/node/210062" />
+<link rel="shortcut icon" href="https://www.presidency.ucsb.edu/sites/default/files/favicon-app_0.png" type="image/png" />
+  <title>State of the Union Address. | The American Presidency Project</title>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400italic,800,700,600,300|Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_uuQd0L7qawhKpY0MHO8pVG2W6LSQqS5w9XHZMk3vO2U.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_Cq1R3m_ERXC2ynYnp57HZ-O7ehprd9pvLTuV32DY_ow.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_BXCmDYWIH6zmNsU0Js_WJYpLGUpEB4GhicAN6AdoPdM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_gsVew5cLoW8YoOz5wlq-MSojac7Ph5f6cujHg4HQfcM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.presidency.ucsb.edu/sites/default/files/css/css_DW59q6nX-P3-D4cA08_V2iLlMJIaFdPFYT8X6nSFpV8.css" media="print" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/jquery/1.11/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_38VWQ3jjQx0wRFj7gkntZr077GgJoGn5nv3v05IeLLo.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"></script>
+<script>window.jQuery.ui || document.write("<script src='/sites/default/modules/contrib/jquery_update/replace/ui/ui/minified/jquery-ui.min.js'>\x3C/script>")</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_XklFG3kfg0lBQ-7DD_t92S8L-ZsoZ29gklqc_A_ZH6o.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-86410002-1", {"cookieDomain":"auto","allowLinker":true});ga("require", "linker");ga("linker:autoLink", ["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]);ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_0ri5u0t83fzlM17yaHG1aQGEln8kbFJP2gAtCU7MncM.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_gvpxcPEErmaiJn8qGSGx2O87lReivTR09hs10gIG3Yg.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"app","theme_token":"YkykCLAFdppHtoxnDXWmWc9HVoIhj3bKUEtebNK_G0A","js":{"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.js":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/src\/jquery.multiselect.filter.js":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.js":1,"modules\/statistics\/statistics.js":1,"sites\/default\/themes\/bootstrap\/js\/bootstrap.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jQuery\/jquery-1.11.2.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"\/\/ajax.aspnetcdn.com\/ajax\/jquery.ui\/1.11.4\/jquery-ui.min.js":1,"1":1,"sites\/default\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/default\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/default\/modules\/contrib\/field_group\/field_group.js":1,"sites\/default\/modules\/contrib\/rrssb\/rrssb.init.js":1,"sites\/default\/libraries\/rrssb-plus\/js\/rrssb.min.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/affix.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/alert.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/button.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/carousel.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/collapse.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/dropdown.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/modal.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tooltip.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/popover.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/scrollspy.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/tab.js":1,"sites\/default\/themes\/app\/bootstrap\/js\/transition.js":1,"sites\/default\/themes\/app\/scripts\/scripts.js":1},"css":{"modules\/system\/system.base.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.accordion.css":1,"sites\/default\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/default\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/default\/modules\/contrib\/date\/date_repeat_field\/date_repeat_field.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/default\/modules\/contrib\/extlink\/extlink.css":1,"sites\/default\/modules\/contrib\/views\/css\/views.css":1,"sites\/default\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.css":1,"sites\/default\/libraries\/jquery-ui-multiselect-widget\/jquery.multiselect.filter.css":1,"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget\/jquery_ui_multiselect_widget.css":1,"sites\/default\/modules\/contrib\/vefl\/css\/vefl-layouts.css":1,"public:\/\/rrssb\/rrssb.3c7a5cb3.css":1,"sites\/default\/libraries\/rrssb-plus\/css\/rrssb.css":1,"sites\/default\/themes\/app\/css\/style.css":1,"sites\/default\/themes\/app\/css\/oog.css":1,"sites\/default\/themes\/app\/css\/print.css":1}},"jquery_ui_multiselect_widget":{"module_path":"sites\/default\/modules\/contrib\/jquery_ui_multiselect_widget","multiple":1,"filter":1,"subselector":"#edit-category2","selectedlist":"4","autoOpen":0,"header":1,"height":"auto","classes":"app-uberselect","filter_auto_reset":1,"filter_width":"auto","jquery_ui_multiselect_widget_path_match_exclude":"admin\/*\r\nmedia\/*\r\nfile\/*\r\nsystem\/ajax"},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"dpg_docs_media":{"displays":{"block_2":{"filters":[]}}},"report_a_typo":{"displays":{"block":{"filters":[]}}},"document_attached_files":{"displays":{"block":{"filters":[]},"block_1":{"filters":[]}}}}},"urlIsAjaxTrusted":{"\/advanced-search":true},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackDomainMode":2,"trackCrossDomains":["dev-wwwpresidencyucsbedu.pantheonsite.io","www.presidency.ucsb.edu"]},"statistics":{"data":{"nid":"210062"},"url":"\/modules\/statistics\/statistics.php"},"field_group":{"div":"full"},"rrssb":{"size":"1","shrink":"1","regrow":"","minRows":"1","maxRows":"1","prefixReserve":"1em","prefixHide":"1em","alignRight":0},"bootstrap":{"anchorsFix":1,"anchorsSmoothScrolling":1,"formHasError":1,"popoverEnabled":0,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-210062 node-type-documents" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div class="wrapper"> <!-- Wrapper for Sticky Footer -->
+
+      <div class="branding-region">
+      <div class="container">
+                  <div class="region region-branding">
+    <section id="block-block-1" class="block block-block site-title-block clearfix">
+
+      
+  <div class="site-title"><a href="https://www.presidency.ucsb.edu/">The American Presidency Project</a></div>
+
+</section>
+<section id="block-block-2" class="block block-block top-link-buttons clearfix">
+
+      
+  <p><a class="btn btn-default" href="https://www.presidency.ucsb.edu/about">About</a><a class="btn btn-default" href="/advanced-search"><span class="glyphicon glyphicon-search"></span> Search</a></p>
+<p id="ucScript"><a href="https://www.ucsb.edu/" target="_blank"><img alt="ucsb wordmark black" src="https://www.presidency.ucsb.edu/sites/default/files/pictures/uc_santa_barbara_wordmark_black_rgb.svg" style="width: 175px; height: 13px;" /></a></p>
+
+</section>
+  </div>
+      </div>
+    </div>
+  
+  <div id="navbar" role="banner" class="navbar navbar-default"><!-- Only way to remove "container" class -->
+    <div class="container">
+      <div class="navbar-header">
+
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+              <div class="navbar-collapse collapse">
+          <nav role="navigation">
+                          <ul class="menu nav navbar-nav"><li class="first expanded active-trail active dropdown"><a href="/documents" class="active-trail dropdown-toggle" data-toggle="dropdown">Documents <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf"><a href="/documents/presidential-documents-archive-guidebook">Guidebook</a></li>
+<li class="last leaf"><a href="/documents/category-attributes">Category Attributes</a></li>
+</ul></li>
+<li class="collapsed"><a href="/statistics">Statistics</a></li>
+<li class="leaf"><a href="/media" title="">Media Archive</a></li>
+<li class="leaf"><a href="/presidents" title="">Presidents</a></li>
+<li class="leaf"><a href="/analyses" title="">Analyses</a></li>
+<li class="last leaf"><a href="https://giving.ucsb.edu/Funds/Give?id=185" title="">GIVE</a></li>
+</ul>                                              </nav>
+        </div>
+          </div>
+  </div>
+
+  <div role="banner" id="page-header" class="site-header">
+      </div>
+
+  <div class="main-container container">
+    <div class="row">
+
+          <aside class="col-sm-3 no-print" role="complementary">
+            <div class="region region-sidebar-first well">
+    <section id="block-menu-block-8" class="block block-menu-block doc-sub clearfix">
+
+        <h2 class="block-title">Documents</h2>
+    
+  <div class="menu-block-wrapper menu-block-8 menu-name-menu-documents parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first leaf menu-mlid-10329"><a href="/documents/presidential-documents-archive-guidebook" title="">Archive Guidebook</a></li>
+<li class="leaf active-trail menu-mlid-10330 active"><a href="/documents" title="" class="active-trail">Categories</a></li>
+<li class="last leaf menu-mlid-10791"><a href="/documents/category-attributes" title="">Attributes</a></li>
+</ul></div>
+
+</section>
+<section id="block-menu-block-7" class="block block-menu-block dropdown clearfix">
+
+        <h2 class="block-title">Categories</h2>
+    
+  <div class="menu-block-wrapper menu-block-7 menu-name-menu-doc-cat-menu parent-mlid-0 menu-level-1">
+    <ul class="menu nav"><li class="first expanded menu-mlid-10954 dropdown"><a href="/documents/app-categories/presidential" title="Presidential (73842)" class="dropdown-toggle" data-toggle="dropdown">Presidential (259551) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10904"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/correspondents-association" title="Correspondents&#039; Association (31)">Correspondents&#039; Association (31)</a></li>
+<li class="leaf menu-mlid-10910"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/eulogies" title="Eulogies (55)">Eulogies (57)</a></li>
+<li class="leaf menu-mlid-10930"><a href="/documents/app-categories/written-presidential-orders/presidential/executive-orders" title="Executive Orders (5885)">Executive Orders (6135)</a></li>
+<li class="leaf menu-mlid-10912"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/fireside-chats" title="Fireside Chats (27)">Fireside Chats (27)</a></li>
+<li class="leaf menu-mlid-10906"><a href="/documents/app-categories/presidential/interviews" title="Interviews (950)">Interviews (955)</a></li>
+<li class="leaf menu-mlid-10894"><a href="/documents/app-categories/presidential/letters" title="Letters (4363)">Letters (4599)</a></li>
+<li class="leaf menu-mlid-10898"><a href="/documents/app-categories/presidential/miscellaneous-remarks" title="Miscellaneous Remarks (21956)">Miscellaneous Remarks (23689)</a></li>
+<li class="leaf menu-mlid-10899"><a href="/documents/app-categories/presidential/miscellaneous-written" title="Miscellaneous Written (741)">Miscellaneous Written (841)</a></li>
+<li class="leaf menu-mlid-10907"><a href="/documents/app-categories/presidential/news-conferences" title="News Conferences (2096)">News Conferences (2474)</a></li>
+<li class="leaf menu-mlid-10933"><a href="/documents/app-categories/written-statements/presidential/signing-statements" title="Signing Statements (2082)">Signing Statements (2151)</a></li>
+<li class="collapsed menu-mlid-10909"><a href="/documents/app-categories/presidential/spoken-addresses-and-remarks" title="Spoken Addresses and Remarks (5428)">Spoken Addresses and Remarks (10397)</a></li>
+<li class="leaf menu-mlid-10911"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/farewell-address" title="Farewell Address (10)">Farewell Address (11)</a></li>
+<li class="leaf menu-mlid-10913"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/inaugural-addresses" title="Inaugural Addresses (61)">Inaugural Addresses (62)</a></li>
+<li class="leaf menu-mlid-10895"><a href="/documents/app-categories/presidential/memoranda" title="Memoranda (1828)">Memoranda (2017)</a></li>
+<li class="leaf menu-mlid-10927"><a href="/documents/app-categories/written-messages/presidential/messages" title="Messages (11049)">Messages (11308)</a></li>
+<li class="leaf menu-mlid-10914"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/oral-address" title="Oral Address (618)">Oral Address (631)</a></li>
+<li class="leaf menu-mlid-10931"><a href="/documents/app-categories/written-presidential-orders/presidential/proclamations" title="Proclamations (7974)">Proclamations (8644)</a></li>
+<li class="leaf menu-mlid-10919"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/saturday-weekly-addresses-radio" title="Saturday Addresses (Radio and Webcast) (1629)">Saturday Weekly Addresses (Radio and Webcast) (1639)</a></li>
+<li class="leaf menu-mlid-10920"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-dinners" title="State Dinners (953)">State Dinners (953)</a></li>
+<li class="leaf menu-mlid-10921"><a href="/documents/app-categories/spoken-addresses-and-remarks/presidential/state-the-union-addresses" title="State of the Union Addresses (98)">State of the Union Addresses (98)</a></li>
+<li class="leaf menu-mlid-10928"><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" title="State of the Union Messages (1)">State of the Union Messages (140)</a></li>
+<li class="leaf menu-mlid-10934"><a href="/documents/app-categories/written-statements/presidential/statements" title="Statements (8647)">Statements (9165)</a></li>
+<li class="leaf menu-mlid-10936"><a href="/documents/app-categories/written-statements/presidential/statements-administration-policy" title="Statements of Administration Policy (5081)">Statements of Administration Policy (5267)</a></li>
+<li class="leaf menu-mlid-10924"><a href="/documents/app-categories/presidential/vetoes" title="Vetoes (266)">Vetoes (1191)</a></li>
+<li class="collapsed menu-mlid-10925"><a href="/documents/app-categories/presidential/written-messages" title="Written Messages (11021)">Written Messages (23748)</a></li>
+<li class="expanded menu-mlid-10929"><a href="/documents/app-categories/presidential/written-presidential-orders" title="Written Presidential Orders (13858)">Written Presidential Orders (31697)</a></li>
+<li class="last collapsed menu-mlid-10932"><a href="/documents/app-categories/presidential/written-statements" title="Written Statements (16012)">Written Statements (33142)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10903 dropdown"><a href="/documents/app-categories/pressmedia" title="Press (9114)" class="dropdown-toggle" data-toggle="dropdown">Press/Media (17316) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first last leaf menu-mlid-10908"><a href="/documents/app-categories/pressmedia/press-briefings" title="Press Briefings (6037)">Press Briefings (6535)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10887 dropdown"><a href="/documents/app-categories/elections-and-transitions" title="Elections and Transitions (16448)" class="dropdown-toggle" data-toggle="dropdown">Elections and Transitions (24429) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10888"><a href="/documents/app-categories/elections-and-transitions/campaign-documents" title="Campaign Documents (2747)">Campaign Documents (4446)</a></li>
+<li class="expanded menu-mlid-10889"><a href="/documents/app-categories/elections-and-transitions/convention-speeches" title="Convention Speeches (50)">Convention Speeches (76)</a></li>
+<li class="leaf menu-mlid-10890"><a href="/documents/app-categories/elections-and-transitions/debates" title="Debates (152)">Debates (171)</a></li>
+<li class="leaf menu-mlid-10892"><a href="/documents/app-categories/elections-and-transitions/party-platforms" title="Party Platforms (98)">Party Platforms (101)</a></li>
+<li class="last leaf menu-mlid-10893"><a href="/documents/app-categories/elections-and-transitions/transition-documents" title="Transition Documents (346)">Transition Documents (549)</a></li>
+</ul></li>
+<li class="expanded menu-mlid-10896 dropdown"><a href="/documents/app-categories/miscellaneous" title="Miscellaneous (46156)" class="dropdown-toggle" data-toggle="dropdown">Miscellaneous (432) <span class="caret"></span></a><ul class="dropdown-menu"><li class="first leaf menu-mlid-10900"><a href="/documents/app-categories/miscellaneous/opposition-party-responses" title="Opposition Party Responses (28)">Opposition Party Responses (32)</a></li>
+<li class="last leaf menu-mlid-10915"><a href="/documents/app-categories/miscellaneous/post-presidential-remarks" title="Post Presidential Remarks (5)">Post Presidential Remarks (10)</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-10883"><a href="/documents/app-categories/congressional" title="Congressional (3)">Congressional (37)</a></li>
+</ul></div>
+
+</section>
+  </div>
+        </aside>  <!-- /#sidebar-first -->
+      
+      <section class="col-sm-9">
+                        <a id="main-content"></a>
+                
+                          
+                          <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  
+
+<div  about="/documents/state-the-union-address" typeof="sioc:Item foaf:Document" class="node node-documents view-mode-full ">
+    <div class="row">
+    <div class="col-sm-8 ">
+      
+  <div class="field-docs-person">
+    <div  about="/people/president/franklin-d-roosevelt" typeof="sioc:Item foaf:Document" class="ds-1col node node-prez-diet view-mode-for_documents  clearfix">
+
+  
+  
+  <div class="field-diet-pictures">
+    <img typeof="foaf:Image" class="img-responsive" src="https://www.presidency.ucsb.edu/sites/default/files/styles/doc_img/public/people/franklin-d-roosevelt_2.jpg?itok=gbyLJ_Cd" width="170" height="230" alt="Franklin D. Roosevelt photo" />  </div>
+
+  <div class="field-title">
+    <h3 class="diet-title"><a href="/people/president/franklin-d-roosevelt">Franklin D. Roosevelt</a></h3>  </div>
+
+  <div class="field-ds-byline">
+    
+  <div class="field-resuable-byline">
+    <div class="diet-by-line president"><span class="presidential-ordinal-number">32nd</span> <span class="job-position">President of the United States:</span> <span class="dates">1933 ‐ 1945</span></div>
+  </div>
+  </div>
+
+  <div class="field-ds-doc-title">
+    <h1>State of the Union Address.</h1>
+  </div>
+</div>
+
+  </div>
+
+  <div class="field-docs-start-date-time">
+    <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="1945-01-06T00:00:00+00:00">January 06, 1945</span>  </div>
+
+  <div class="field-docs-content">
+    <p>To the Congress:</p>
+<p>In considering the State of the Union, the war and the peace that is to follow are naturally uppermost in the minds of all of us.</p>
+<p>This war must be waged—it is being waged—with the greatest and most persistent intensity. Everything we are and have is at stake. Everything we are and have will be given. American men, fighting far from home, have already won victories which the world will never forget.</p>
+<p>We have no question of the ultimate victory. We have no question of the cost. Our losses will be heavy.</p>
+<p>We and our allies will go on fighting together to ultimate total victory.</p>
+<p>We have seen a year marked, on the whole, by substantial progress toward victory, even though the year ended with a setback for our arms, when the Germans launched a ferocious counter-attack into Luxembourg and Belgium with the obvious objective of cutting our line in the center.</p>
+<p>Our men have fought with indescribable and unforgettable gallantry under most difficult conditions, and our German enemies have sustained considerable losses while failing to obtain their objectives.</p>
+<p>The high tide of this German effort was reached two days after Christmas. Since then we have reassumed the offensive, rescued the isolated garrison at Bastogne, and forced a German withdrawal along the whole line of the salient. The speed with which we recovered from this savage attack was largely possible because we have one supreme commander in complete control of all the Allied armies in France. General Eisenhower has faced this period of trial with admirable calm and resolution and with steadily increasing success. He has my complete confidence.</p>
+<p>Further desperate attempts may well be made to break our lines, to slow our progress. We must never make the mistake of assuming that the Germans are beaten until the last Nazi has surrendered.</p>
+<p>And I would express another most serious warning against the poisonous effects of enemy propaganda.</p>
+<p>The wedge that the Germans attempted to drive in western Europe was less dangerous in actual terms of winning the war than the wedges which they are continually attempting to drive between ourselves and our allies.</p>
+<p>Every little rumor which is intended to weaken our faith in our allies is like an actual enemy agent in our midst- seeking to sabotage our war effort. There are, here and there, evil and baseless rumors against the Russians- rumors against the British—rumors against our own American commanders in the field.</p>
+<p>When you examine these rumors closely, you will observe that every one of them bears the same trade-mark—"Made in Germany."</p>
+<p>We must resist this divisive propaganda—we must destroy it -with the same strength and the same determination that our fighting men are displaying as they resist and destroy the panzer divisions.</p>
+<p>In Europe, we shall resume the attack and—despite temporary setbacks here or there- we shall continue the attack relentlessly until Germany is completely defeated.</p>
+<p>It is appropriate at this time to review the basic strategy which has guided us through three years of war, and which will lead, eventually, to total victory.</p>
+<p>The tremendous effort of the first years of this war was directed toward the concentration of men and supplies in the various theaters of action at the points where they could hurt our enemies most.</p>
+<p>It was an effort—in the language of the military men—of deployment of our forces. Many battles—essential battles—were fought; many victories—vital victories—were won. But these battles and these victories were fought and won to hold back the attacking enemy, and to put us in positions from which we and our allies could deliver the final, decisive blows.</p>
+<p>In the beginning our most important military task was to prevent our enemies—the strongest and most violently aggressive powers that ever have threatened civilization—from winning decisive victories. But even while we were conducting defensive, delaying actions, we were looking forward to the time when we could wrest the initiative from our enemies and place our superior resources of men and materials into direct competition with them.</p>
+<p>It was plain then that the defeat of either enemy would require the massing of overwhelming forces- ground, sea, and air- in positions from which we and our allies could strike directly against the enemy homelands and destroy the Nazi and Japanese war machines.</p>
+<p>In the case of Japan, we had to await the completion of extensive preliminary operations—operations designed to establish secure supply lines through the Japanese outer-zone defenses. This called for overwhelming sea power and air power—supported by ground forces strategically employed against isolated outpost garrisons.</p>
+<p>Always—from the very day we were attacked- it was right militarily as well as morally to reject the arguments of those shortsighted people who would have had us throw Britain and Russia to the Nazi wolves and concentrate against the Japanese. Such people urged that we fight a purely defensive war against Japan while allowing the domination of all the rest of the world by Nazism and Fascism.</p>
+<p>In the European theater the necessary bases for the massing of ground and air power against Germany were already available in Great Britain. In the Mediterranean area we could begin ground operations against major elements of the German Army as rapidly as we could put troops in the field, first in North Africa and then in Italy.</p>
+<p>Therefore, our decision was made to concentrate the bulk of our ground and air forces against Germany until her utter defeat. That decision was based on all these factors; and it was also based on the realization that, of our two enemies, Germany would be more able to digest quickly her conquests, the more able quickly to convert the manpower and resources of her conquered territory into a war potential.</p>
+<p>We had in Europe two active and indomitable allies- Britain and the Soviet Union- and there were also the heroic resistance movements in the occupied countries, constantly engaging and harassing the Germans. We cannot forget how Britain held the line, alone, in 1940 and 1941; and at the same time, despite ferocious bombardment from the air, built up a tremendous armaments industry which enabled her to take the offensive at El Alamein in 1942.</p>
+<p>We cannot forget the heroic defense of Moscow and Leningrad and Stalingrad, or the tremendous Russian offensives of 1943 and 1944 which destroyed formidable German armies.</p>
+<p>Nor can we forget how, for more than seven long years, the Chinese people have been sustaining the barbarous attacks of the Japanese and containing large enemy forces on the vast areas of the Asiatic mainland.</p>
+<p>In the future we must never forget the lesson that we have learned- that we must have friends who will work with us in peace as they have fought at our side in war.</p>
+<p>As a result of the combined effort of the Allied forces, great military victories were achieved in 1944: The liberation of France, Belgium, Greece, and parts of The Netherlands, Norway, Poland, Yugoslavia, and Czechoslovakia; the surrender of Rumania and Bulgaria; the invasion of Germany itself and Hungary; the steady march through the Pacific islands to the Philippines, Guam, and Saipan; and the beginnings of a mighty air offensive against the Japanese islands.</p>
+<p>Now, as this Seventy-ninth Congress meets, we have reached the most critical phase of the war.</p>
+<p>The greatest victory of the last year was, of course, the successful breach on June 6, 1944, of the German "impregnable" seawall of Europe and the victorious sweep of the Allied forces through France and Belgium and Luxembourg—almost to the Rhine itself.</p>
+<p>The cross-channel invasion of the Allied armies was the greatest amphibious operation in the history of the world. It overshadowed all other operations in this or any other war in its immensity. Its success is a tribute to the fighting courage of the soldiers who stormed the beaches- to the sailors and merchant seamen who put the soldiers ashore and kept them supplied-and to the military and naval leaders who achieved a real miracle of planning and execution. And it is also a tribute to the ability of two Nations, Britain and America, to plan together, and work together, and fight together in perfect cooperation and perfect harmony.</p>
+<p>This cross-channel invasion was followed in August by a second great amphibious operation, landing troops in southern France. In this, the same cooperation and the same harmony existed between the American, French, and other Allied forces based in North Africa and Italy.</p>
+<p>The success of the two invasions is a tribute also to the ability of many men and women to maintain silence, when a few careless words would have imperiled the lives of hundreds of thousands, and would have jeopardized the whole vast undertakings.</p>
+<p>These two great operations were made possible by success in the Battle of the Atlantic.</p>
+<p>Without this success over German submarines, we could not have built up our invasion forces or air forces in Great Britain, nor could we have kept a steady stream of supplies flowing to them after they had landed in France.</p>
+<p>The Nazis, however, may succeed in improving their submarines and their crews. They have recently increased their U-boat activity. The Battle of the Atlantic—like all campaigns in this war—demands eternal vigilance. But the British, Canadian, and other Allied navies, together with our own, are constantly on the alert.</p>
+<p>The tremendous operations in western Europe have overshadowed in the public mind the less spectacular but vitally important Italian front. Its place in the strategic conduct of the war in Europe has been obscured, and—by some people unfortunately—underrated.</p>
+<p>It is important that any misconception on that score be corrected—now.</p>
+<p>What the Allied forces in Italy are doing is a well-considered part in our strategy in Europe, now aimed at only one objective —the total defeat of the Germans. These valiant forces in Italy are continuing to keep a substantial portion of the German Army under constant pressure—including some 20 first-line German divisions and the necessary supply and transport and replacement troops—all of which our enemies need so badly elsewhere.</p>
+<p>Over very difficult terrain and through adverse weather conditions, our Fifth Army and the British Eighth Army—reinforced by units from other United Nations, including a brave and well equipped unit of the Brazilian Army—have, in the past year, pushed north through bloody Cassino and the Anzio beachhead, and through Rome until now they occupy heights overlooking the valley of the Po.</p>
+<p>The greatest tribute which can be paid to the courage and fighting ability of these splendid soldiers in Italy is to point out that although their strength is about equal to that of the Germans they oppose, the Allies have been continuously on the offensive.</p>
+<p>That pressure, that offensive, by our troops in Italy will continue.</p>
+<p>The American people- and every soldier now fighting in the Apennines—should remember that the Italian front has not lost any of the importance which it had in the days when it was the only Allied front in Europe.</p>
+<p>In the Pacific during the past year, we have conducted the fastest-moving offensive in the history of modern warfare. We have driven the enemy back more than 3,000 miles across the Central Pacific. A year ago, our conquest of Tarawa was a little more than a month old.</p>
+<p>A year ago, we were preparing for our invasion of Kwajalein, the second of our great strides across the Central Pacific to the Philippines.</p>
+<p>A year ago, General MacArthur was still fighting in New Guinea almost 1,500 miles from his present position in the Philippine Islands.</p>
+<p>We now have firmly established bases in the Mariana Islands, from which our Super fortresses bomb Tokyo itself—and will continue to blast Japan in ever-increasing numbers.</p>
+<p>Japanese forces in the Philippines have been cut in two. There is still hard fighting ahead—costly fighting. But the liberation of the Philippines will mean that Japan has been largely cut off from her conquests in the East Indies.</p>
+<p>The landing of our troops on Leyte was the largest amphibious operation thus far conducted in the Pacific.</p>
+<p>Moreover, these landings drew the Japanese Fleet into the first great sea battle which Japan has risked in almost two years. Not since the night engagements around Guadalcanal in November-December, 1942, had our Navy been able to come to grips with major units of the Japanese Fleet. We had brushed against their fleet in the first battle of the Philippine Sea in June, 1944, but not until last October were we able really to engage a major portion of the Japanese Navy in actual combat. The naval engagement which raged for three days was the heaviest blow ever struck against Japanese sea power.</p>
+<p>As a result of that battle, much of what is left of the Japanese Fleet has been driven behind the screen of islands that separates the Yellow Sea, the China Sea, and the Sea of Japan from the Pacific.</p>
+<p>Our Navy looks forward to any opportunity which the lords of the Japanese Navy will give us to fight them again.</p>
+<p>The people of this Nation have a right to be proud of the courage and fighting ability of the men in the armed forces—on all fronts. They also have a right to be proud of American leadership which has guided their sons into battle.</p>
+<p>The history of the generalship of this war has been a history of teamwork and cooperation, of skill and daring. Let me give you one example out of last year's operations in the Pacific.</p>
+<p>Last September Admiral Halsey led American naval task forces into Philippine waters and north to the East China Sea, and struck heavy blows at Japanese air and sea power.</p>
+<p>At that time it was our plan to approach the Philippines by further stages, taking islands which we may call A, C, and E. However, Admiral Halsey reported that a direct attack on Leyte appeared feasible. When General MacArthur received the reports from Admiral Halsey's task forces, he also concluded that it might be possible to attack the Japanese in the Philippines directly- bypassing islands A, C, and E.</p>
+<p>Admiral Nimitz thereupon offered to make available to General MacArthur several divisions which had been scheduled to take the intermediate objectives. These discussions, conducted at great distances, all took place in one day.</p>
+<p>General MacArthur immediately informed the Joint Chiefs of Staff here in Washington that he was prepared to initiate plans for an attack on Leyte in October. Approval of the change in plan was given on the same day.</p>
+<p>Thus, within the space of 24 hours, a major change of plans was accomplished which involved Army and Navy forces from two different theaters of operations- a change which hastened the liberation of the Philippines and the final day of victory- a change which saved lives which would have been expended in the capture of islands which are now neutralized far behind our lines.</p>
+<p>Our over-all strategy has not neglected the important task of rendering all possible aid to China. Despite almost insuperable difficulties, we increased this aid during 1944. At present our aid to China must be accomplished by air transport- there is no other way. By the end of 1944, the Air Transport Command was carrying into China a tonnage of supplies three times as great as that delivered a year ago, and much more, each month, than the Burma Road ever delivered at its peak.</p>
+<p>Despite the loss of important bases in China, the tonnage delivered by air transport has enabled General Chennault's Fourteenth Air Force, which includes many Chinese flyers, to wage an effective and aggressive campaign against the Japanese. In 1944 aircraft of the Fourteenth Air Force flew more than 35,000 sorties against the Japanese and sank enormous tonnage of enemy shipping, greatly diminishing the usefulness of the China Sea lanes.</p>
+<p>British, Dominion, and Chinese forces together with our own have not only held the line in Burma against determined Japanese attacks but have gained bases of considerable importance to the supply line into China.</p>
+<p>The Burma campaigns have involved incredible hardship, and have demanded exceptional fortitude and determination. The officers and men who have served with so much devotion in these far distant jungles and mountains deserve high honor from their countrymen.</p>
+<p>In all of the far-flung operations of our own armed forces—on land, and sea and in the air— the final job, the toughest job, has been performed by the average, easy-going, hard-fighting young American, who carries the weight of battle on his own shoulders.</p>
+<p>It is to him that we and all future generations of Americans must pay grateful tribute.</p>
+<p>But—it is of small satisfaction to him to know that monuments will be raised to him in the future. He wants, he needs, and he is entitled to insist upon, our full and active support—now.</p>
+<p>Although unprecedented production figures have made possible our victories, we shall have to increase our goals even more in certain items.</p>
+<p>Peak deliveries of supplies were made to the War Department in December, 1943. Due in part to cutbacks, we have not produced as much since then. Deliveries of Army supplies were down by 15 percent by July, 1944, before the upward trend was once more resumed.</p>
+<p>Because of increased demands from overseas, the Army Service Forces in the month of October, 1944, had to increase its estimate of required production by 10 percent. But in November, one month later, the requirements for 1945 had to be increased another 10 percent, sending the production goal well above anything we have yet attained. Our armed forces in combat have steadily increased their expenditure of medium and heavy artillery ammunition. As we continue the decisive phases of this war, the munitions that we expend will mount day by day.</p>
+<p>In October, 1944, while some were saying the war in Europe was over, the Army was shipping more men to Europe than in any previous month of the war.</p>
+<p>One of the most urgent immediate requirements of the armed forces is more nurses. Last April the Army requirement for nurses was set at 50,000. Actual strength in nurses was then 40,000. Since that time the Army has tried to raise the additional 10,000. Active recruiting has been carried on, but the net gain in eight months has been only 2,000. There are now 42,000 nurses in the Army.</p>
+<p>Recent estimates have increased the total number needed to 60,000. That means that 18,000 more nurses must be obtained for the Army alone and the Navy now requires 2,000 additional nurses.</p>
+<p>The present shortage of Army nurses is reflected in undue strain on the existing force. More than a thousand nurses are now hospitalized, and part of this is due to overwork. The shortage is also indicated by the fact that 11 Army hospital units have been sent overseas without their complement of nurses. At Army hospitals in the United States there is only 1 nurse to 26 beds, instead of the recommended 1 to 15 beds.</p>
+<p>It is tragic that the gallant women who have volunteered for service as nurses should be so overworked. It is tragic that our wounded men should ever want for the best possible nursing care.</p>
+<p>The inability to get the needed nurses for the Army is not due to any shortage of nurses; 280,000 registered nurses are now practicing in this country. It has been estimated by the War Manpower Commission that 27,000 additional nurses could be made available to the armed forces without interfering too seriously with the needs of the civilian population for nurses.</p>
+<p>Since volunteering has not produced the number of nurses required, I urge that the Selective Service Act be amended to provide for the induction of nurses into the armed forces. The need is too pressing to await the outcome of further efforts at recruiting.</p>
+<p>The care and treatment given to our wounded and sick soldiers have been the best known to medical science. Those standards must be maintained at all costs. We cannot tolerate a lowering of them by failure to provide adequate nursing for the brave men who stand desperately in need of it.</p>
+<p>In the continuing progress of this war we have constant need for new types of weapons, for we cannot afford to fight the war of today or tomorrow with the weapons of yesterday. For example, the American Army now has developed a new tank with a gun more powerful than any yet mounted on a fast-moving vehicle. The Army will need many thousands of these new tanks in 1945.</p>
+<p>Almost every month finds some new development in electronics which must be put into production in order to maintain our technical superiority—and in order to save lives. We have to work every day to keep ahead of the enemy in radar. On D-Day, in France, with our superior new equipment, we located and then put out of operation every warning set which the Germans had along the French coast.</p>
+<p>If we do not keep constantly ahead of our enemies in the development of new weapons, we pay for our backwardness with the life's blood of our sons.</p>
+<p>The only way to meet these increased needs for new weapons and more of them is for every American engaged in war work to stay on his war job—for additional American civilians, men and women, not engaged in essential work, to go out and get a war job. Workers who are released because their production is cut back should get another job where production is being increased. This is no time to quit or change to less essential jobs.</p>
+<p>There is an old and true saying that the Lord hates a quitter. And this Nation must pay for all those who leave their essential jobs- or all those who lay down on their essential jobs for nonessential reasons. And-again—that payment must be made 'with the life's blood of our sons.</p>
+<p>Many critical production programs with sharply rising needs are now seriously hampered by manpower shortages. The most important Army needs are artillery ammunition, cotton duck, bombs, tires, tanks, heavy trucks, and even B-29's. In each of these vital programs, present production is behind requirements.</p>
+<p>Navy production of bombardment ammunition is hampered by manpower shortages; so is production for its huge rocket program. Labor shortages have also delayed its cruiser and carrier programs, and production of certain types of aircraft.</p>
+<p>There is critical need for more repair workers and repair parts; this Jack delays the return of damaged fighting ships to their places in the fleet, and prevents ships now in the fighting line from getting needed overhauling.</p>
+<p>The pool of young men under 26 classified as I-A is almost depleted. Increased replacements for the armed forces will take men now deferred who are at work in war industry. The armed forces must have an assurance of a steady flow of young men for replacements. Meeting this paramount need will be difficult, and will also make it progressively more difficult to attain the 1945 production goals.</p>
+<p>Last year, after much consideration, I recommended that the Congress adopt a national service act as the most efficient and democratic way of insuring full production for our war requirements. This recommendation was not adopted.</p>
+<p>I now again call upon the Congress to enact this measure for the total mobilization of all our human resources for the prosecution of the war. I urge that this be done at the earliest possible moment.</p>
+<p>It is not too late in the war. In fact, bitter experience has shown that in this kind of mechanized warfare where new weapons are constantly being created by our enemies and by ourselves, the closer we come to the end of the war, the more pressing becomes the need for sustained war production with which to deliver the final blow to the enemy.</p>
+<p>There are three basic arguments for a national service law:</p>
+<p>First, it would assure that we have the right numbers of workers in the right places at the right times.</p>
+<p>Second, it would provide supreme proof to all our fighting men that we are giving them what they are entitled to, which is nothing less than our total effort.</p>
+<p>And, third, it would be the final, unequivocal answer to the hopes of the Nazis and the Japanese that we may become halfhearted about this war and that they can get from us a negotiated peace.</p>
+<p>National service legislation would make it possible to put ourselves in a position to assure certain and speedy action in meeting our manpower needs.</p>
+<p>It would be used only to the extent absolutely required by military necessities. In fact, experience in Great Britain and in other Nations at war indicates that use of the compulsory powers of national service is necessary only in rare instances.</p>
+<p>This proposed legislation would provide against loss of retirement and seniority rights and benefits. It would not mean reduction in wages.</p>
+<p>In adopting such legislation, it is not necessary to discard the voluntary and cooperative processes which have prevailed up to this time. This cooperation has already produced great results. The contribution of our workers to the war effort has been beyond measure. We must build on the foundations that have already been laid and supplement the measures now in operation, in order to guarantee the production that may be necessary in the critical period that lies ahead.</p>
+<p>At the present time we are using the inadequate tools at hand to do the best we can by such expedients as manpower ceilings, and the use of priority and other powers, to induce men and women to shift from non-essential to essential war jobs.</p>
+<p>I am in receipt of a joint letter from the Secretary of War and the Secretary of the Navy, dated January 3, 1945, which says:</p>
+<p>"With the experience of three years of war and after the most thorough consideration, we are convinced that it is now necessary to carry out the statement made by the Congress in the joint resolutions declaring that a state of war existed with Japan and Germany: That 'to bring the conflict to a successful conclusion, all of the resources of the country are hereby pledged by the Congress of the United States.'</p>
+<p>"In our considered judgment, which is supported by General Marshall and Admiral King, this requires total mobilization of our manpower by the passage of a national war service law. The armed forces need this legislation to hasten the day of final victory, and to keep to a minimum the cost in lives.</p>
+<p>"National war service, the recognition by law of the duty of every citizen to do his or her part in winning the war, will give complete assurance that the need for war equipment will be filled. In the coming year we must increase the output of many weapons and supplies on short notice. Otherwise we shall not keep our production abreast of the swiftly changing needs of war. At the same time it will be necessary to draw progressively many men now engaged in war production to serve with the armed forces, and their places in war production must be filled promptly. These developments will require the addition of hundreds of thousands to those already working in war industry. We do not believe that these needs can be met effectively under present methods.</p>
+<p>"The record made by management and labor in war industry has been a notable testimony to the resourcefulness and power of America. The needs are so great, nevertheless, that in many instances we have been forced to recall soldiers and sailors from military duty to do work of a civilian character in war production, because of the urgency of the need for equipment and because of inability to recruit civilian labor."</p>
+<p>Pending action by the Congress on the broader aspects of national service, I recommend that the Congress immediately enact legislation which will be effective in using the services of the 4,000,000 men now classified as IV-F in whatever capacity is best for the war effort.</p>
+<p>In the field of foreign policy, we propose to stand together with the United Nations not for the war alone but for the victory for which the war is fought.</p>
+<p>It is not only a common danger which unites us but a common hope. Ours is an association not of Governments but of peoples—and the peoples' hope is peace. Here, as in England; in England, as in Russia; in Russia, as in China; in France, and through the continent of Europe, and throughout the world; wherever men love freedom, the hope and purpose of the people are for peace—a peace that is durable and secure.</p>
+<p>It will not be easy to create this peoples' peace. We delude ourselves if we believe that the surrender of the armies of our enemies will make the peace we long for. The unconditional surrender of the armies of our enemies is the first and necessary step- but the first step only.</p>
+<p>We have seen already, in areas liberated from the Nazi and the Fascist tyranny, what problems peace will bring. And we delude ourselves if we attempt to believe wishfully that all these problems can be solved overnight.</p>
+<p>The firm foundation can be built- and it will be built. But the continuance and assurance of a living peace must, in the long run, be the work of the people themselves.</p>
+<p>We ourselves, like all peoples who have gone through the difficult processes of liberation and adjustment, know of our own experience how great the difficulties can be. We know that they are not difficulties peculiar to any continent or any Nation. Our own Revolutionary War left behind it, in the words of one American historian, "an eddy of lawlessness and disregard of human life." There were separatist movements of one kind or another in Vermont, Pennsylvania, Virginia, Tennessee, Kentucky, and Maine. There were insurrections, open or threatened, in Massachusetts and New Hampshire. These difficulties we worked out for ourselves as the peoples of the liberated areas of Europe, faced with complex problems of adjustment, will work out their difficulties for themselves.</p>
+<p>Peace can be made and kept only by the united determination of free and peace-loving peoples who are willing to work together- willing to help one another—willing to respect and tolerate and try to understand one another's opinions and feelings.</p>
+<p>The nearer we come to vanquishing our enemies the more we inevitably become conscious of differences among the victors.</p>
+<p>We must not let those differences divide us and blind us to our more important common and continuing interests in winning the war and building the peace.</p>
+<p>International cooperation on which enduring peace must be based is not a one-way street.</p>
+<p>Nations like individuals do not always see alike or think alike, and international cooperation and progress are not helped by any Nation assuming that it has a monopoly of wisdom or of virtue.</p>
+<p>In the future world the misuse of power, as implied in the term "power politics," must not be a controlling factor in international relations. That is the heart of the principles to which we have subscribed. We cannot deny that power is a factor in world politics any more than we can deny its existence as a factor in national politics. But in a democratic world, as in a democratic Nation, power must be linked with responsibility, and obliged to defend and justify itself within the framework of the general good.</p>
+<p>Perfectionism, no less than isolationism or imperialism or power politics, may obstruct the paths to international peace. Let us not forget that the retreat to isolationism a quarter of a century ago was started not by a direct attack against international cooperation but against the alleged imperfections of the peace.</p>
+<p>In our disillusionment after the last war we preferred international anarchy to international cooperation with Nations which did not see and think exactly as we did. We gave up the hope of gradually achieving a better peace because we had not the courage to fulfill our responsibilities in an admittedly imperfect world.</p>
+<p>We must not let that happen again, or we shall follow the same tragic road again—the road to a third world war.</p>
+<p>We can fulfill our responsibilities for maintaining the security of our own country only by exercising our power and our influence to achieve the principles in which we believe and for which we have fought.</p>
+<p>In August, 1941, Prime Minister Churchill and I agreed to the principles of the Atlantic Charter, these being later incorporated into the Declaration by United Nations of January 1, 1942. At that time certain isolationists protested vigorously against our right to proclaim the principles—and against the very principles themselves. Today, many of the same people are protesting against the possibility of violation of the same principles.</p>
+<p>It is true that the statement of principles in the Atlantic Charter does not provide rules of easy application to each and every one of this war-torn world's tangled situations. But it is a good and a useful thing- it is an essential thing- to have principles toward which we can aim.</p>
+<p>And we shall not hesitate to use our influence- and to use it now—to secure so far as is humanly possible the fulfillment of the principles of the Atlantic Charter. We have not shrunk from the military responsibilities brought on by this war. We cannot and will not shrink from the political responsibilities which follow in the wake of battle.</p>
+<p>I do not wish to give the impression that all mistakes can be avoided and that many disappointments are not inevitable in the making of peace. But we must not this time lose the hope of establishing an international order which will be capable of maintaining peace and realizing through the years more perfect justice between Nations.</p>
+<p>To do this we must be on our guard not to exploit and exaggerate the differences between us and our allies, particularly with reference to the peoples who have been liberated from Fascist tyranny. That is not the way to secure a better settlement of those differences or to secure international machinery which can rectify mistakes which may be made.</p>
+<p>I should not be frank if I did not admit concern about many situations—the Greek and Polish for example. But those situations are not as easy or as simple to deal with as some spokesmen, whose sincerity I do not question, would have us believe. We have obligations, not necessarily legal, to the exiled Governments, to the underground leaders, and to our major allies who came much nearer the shadows than we did.</p>
+<p>We and our allies have declared that it is our purpose to respect the right of all peoples to choose the form of government under which they will live and to see sovereign rights and self-government restored to those who have been forcibly deprived of them. But with internal dissension, with many citizens of liberated countries still prisoners of war or forced to labor in Germany, it is difficult to guess the kind of self-government the people really want.</p>
+<p>During the interim period, until conditions permit a genuine expression of the people's will, we and our allies have a duty, which we cannot ignore, to use our influence to the end that no temporary or provisional authorities in the liberated countries block the eventual exercise of the peoples' right freely to choose the government and institutions under which, as freemen, they are to live.</p>
+<p>It is only too easy for all of us to rationalize what we want to believe, and to consider those leaders we like responsible and those we dislike irresponsible. And our task is not helped by stubborn partisanship, however understandable on the part of opposed internal factions.</p>
+<p>It is our purpose to help the peace-loving peoples of Europe to live together as good neighbors, to recognize their common interests and not to nurse their traditional grievances against one another.</p>
+<p>But we must not permit the many specific and immediate problems of adjustment connected with the liberation of Europe to delay the establishment of permanent machinery for the maintenance of peace. Under the threat of a common danger, the United Nations joined together in war to preserve their independence and their freedom. They must now join together to make secure the independence and freedom of all peace-loving states, so that never again shall tyranny be able to divide and conquer.</p>
+<p>International peace and well-being, like national peace and well-being, require constant alertness, continuing cooperation, and organized effort.</p>
+<p>International peace and well-being, like national peace and well-being, can be secured only through institutions capable of life and growth.</p>
+<p>Many of the problems of the peace are upon us even now while the conclusion of the war is still before us. The atmosphere of friendship and mutual understanding and determination to find a common ground of common understanding, which surrounded the conversations at Dumbarton Oaks, gives us reason to hope that future discussions will succeed in developing the democratic and fully integrated world security system toward which these preparatory conversations were directed.</p>
+<p>We and the other United Nations are going forward, with vigor and resolution, in our efforts to create such a system by providing for it strong and flexible institutions of joint and cooperative action.</p>
+<p>The aroused conscience of humanity will not permit failure in this supreme endeavor.</p>
+<p>We believe that the extraordinary advances in the means of intercommunication between peoples over the past generation offer a practical method of advancing the mutual understanding upon which peace and the institutions of peace must rest, and it is our policy and purpose to use these great technological achievements for the common advantage of the world.</p>
+<p>We support the greatest possible freedom of trade and commerce.</p>
+<p>We Americans have always believed in freedom of opportunity, and equality of opportunity remains one of the principal objectives of our national life. What we believe in for individuals, we believe in also for Nations. We are opposed to restrictions, whether by public act or private arrangement, which distort and impair commerce, transit, and trade.</p>
+<p>We have house-cleaning of our own to do in this regard. But it is our hope, not only in the interest of our own prosperity but in the interest of the prosperity of the world, that trade and commerce and access to materials and markets may be freer after this war than ever before in the history of the world.</p>
+<p>One of the most heartening events of the year in the international field has been the renaissance of the French people and the return of the French Nation to the ranks of the United Nations. Far from having been crushed by the terror of Nazi domination, the French people have emerged with stronger faith than ever in the destiny of their country and in the soundness of the democratic ideals to which the French Nation has traditionally contributed so greatly.</p>
+<p>During her liberation, France has given proof of her unceasing determination to fight the Germans, continuing the heroic efforts of the resistance groups under the occupation and of all those Frenchmen throughout the world who refused to surrender after the disaster of 1940.</p>
+<p>Today, French armies are again on the German frontier, and are again fighting shoulder to shoulder with our sons.</p>
+<p>Since our landings in Africa, we have placed in French hands all the arms and material of war which our resources and the military situation permitted. And I am glad to say that we are now about to equip large new French forces with the most modern weapons for combat duty.</p>
+<p>In addition to the contribution which France can make to our common victory, her liberation likewise means that her great influence will again be available in meeting the problems of peace.</p>
+<p>We fully recognize France's vital interest in a lasting solution of the German problem and the contribution which she can make in achieving international security. Her formal adherence to the declaration by United Nations a few days ago and the proposal at the Dumbarton Oaks discussions, whereby France would receive one of the five permanent seats in the proposed Security Council, demonstrate the extent to which France has resumed her proper position of strength and leadership.</p>
+<p>I am clear in my own mind that, as an essential factor in the maintenance of peace in the future, we must have universal military training after this war, and I shall send a special message to the Congress on this subject.</p>
+<p>An enduring peace cannot be achieved without a strong America- strong in the social and economic sense as well as in the military sense.</p>
+<p>In the State of the Union message last year I set forth what I considered to be an American economic bill of rights.</p>
+<p>I said then, and I say now, that these economic truths represent a second bill of rights under which a new basis of security and prosperity can be established for all- regardless of station, race, or creed.</p>
+<p>Of these rights the most fundamental, and one on which the fulfillment of the others in large degree depends, is the "right to a useful and remunerative job in the industries or shops or farms or mines of the Nation." In turn, others of the economic rights of American citizenship, such as the right to a decent home, to a good education, to good medical care, to social security, to reasonable farm income, will, if fulfilled, make major contributions to achieving adequate levels of employment.</p>
+<p>The Federal Government must see to it that these rights become realities—with the help of States, municipalities, business, labor, and agriculture.</p>
+<p>We have had full employment during the war. We have had it because the Government has been ready to buy all the materials of war which the country could produce—and this has amounted to approximately half our present productive capacity.</p>
+<p>After the war we must maintain full employment with Government performing its peacetime functions. This means that we must achieve a level of demand and purchasing power by private consumers- farmers, businessmen, workers, professional men, housewives- which is sufficiently high to replace wartime Government demands; and it means also that we must greatly increase our export trade above the prewar level.</p>
+<p>Our policy is, of course, to rely as much as possible on private enterprise to provide jobs. But the American people will not accept mass unemployment or mere makeshift work. There will be need for the work of everyone willing and able to work—and that means close to 60,000,000 jobs.</p>
+<p>Full employment means not only jobs- but productive jobs. Americans do not regard jobs that pay substandard wages as productive jobs.</p>
+<p>We must make sure that private enterprise works as it is supposed to work- on the basis of initiative and vigorous competition, without the stifling presence of monopolies and cartels.</p>
+<p>During the war we have guaranteed investment in enterprise essential to the war effort. We should also take appropriate measures in peacetime to secure opportunities for new small enterprises and for productive business expansion for which finance would otherwise be unavailable.</p>
+<p>This necessary expansion of our peacetime productive capacity will require new facilities, new plants, and new equipment.</p>
+<p>It will require large outlays of money which should be raised through normal investment channels. But while private capital should finance this expansion program, the Government should recognize its responsibility for sharing part of any special or abnormal risk of loss attached to such financing.</p>
+<p>Our full-employment program requires the extensive development of our natural resources and other useful public works. The undeveloped resources of this continent are still vast. Our river-watershed projects will add new and fertile territories to the United States. The Tennessee Valley Authority, which was constructed at a cost of $750,000,000—the cost of waging this war for less than 4 days—was a bargain. We have similar opportunities in our other great river basins. By harnessing the resources of these river basins, as we have in the Tennessee Valley, we shall provide the same kind of stimulus to enterprise as was provided by the Louisiana Purchase and the new discoveries in the West during the nineteenth century.</p>
+<p>If we are to avail ourselves fully of the benefits of civil aviation, and if we are to use the automobiles we can produce, it will be necessary to construct thousands of airports and to overhaul our entire national highway system.</p>
+<p>The provision of a decent home for every family is a national necessity, if this country is to be worthy of its greatness—and that task will itself create great employment opportunities. Most of our cities need extensive rebuilding. Much of our farm plant is in a state of disrepair. To make a frontal attack on the problems of housing and urban reconstruction will require thoroughgoing cooperation between industry and labor, and the Federal, State, and local Governments.</p>
+<p>An expanded social security program, and adequate health and education programs, must play essential roles in a program designed to support individual productivity and mass purchasing power. I shall communicate further with the Congress on these subjects at a later date.</p>
+<p>The millions of productive jobs that a program of this nature could bring are jobs in private enterprise. They are jobs based on the expanded demand for the output of our economy for consumption and investment. Through a program of this character we can maintain a national income high enough to provide for an orderly retirement of the public debt along with reasonable tax reduction.</p>
+<p>Our present tax system geared primarily to war requirements must be revised for peacetime so as to encourage private demand.</p>
+<p>While no general revision of the tax structure can be made until the war ends on all fronts, the Congress should be prepared to provide tax modifications at the end of the war in Europe, designed to encourage capital to invest in new enterprises and to provide jobs. As an integral part of this program to maintain high employment, we must, after the war is over, reduce or eliminate taxes which bear too heavily on consumption.</p>
+<p>The war will leave deep disturbances in the world economy, in our national economy, in many communities, in many families, and in many individuals. It will require determined effort and responsible action of all of us to find our way back to peacetime, and to help others to find their way back to peacetime- a peacetime that holds the values of the past and the promise of the future.</p>
+<p>If we attack our problems with determination we shall succeed. And we must succeed. For freedom and peace cannot exist without security.</p>
+<p>During the past year the American people, in a national election, reasserted their democratic faith.</p>
+<p>In the course of that campaign various references were made to "strife" between this Administration and the Congress, with the implication, if not the direct assertion, that this Administration and the Congress could never work together harmoniously in the service of the Nation.</p>
+<p>It cannot be denied that there have been disagreements between the legislative and executive branches—as there have been disagreements during the past century and a half.</p>
+<p>I think we all realize too that there are some people in this Capital City whose task is in large part to stir up dissension, and to magnify normal healthy disagreements so that they appear to be irreconcilable conflicts.</p>
+<p>But- I think that the over-all record in this respect is eloquent: The Government of the United States of America—all branches of it- has a good record of achievement in this war.</p>
+<p>The Congress, the Executive, and the Judiciary have worked together for the common good.</p>
+<p>I myself want to tell you, the Members of the Senate and of the House of Representatives, how happy I am in our relationships and friendships. I have not yet had the pleasure of meeting some of the new Members in each House, but I hope that opportunity will offer itself in the near future.</p>
+<p>We have a great many problems ahead of us and we must approach them with realism and courage.</p>
+<p>This new year of 1945 can be the greatest year of achievement in human history.</p>
+<p>Nineteen forty-five can see the final ending of the Nazi-Fascist reign of terror in Europe.</p>
+<p>Nineteen forty-five can see the closing in of the forces of retribution about the center of the malignant power of imperialistic Japan.</p>
+<p>Most important of all—1945 can and must see the substantial beginning of the organization of world peace. This organization must be the fulfillment of the promise for which men have fought and died in this war. It must be the justification of all the sacrifices that have been made- of all the dreadful misery that this world has endured.</p>
+<p>We Americans of today, together with our allies, are making history- and I hope it will be better history than ever has been made before.</p>
+<p>We pray that we may be worthy of the unlimited opportunities that God has given us.</p>
+  </div>
+
+  <div class="field-prez-document-citation">
+    <p class="ucsbapp_citation">Franklin D. Roosevelt, State of the Union Address. Online by Gerhard Peters and John T. Woolley, The American Presidency Project https://www.presidency.ucsb.edu/node/210062</p>  </div>
+    </div>
+    <div class="col-sm-4 ">
+      <div class="group-meta">
+  <div class="field-ds-filed-under-">
+    <h3 class="oog-label">Filed Under</h3>  </div>
+<h3 class="label-above oog-label ds ">Categories</h3><div><a href="/documents/app-categories/presidential" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Presidential</a></div><div><a href="/documents/app-categories/presidential/written-messages" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Written Messages</a></div><div><a href="/documents/app-categories/written-messages/presidential/state-the-union-messages" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">State of the Union Messages</a></div><div class="jump"><div class="view view-dpg-docs-media view-id-dpg_docs_media view-display-id-block_2 view-dom-id-44d16125dd66c39804892f22e6aab28d">
+        
+    
+      <div class="view-content">
+        <div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div></div></div><div class="rrssb"><ul class="rrssb-buttons"><li class="rrssb-twitter"><a href="https://twitter.com/intent/tweet?text=State%20of%20the%20Union%20Address.&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-address" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">twitter</span></a></li><li class="rrssb-facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-address" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">facebook</span></a></li><li class="rrssb-linkedin"><a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-address&title=State%20of%20the%20Union%20Address." class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">linkedin</span></a></li><li class="rrssb-googleplus"><a href="https://plus.google.com/share?url=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-address" class="popup"><span class="rrssb-icon"></span><span class="rrssb-text">google+</span></a></li><li class="rrssb-email"><a href="mailto:?subject=State%20of%20the%20Union%20Address.&body=https%3A%2F%2Fwww.presidency.ucsb.edu%2Fdocuments%2Fstate-the-union-address" ><span class="rrssb-icon"></span><span class="rrssb-text">email</span></a></li></ul></div>
+  <div class="field-ds-big-search-block">
+    <section id="block-views-5c12edf56060306972111336e0789cf4" class="block block-views other-frontpage-block clearfix">
+
+        <h2 class="block-title">Simple Search of Our Archives</h2>
+    
+  <form action="/advanced-search" method="get" id="views-exposed-form-prez-documents-archive-search2-page-1" accept-charset="UTF-8"><div>  <div class="views-exposed-form vefl-layout bootstrap-6-6-stacked">
+    <div class="views-exposed-widgets clearfix">
+              <div class="vefl-region vefl-region-top">
+                      
+<div id="edit-field-keywords-wrapper" class="views-exposed-widget views-widget-edit-field-keywords">
+    
+  <div class="views-widget">    <div class="form-item form-item-field-keywords form-type-textfield form-group"><input class="form-control form-text" type="text" id="edit-field-keywords" name="field-keywords" value="" size="30" maxlength="128" /></div>  </div>
+  </div>
+                  </div>
+              <div class="vefl-region vefl-region-left">
+                  </div>
+              <div class="vefl-region vefl-region-right">
+                  </div>
+              <div class="vefl-region vefl-region-bottom">
+                      
+<div id="items-per-page-wrapper" class="views-exposed-widget views-widget-items-per-page">
+    
+      <div class="form-item form-item-items-per-page form-type-select form-group"> <label class="control-label" for="edit-items-per-page"># per page</label>
+<select class="form-control form-select" id="edit-items-per-page" name="items_per_page"><option value="5">5</option><option value="10">10</option><option value="25" selected="selected">25</option><option value="50">50</option><option value="100">100</option></select></div>  
+  </div>
+                      
+<div id="button-wrapper" class="views-exposed-widget views-widget-button views-submit-button">
+    
+      <button type="submit" id="edit-submit-prez-documents-archive-search2" name="" value="Apply" class="btn btn-default form-submit">Apply</button>
+  
+  </div>
+                  </div>
+          </div>
+  </div>
+</div></form>
+</section>
+  </div>
+
+  <div class="field-ds-typo">
+    <div class="view view-report-a-typo view-id-report_a_typo view-display-id-block view-dom-id-9505d1f9cd496cb919cf6c038f9c5d2d">
+        
+    
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+  <div class="views-field views-field-title">        <span class="field-content"><a href="/report-a-typo?content_id=210062&amp;title=State%20of%20the%20Union%20Address." class="report-typo" target="_blank"><h3>Report a Typo</h3></a></span>  </div>  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Needed to activate display suite support on forms -->
+
+</section>
+  </div>
+<!-- Content -->
+      </section>
+
+      
+    </div>
+  </div>
+  
+  
+</div>
+<footer class="site-footer no-print">
+  <div class="container">
+      <div class="region region-footer">
+    <section id="block-block-4" class="block block-block attribution clearfix">
+
+      
+  <p><span>The American Presidency Project</span><br />John Woolley and Gerhard Peters<br /><strong><a href="https://www.presidency.ucsb.edu/contact">Contact</a></strong></p>
+
+</section>
+<section id="block-block-6" class="block block-block foot ucsb clearfix">
+
+      
+  <p style="text-align: center;display:inline-block;"><a class="twitter" href="https://twitter.com/presidency_proj" target="_blank">Twitter</a> <a class="facebook" href="https://www.facebook.com/pg/american.presidency.project/" target="_blank">Facebook</a></p>
+
+</section>
+<section id="block-block-5" class="block block-block copyright clearfix">
+
+      
+  <p>Copyright &copy; The American Presidency Project<br /><a href="http://www.ucsb.edu/terms-of-use" target="_blank">Terms of Service</a> | <a href="http://www.policy.ucsb.edu/privacy-notification/" target="_blank">Privacy</a> | <a href="/accessibility">Accessibility</a></p><p><img alt="uc santa barbara logo" src="/sites/default/files/pictures/uc-santa-barbara-wordmark-white1x.svg" style="width: 197px; min-width: 150px; height: 14px;object-fit:cover;" /></p>
+</section>
+  </div>
+  </div>
+  </footer>
+  <script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_NKBfN5q_T2fdeVG6tE3pdNU7glYkyzgPuDTc4K3Ne1w.js"></script>
+<script src="https://www.presidency.ucsb.edu/sites/default/files/js/js_MRdvkC2u4oGsp5wVxBG1pGV5NrCPW3mssHxIn6G9tGE.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"dee899de70","applicationID":"80106271","transactionName":"bl1XYxNYWkVYVxFdWVcXdFQVUFtYFlAWa1NBTEdWEmZaWV1ROkRXXl1qQQhcQw==","queueTime":0,"applicationTime":685,"atts":"QhpUFVtCSUs=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
